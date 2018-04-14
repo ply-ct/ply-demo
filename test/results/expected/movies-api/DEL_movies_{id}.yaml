@@ -1,0 +1,19 @@
+test: 'DEL:movies/{id}'
+request:
+  url: '${base-url}/movies/${id}'
+  method: DELETE
+  headers:
+    Accept: application/json
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    content-type: application/json
+  body: |-
+    {
+      "status": {
+        "code": 200,
+        "message": "Movie deleted: ${id}"
+      }
+    }

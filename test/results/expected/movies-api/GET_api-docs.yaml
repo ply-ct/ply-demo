@@ -1,0 +1,344 @@
+test: 'GET:api-docs'
+request:
+  url: '${base-url}/api-docs'
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    content-type: application/json;charset=ISO-8859-1
+  body: |-
+    {
+      "basePath": "/demo",
+      "consumes": [
+        "application/json"
+      ],
+      "definitions": {
+        "Credit": {
+          "type": "object",
+          "required": [
+            "name",
+            "role"
+          ],
+          "properties": {
+            "role": {
+              "description": "Can be just a generic designation (eg: 'director', 'actor')",
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "Movie": {
+          "type": "object",
+          "required": [
+            "title",
+            "year"
+          ],
+          "properties": {
+            "webRef": {
+              "$ref": "#/definitions/WebRef"
+            },
+            "year": {
+              "format": "int32",
+              "type": "integer",
+              "minimum": 1900
+            },
+            "credits": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Credit"
+              }
+            },
+            "owned": {
+              "type": "boolean"
+            },
+            "rating": {
+              "format": "float",
+              "description": "Must be a multiple of 0.5",
+              "maximum": 5,
+              "type": "number",
+              "minimum": 0
+            },
+            "description": {
+              "minLength": 0,
+              "type": "string",
+              "maxLength": 2048
+            },
+            "id": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "poster": {
+              "type": "string"
+            }
+          }
+        },
+        "Status": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "message": {
+              "type": "string"
+            }
+          }
+        },
+        "StatusResponse": {
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "WebRef": {
+          "type": "object",
+          "required": [
+            "ref",
+            "site"
+          ],
+          "properties": {
+            "site": {
+              "type": "string",
+              "enum": [
+                "imdb.com",
+                "themoviedb.org"
+              ]
+            },
+            "ref": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "info": {
+        "license": {
+          "name": "Apache 2.0"
+        },
+        "title": "Movies API",
+        "version": "1.0"
+      },
+      "paths": {
+        "/movies": {
+          "post": {
+            "summary": "Create a movie",
+            "responses": {
+              "200": {
+                "schema": {
+                  "$ref": "#/definitions/Movie"
+                },
+                "description": "OK"
+              }
+            },
+            "parameters": [
+              {
+                "schema": {
+                  "$ref": "#/definitions/Movie"
+                },
+                "in": "body",
+                "name": "Movie",
+                "required": true
+              }
+            ],
+            "tags": [
+              "Limberest Demo Movies"
+            ]
+          },
+          "get": {
+            "summary": "Retrieve movies",
+            "description": "Returns an (optionally paginated) array of movies matching query criteria.",
+            "responses": {
+              "200": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Movie"
+                  }
+                },
+                "description": "OK"
+              }
+            },
+            "parameters": [
+              {
+                "in": "query",
+                "name": "title",
+                "description": "Movie title",
+                "type": "string",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "year",
+                "description": "Year movie was made",
+                "type": "int",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "rating",
+                "description": "Rating (up to 5, multiple of 0.5)",
+                "type": "float",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "director",
+                "description": "Director",
+                "type": "string",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "actors",
+                "description": "Actor(s) match",
+                "type": "string",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "sort",
+                "description": "Sort property",
+                "type": "string",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "descending",
+                "description": "Sort descending",
+                "type": "boolean",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "max",
+                "description": "Limit retrieved items",
+                "type": "int",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "start",
+                "description": "Start with this item index",
+                "type": "int",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "search",
+                "description": "Search string",
+                "type": "string",
+                "required": false
+              },
+              {
+                "in": "query",
+                "name": "count",
+                "description": "Return item count only",
+                "type": "boolean",
+                "required": false
+              }
+            ],
+            "tags": [
+              "Limberest Demo Movies"
+            ]
+          }
+        },
+        "/movies/{id}": {
+          "get": {
+            "summary": "Retrieve a movie by {id}",
+            "responses": {
+              "200": {
+                "schema": {
+                  "$ref": "#/definitions/Movie"
+                },
+                "description": "OK"
+              }
+            },
+            "parameters": [
+              {
+                "in": "path",
+                "name": "id",
+                "type": "string",
+                "required": true
+              }
+            ],
+            "tags": [
+              "Limberest Demo Movie"
+            ]
+          },
+          "delete": {
+            "summary": "Delete a movie.",
+            "responses": {
+              "200": {
+                "schema": {
+                  "$ref": "#/definitions/StatusResponse"
+                },
+                "description": "OK"
+              }
+            },
+            "parameters": [
+              {
+                "in": "path",
+                "name": "id",
+                "type": "string",
+                "required": true
+              }
+            ],
+            "tags": [
+              "Limberest Demo Movie"
+            ]
+          },
+          "put": {
+            "summary": "Update a movie.",
+            "responses": {
+              "200": {
+                "schema": {
+                  "$ref": "#/definitions/StatusResponse"
+                },
+                "description": "OK"
+              }
+            },
+            "parameters": [
+              {
+                "in": "path",
+                "name": "id",
+                "type": "string",
+                "required": true
+              },
+              {
+                "schema": {
+                  "$ref": "#/definitions/Movie"
+                },
+                "in": "body",
+                "name": "Movie",
+                "required": true
+              }
+            ],
+            "tags": [
+              "Limberest Demo Movie"
+            ]
+          }
+        }
+      },
+      "produces": [
+        "application/json"
+      ],
+      "schemes": [
+        "https"
+      ],
+      "swagger": "2.0"
+    }

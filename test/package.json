@@ -1,0 +1,16 @@
+{
+  "name": "ply-demo",
+  "version": "1.0.10",
+  "description": "Sample test cases for ply",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ply-ct/ply-demo.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ply-ct": "^1.0.15"
+  },
+  "bugs": {
+    "url": "https://github.com/ply-ct/ply-demo/issues"
+  }
+}

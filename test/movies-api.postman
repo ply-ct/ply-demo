@@ -1,0 +1,183 @@
+{
+	"info": {
+		"name": "movies-api",
+		"_postman_id": "13c7f556-cdae-41cd-297b-4c7bdced3ca0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api-docs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{base-url}}/api-docs",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies?{query}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{base-url}}/movies?{{query}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "{{query}}",
+							"value": "",
+							"equals": false
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"credits\": [\r\n    {\r\n      \"name\": \"Alan Crosland\",\r\n      \"role\": \"director\"\r\n    },\r\n    {\r\n      \"name\": \"Warren William\",\r\n      \"role\": \"actor\"\r\n    },\r\n    {\r\n      \"name\": \"Mary Astor\",\r\n      \"role\": \"actor\"\r\n    },\r\n    {\r\n      \"name\": \"Allen Jenkins\",\r\n      \"role\": \"actor\"\r\n    },\r\n    {\r\n      \"name\": \"Grant Mitchell\",\r\n      \"role\": \"actor\"\r\n    },\r\n    {\r\n      \"name\": \"Helen Trenholme\",\r\n      \"role\": \"actor\"\r\n    }\r\n  ],\r\n  \"poster\": \"cothd.jpg\",\r\n  \"title\": \"The Case of the Howling Dog\",\r\n  \"webRef\": {\r\n    \"ref\": \"tt0024958\",\r\n    \"site\": \"imdb.com\"\r\n  },\r\n  \"year\": 1934\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{base-url}}/movies",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"credits\": [\r\n    {\r\n      \"name\": \"Alan Crosland\",\r\n      \"role\": \"director\"\r\n    },\r\n    {\r\n      \"name\": \"Warren William\",\r\n      \"role\": \"actor\"\r\n    },\r\n    {\r\n      \"name\": \"Mary Astor\",\r\n      \"role\": \"actor\"\r\n    },\r\n    {\r\n      \"name\": \"Allen Jenkins\",\r\n      \"role\": \"actor\"\r\n    },\r\n    {\r\n      \"name\": \"Grant Mitchell\",\r\n      \"role\": \"actor\"\r\n    },\r\n    {\r\n      \"name\": \"Helen Trenholme\",\r\n      \"role\": \"actor\"\r\n    }\r\n  ],\r\n  \"id\": \"{{id}}\",\r\n  \"poster\": \"cothd.jpg\",\r\n  \"rating\": {{rating}},\r\n  \"title\": \"The Case of the Howling Dog\",\r\n  \"webRef\": {\r\n    \"ref\": \"tt0024958\",\r\n    \"site\": \"imdb.com\"\r\n  },\r\n  \"year\": 1934\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{base-url}}/movies/{{id}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"movies",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies/{id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{base-url}}/movies/{{id}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"movies",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{base-url}}/movies/{{id}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"movies",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
