@@ -1,0 +1,12 @@
+api:
+  definitionClasses:
+    - com.plyct.demo.Swagger
+  prettyIndent: 2
+
+request:
+  fallbackContentType:
+    get: application/json
+  
+response:
+  prettyIndent: 2
+ 
