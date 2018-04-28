@@ -9,6 +9,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 
 import com.plyct.demo.model.Movie;
 
@@ -18,46 +22,48 @@ import io.limberest.json.JsonObject;
 import io.limberest.json.JsonableComparator;
 import io.limberest.service.Query;
 import io.limberest.service.http.Status;
-import io.limberest.util.FileLoader;
 
 /**
  * Persistence implementation with a JSON file store.
  * Caches movies in memory.
  */
-public class MoviesPersistFile implements Persist<Movie> {
+@Configuration
+public class MoviesPersist implements Persist<Movie> {
 
-    private String path;
-    
-    public MoviesPersistFile(String path) {
-        this.path = path;
+    @Autowired
+    private ResourceLoader resourceLoader;
+    public ResourceLoader getResourceLoader() {
+        return resourceLoader;
     }
-    
+
+    private String path = "movies.json";
+
     @Override
     public List<Movie> retrieve(Query query) throws PersistException {
         List<Movie> movies = getMovies();
         Stream<Movie> stream = movies.stream();
-        
+
         // filter
         if (query.hasFilters() || query.getSearch() != null) {
             stream = stream.filter(movie -> query.match(new JsonMatcher(movie.toJson())));
         }
-        
+
         // sort
         if ((query.getSort() != null && !"title".equals(query.getSort())) || query.isDescending()) {
             stream = stream.sorted(new JsonableComparator(query, (j1, j2) -> {
                 return getSortTitle(j1).compareToIgnoreCase(getSortTitle(j2));
             }));
         }
-        
+
         // paginate
         if (query.getStart() > 0)
             stream = stream.skip(query.getStart());
         if (query.getMax() != Query.MAX_ALL)
             stream = stream.limit(query.getMax());
-        
+
         return stream.collect(Collectors.toList());
     }
-    
+
     @Override
     public Movie get(String id) throws PersistException {
         for (Movie movie : getMovies()) {
@@ -66,10 +72,10 @@ public class MoviesPersistFile implements Persist<Movie> {
         }
         return null;
     }
-    
+
     @Override
     public Movie create(Movie movie) throws PersistException {
-        synchronized(MoviesPersistFile.class) {
+        synchronized(MoviesPersist.class) {
             load();
             String unique = movie.getTitle() + " (" + movie.getYear() + ")";
             String id = Integer.toHexString(unique.hashCode());
@@ -88,7 +94,7 @@ public class MoviesPersistFile implements Persist<Movie> {
 
     @Override
     public void update(Movie movie) throws PersistException {
-        synchronized(MoviesPersistFile.class) {
+        synchronized(MoviesPersist.class) {
             load();
             Movie toReplace = null;
             for (Movie m : _movies) {
@@ -108,7 +114,7 @@ public class MoviesPersistFile implements Persist<Movie> {
 
     @Override
     public void delete(String id) throws PersistException {
-        synchronized(MoviesPersistFile.class) {
+        synchronized(MoviesPersist.class) {
             load();
             int idx = -1;
             for (int i = 0; i < _movies.size(); i++) {
@@ -123,7 +129,7 @@ public class MoviesPersistFile implements Persist<Movie> {
             save();
         }
     }
-    
+
     public void load() throws PersistException {
         try {
             String json;
@@ -132,9 +138,10 @@ public class MoviesPersistFile implements Persist<Movie> {
                 json = new String(Files.readAllBytes(Paths.get(file.getPath())));
             }
             else {
-                json = new String(new FileLoader(path).readFromClassLoader());
+                Resource res = resourceLoader.getResource("classpath:" + path);
+                json = new String(Files.readAllBytes(Paths.get(res.getURI())));
             }
-            
+
             // use Limberest's JsonObject for sorted keys
             JSONObject jsonObj = new JsonObject(json);
             JsonList<Movie> jsonList = new JsonList<Movie>(jsonObj, Movie.class);
@@ -147,7 +154,7 @@ public class MoviesPersistFile implements Persist<Movie> {
             throw new PersistException(ex.getMessage(), ex);
         }
     }
-    
+
     private void save() throws PersistException {
         JsonList<Movie> movieList = new JsonList<>(_movies, "movies");
         try {
@@ -161,16 +168,16 @@ public class MoviesPersistFile implements Persist<Movie> {
             throw new PersistException(ex.getMessage(), ex);
         }
     }
-    
+
     private static List<Movie> _movies;
     private List<Movie> getMovies() throws PersistException {
-        synchronized(MoviesPersistFile.class) {
+        synchronized(MoviesPersist.class) {
             if (_movies == null)
                 load();
         }
         return _movies;
     }
-    
+
     private static final String[] ignoredLeadingArticles = new String[]{"A ", "An ", "The "};
     private static String getSortTitle(JSONObject json) {
         String title = json.has("title") ? json.getString("title") : "";

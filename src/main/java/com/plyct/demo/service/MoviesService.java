@@ -2,14 +2,13 @@ package com.plyct.demo.service;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.ServiceLoader;
 
 import javax.ws.rs.Path;
 
 import org.json.JSONObject;
 
+import com.plyct.demo.ContextAccess;
 import com.plyct.demo.model.Movie;
-import com.plyct.demo.persist.MoviesPersistFile;
 import com.plyct.demo.persist.Persist;
 
 import io.limberest.api.validate.SwaggerValidator;
@@ -58,7 +57,7 @@ public class MoviesService extends JsonRestService {
     @Override
     @ApiOperation(value="Create a movie", response=Movie.class)
     @ApiImplicitParams({
-        @ApiImplicitParam(name="Movie", paramType="body", dataType="io.limberest.demo.model.Movie", required=true)})
+        @ApiImplicitParam(name="Movie", paramType="body", dataType="com.plyct.demo.model.Movie", required=true)})
     public Response<JSONObject> post(Request<JSONObject> request) throws ServiceException {
 
         validate(request);
@@ -98,16 +97,8 @@ public class MoviesService extends JsonRestService {
         return val;
     }
 
-    /**
-     * Crude injection.
-     */
-    @SuppressWarnings({"rawtypes", "unchecked"})
+    @SuppressWarnings("unchecked")
     static Persist<Movie> getPersist() {
-        ServiceLoader<Persist> persistLoader = ServiceLoader.load(Persist.class);
-        for (Persist<?> persist : persistLoader) {
-            if (persist != null && persist.getType().equals(Movie.class))
-                return (Persist<Movie>)persist;
-        }
-        return new MoviesPersistFile("movies.json");
+        return ContextAccess.getApplicationContext().getBean(Persist.class);
     }
 }

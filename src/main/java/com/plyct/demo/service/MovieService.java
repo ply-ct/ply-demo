@@ -50,7 +50,7 @@ public class MovieService extends MoviesService {
     @ApiOperation(value="Update a movie.", response=StatusResponse.class)
     @ApiImplicitParams({
         @ApiImplicitParam(name="id", paramType="path", dataType="string", required=true),
-        @ApiImplicitParam(name="Movie", paramType="body", dataType="io.limberest.demo.model.Movie", required=true)})
+        @ApiImplicitParam(name="Movie", paramType="body", dataType="com.plyct.demo.model.Movie", required=true)})
     public Response<JSONObject> put(Request<JSONObject> request) throws ServiceException {
 
         validate(request);
