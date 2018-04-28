@@ -10,9 +10,9 @@ import java.util.stream.Stream;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
+import org.springframework.stereotype.Component;
 
 import com.plyct.demo.model.Movie;
 
@@ -27,7 +27,7 @@ import io.limberest.service.http.Status;
  * Persistence implementation with a JSON file store.
  * Caches movies in memory.
  */
-@Configuration
+@Component
 public class MoviesPersist implements Persist<Movie> {
 
     @Autowired

@@ -6,8 +6,9 @@ import java.util.List;
 import javax.ws.rs.Path;
 
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import com.plyct.demo.ContextAccess;
 import com.plyct.demo.model.Movie;
 import com.plyct.demo.persist.Persist;
 
@@ -29,7 +30,14 @@ import io.swagger.models.properties.DecimalProperty;
 
 @Path("/movies")
 @Api("movies")
+@Component
 public class MoviesService extends JsonRestService {
+
+    @Autowired
+    private Persist<Movie> persist;
+    public Persist<Movie> getPersist() {
+        return persist;
+    }
 
     @ApiOperation(value="Retrieve movies",
         notes="Returns an (optionally paginated) array of movies matching query criteria.",
@@ -95,10 +103,5 @@ public class MoviesService extends JsonRestService {
             return new Result(Status.OK);
         });
         return val;
-    }
-
-    @SuppressWarnings("unchecked")
-    static Persist<Movie> getPersist() {
-        return ContextAccess.getApplicationContext().getBean(Persist.class);
     }
 }

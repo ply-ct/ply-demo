@@ -24,6 +24,23 @@ repositories {
 
 dependencies {
 	compile "org.springframework.boot:spring-boot-starter-web"
-	compile "io.limberest:limberest:${limberestVersion}"
+	// compile "io.limberest:limberest:${limberestVersion}"
+    compile 'io.swagger:swagger-annotations:1.5.13'
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    
+    // TEMP TEMP TEMP
+    compile fileTree(dir: "../limberest/build/libs", include: "limberest-1.2.0.jar")
+    compileOnly 'javax.servlet:javax.servlet-api:3.0.1'
+    compile 'com.google.guava:guava:21.0'
+    compile 'org.reflections:reflections:0.9.10'
+    compile 'io.swagger:swagger-core:1.5.13'
+    compile 'io.swagger:swagger-models:1.5.13'
+    compile 'io.swagger:swagger-servlet:1.5.13'
+
+    compile 'javax.ws.rs:javax.ws.rs-api:2.0'
+    compile 'org.json:json:20160810'
+    compile 'ch.qos.logback:logback-core:1.1.9'
+    compile 'ch.qos.logback:logback-classic:1.1.9'
+    compile 'junit:junit:4.12'
+
 }

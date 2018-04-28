@@ -6,6 +6,7 @@ import java.util.List;
 import javax.ws.rs.Path;
 
 import org.json.JSONObject;
+import org.springframework.stereotype.Component;
 
 import com.plyct.demo.model.Movie;
 
@@ -25,6 +26,7 @@ import io.swagger.annotations.ApiOperation;
  */
 @Path(value="/movies/{id}" )
 @Api("movie")
+@Component
 public class MovieService extends MoviesService {
 
     /**
