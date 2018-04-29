@@ -2,8 +2,3 @@ server:
   port: 8080
   servlet:
     context-path: /ply-demo
-
-spring:
-  logging:
-    level:
-     com.plyct.demo: ERROR

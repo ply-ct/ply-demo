@@ -6,7 +6,7 @@
     </encoder>
   </appender>
 
-  <logger name="com.plyct.demo" level="trace" additivity="false">
+  <logger name="com.plyct.demo" level="debug" additivity="false">
     <appender-ref ref="STDOUT" />
   </logger>
 
