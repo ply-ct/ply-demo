@@ -30,9 +30,9 @@ dependencies {
     
     
     // TEMP TEMP TEMP
-    compile fileTree(dir: "../limberest/build/libs", include: "limberest-1.2.0.jar")
+    compile fileTree(dir: "../limberest/build/libs", include: "limberest-1.2.1.jar")
     compileOnly 'javax.servlet:javax.servlet-api:3.0.1'
-    compile 'org.reflections:reflections:0.9.10'
+    compile 'org.reflections:reflections:0.9.11'
     compile 'io.swagger:swagger-core:1.5.19'
     compile 'io.swagger:swagger-models:1.5.19'
     compile 'io.swagger:swagger-servlet:1.5.19'
@@ -41,6 +41,6 @@ dependencies {
 //    compile 'ch.qos.logback:logback-core:1.1.9'
 //    compile 'ch.qos.logback:logback-classic:1.1.9'
     compile 'junit:junit:4.12'
-    compile 'javax.xml.bind:jaxb-api:2.3.0'
+    compile 'javax.xml.bind:jaxb-api:2.2.12'
     
 }
