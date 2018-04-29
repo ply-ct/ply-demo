@@ -1,0 +1,9 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /ply-demo
+
+spring:
+  logging:
+    level:
+     com.plyct.demo: ERROR
