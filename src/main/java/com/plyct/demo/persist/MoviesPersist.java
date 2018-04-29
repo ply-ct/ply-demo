@@ -1,7 +1,9 @@
 package com.plyct.demo.persist;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -139,7 +141,16 @@ public class MoviesPersist implements Persist<Movie> {
             }
             else {
                 Resource res = resourceLoader.getResource("classpath:" + path);
-                json = new String(Files.readAllBytes(Paths.get(res.getURI())));
+                try (InputStream is = res.getInputStream()) {
+                    ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+                    int bytesRead;
+                    byte[] data = new byte[1024];
+                    while ((bytesRead = is.read(data, 0, data.length)) != -1) {
+                        buffer.write(data, 0, bytesRead);
+                    }
+                    buffer.flush();
+                    json = new String(buffer.toByteArray());
+                }
             }
 
             // use Limberest's JsonObject for sorted keys
