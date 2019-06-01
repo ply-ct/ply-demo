@@ -47,7 +47,7 @@ response:
     message: Created
   headers:
     content-type: application/json
-    location: 'https://ply-ct.com/demo/api/movies/435b30ad'
+    location: '${base-url}/movies/435b30ad'
   body: |-
     {
       "credits": [
