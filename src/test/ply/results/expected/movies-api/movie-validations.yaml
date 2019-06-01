@@ -50,7 +50,7 @@ response:
     {
       "status": {
         "code": 400,
-        "message": "title is required\nyear: value '1812' is less than minimum (1900)"
+        "message": "[\"title is required\", \"year: value '1812' is less than minimum (1900)\"]"
       }
     }
 test: create movie
@@ -195,7 +195,7 @@ response:
     {
       "status": {
         "code": 400,
-        "message": "rating: value '5.2' must be a multiple of 0.5\nrating: value '5.2' exceeds maximum (5)"
+        "message": "[\"rating: value '5.2' exceeds maximum (5)\", \"rating: value '5.2' must be a multiple of 0.5\"]"
       }
     }
 test: movie-validations
