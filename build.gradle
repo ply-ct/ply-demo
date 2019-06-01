@@ -8,7 +8,6 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
@@ -25,6 +24,6 @@ repositories {
 dependencies {
 	compile "org.springframework.boot:spring-boot-starter-web"
 	compile "io.limberest:limberest:${limberestVersion}"
-    compile 'io.swagger:swagger-annotations:1.5.19'
-    testCompile('org.springframework.boot:spring-boot-starter-test')   
+  compile 'io.swagger:swagger-annotations:1.5.19'
+  testCompile('org.springframework.boot:spring-boot-starter-test')
 }

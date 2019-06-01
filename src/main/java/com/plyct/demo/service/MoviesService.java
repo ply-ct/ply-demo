@@ -17,7 +17,6 @@ import io.limberest.json.JsonList;
 import io.limberest.json.JsonRestService;
 import io.limberest.service.ServiceException;
 import io.limberest.service.http.Request;
-import io.limberest.service.http.Request.HttpMethod;
 import io.limberest.service.http.Response;
 import io.limberest.service.http.Status;
 import io.limberest.validate.Result;
@@ -74,16 +73,6 @@ public class MoviesService extends JsonRestService {
         Response<JSONObject> response = new Response<>(Status.CREATED, movie.toJson());
         response.getHeaders().put("Location", request.getBase() + "/movies/" + movie.getId());
         return response;
-    }
-
-    /**
-     * Require authentication for all methods except GET.
-     * See also {@link MovieService#getRolesAllowedAccess(Request)}, which further restricts
-     * by authorizing DELETE operations only for a specific role.
-     */
-    @Override
-    public boolean isAuthenticationRequired(Request<JSONObject> request) {
-        return request.getMethod() != HttpMethod.GET;
     }
 
     protected void validate(Request<JSONObject> request) throws ValidationException {

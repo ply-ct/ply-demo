@@ -1,8 +1,5 @@
 package com.plyct.demo.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.ws.rs.Path;
 
 import org.json.JSONObject;
@@ -91,19 +88,5 @@ public class MovieService extends MoviesService {
     public Response<JSONObject> post(Request<JSONObject> request)
             throws ServiceException {
         throw new ServiceException(Status.NOT_IMPLEMENTED, HttpMethod.POST + " not implemented");
-    }
-
-    /**
-     * This implementation illustrates how to restrict operations to users
-     * with specific roles.  Only DELETE operations are restricted here.
-     */
-    @Override
-    public List<String> getRolesAllowedAccess(Request<JSONObject> request) {
-        if (request.getMethod() == HttpMethod.DELETE) {
-            List<String> roles = new ArrayList<>();
-            roles.add("Deleters");
-            return roles;
-        }
-        return null; // access is not restricted for other operations
     }
 }
