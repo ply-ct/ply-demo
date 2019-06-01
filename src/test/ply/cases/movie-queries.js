@@ -1,18 +1,18 @@
 'use strict';
 
-const limberest = require('limberest');
-const demo = require('../lib/limberest-demo');
-const Case = limberest.Case;
+const ply = require('ply-ct');
+const demo = require('../lib/ply-demo');
+const Case = ply.Case;
 
 var options = demo.getOptions();
 const testCase = new Case('movie-queries', options);
 
-//to be replaced once loaded
+// to be replaced once loaded
 var group = 'movies-api.postman';
-var values = {'base-url': 'https://limberest.io/demo'};
+var values = {'base-url': 'https://ply-ct.com/demo/api'};
 var request;
 
-limberest.loadGroup(options.location + '/' + group)
+ply.loadGroup(options.location + '/' + group)
 .then(loadedGroup => {
   group = loadedGroup;
   values.query = 'rating=5&year=1935'; 
@@ -41,13 +41,13 @@ limberest.loadGroup(options.location + '/' + group)
 })
 .then(response => {
   // load results
-  return limberest.loadFile(options, 'results/expected/movies-api/movie-queries.yaml');
+  return ply.loadFile(options, 'results/expected/movies-api/movie-queries.yaml');
 })
 .then(expectedResult => {
   // compare expected vs actual
   var res = testCase.verifyResult(expectedResult, values);
   if (demo.getUiCallback()) {
-    // tell the UI (limberest-ui)
+    // tell the UI (ply-ui)
     demo.getUiCallback()(null, res, values);
   }
 })

@@ -1,34 +1,34 @@
 'use strict';
 
-// Helper for limberest demo test cases.
+// Helper for ply demo test cases.
 
-// const limberest = require('limberest');
-const limberest = require('../../../limberest-js/lib/limberest');
-const Logger = limberest.Logger;
-const Case = limberest.Case;
+const ply = require('ply-ct');
+// const ply = require('../../../ply/lib/ply');
+const Logger = ply.Logger;
+const Case = ply.Case;
 
-function LimberestDemo() {
+function PlyDemo() {
 }
 
-LimberestDemo.prototype.isBrowser = function() {
+PlyDemo.prototype.isBrowser = function() {
   return (typeof window !== 'undefined');  
 };
 
-LimberestDemo.prototype.setRemote = function(remote) {
+PlyDemo.prototype.setRemote = function(remote) {
   this.remote = remote;
 }
-LimberestDemo.prototype.isRemote = function() {
+PlyDemo.prototype.isRemote = function() {
   return this.remote || this.isBrowser();
 }
 
 // Returns options as appropriate for browser vs local. 
-LimberestDemo.prototype.getOptions = function() {
+PlyDemo.prototype.getOptions = function() {
   var testsLoc = '..';
   var path = null;
   
   if (this.isRemote()) {
     // in browser
-    testsLoc = 'https://raw.githubusercontent.com/limberest/limberest-demo/master/test';
+    testsLoc = 'https://raw.githubusercontent.com/ply-ct/ply-demo/master/src/test/ply';
   }
   return {
     location: testsLoc,
@@ -43,27 +43,27 @@ LimberestDemo.prototype.getOptions = function() {
   }
 };
 
-LimberestDemo.prototype.setAuth = function(auth) {
+PlyDemo.prototype.setAuth = function(auth) {
   this.auth = auth;
 }
-LimberestDemo.prototype.getAuth = function(options) {
+PlyDemo.prototype.getAuth = function(options) {
   if (this.isBrowser()) {
     return this.auth;
   }
   else {
-    return limberest.loadValuesSync(options.location + '/auth.values');
+    return ply.loadValuesSync(options.location + '/auth.values');
   }
 };
 
-LimberestDemo.prototype.setUiCallback = function(callback) {
+PlyDemo.prototype.setUiCallback = function(callback) {
   this.uiCallback = callback;
 };
-LimberestDemo.prototype.getUiCallback = function() {
+PlyDemo.prototype.getUiCallback = function() {
   return this.uiCallback;
 };
 
 // TODO: other than Basic
-LimberestDemo.prototype.getAuthHeader = function() {
+PlyDemo.prototype.getAuthHeader = function() {
   var auth = this.getAuth(this.getOptions());
   if (this.isBrowser()) {
     return 'Basic ' + btoa(auth.user + ':' + auth.password);
@@ -73,12 +73,12 @@ LimberestDemo.prototype.getAuthHeader = function() {
   }
 };
 
-LimberestDemo.prototype.cleanupMovie = function(group, values) {
+PlyDemo.prototype.cleanupMovie = function(group, values) {
   var options = Object.assign({}, this.getOptions(), {retainResult: false, retainLog: false});
   const testCase = new Case('movie-cleanup', options);
   testCase.authHeader = this.getAuthHeader();
   return new Promise(function(resolve, reject) {
-    // Run the DELETE request against limberest.io
+    // Run the DELETE request against ply-ct.com
     var request = group.getRequest('DELETE', 'movies/{id}');
     testCase.run(request, values, 'delete movie')
     .then(response => {
@@ -96,7 +96,7 @@ LimberestDemo.prototype.cleanupMovie = function(group, values) {
   });
 };
 
-LimberestDemo.prototype.getLogger = function(group, caseName) {
+PlyDemo.prototype.getLogger = function(group, caseName) {
   var options = this.getOptions();
   return new Logger({
     level: options.debug ? 'debug' : 'info',
@@ -107,4 +107,4 @@ LimberestDemo.prototype.getLogger = function(group, caseName) {
   
 };
 
-module.exports = new LimberestDemo();
+module.exports = new PlyDemo();

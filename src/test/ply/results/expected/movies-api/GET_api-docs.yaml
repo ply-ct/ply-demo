@@ -156,7 +156,7 @@ response:
               }
             ],
             "tags": [
-              "Limberest Demo Movies"
+              "Ply Demo Movies"
             ]
           },
           "get": {
@@ -253,7 +253,7 @@ response:
               }
             ],
             "tags": [
-              "Limberest Demo Movies"
+              "Ply Demo Movies"
             ]
           }
         },
@@ -277,7 +277,7 @@ response:
               }
             ],
             "tags": [
-              "Limberest Demo Movie"
+              "Ply Demo Movie"
             ]
           },
           "delete": {
@@ -299,7 +299,7 @@ response:
               }
             ],
             "tags": [
-              "Limberest Demo Movie"
+              "Ply Demo Movie"
             ]
           },
           "put": {
@@ -329,7 +329,7 @@ response:
               }
             ],
             "tags": [
-              "Limberest Demo Movie"
+              "Ply Demo Movie"
             ]
           }
         }

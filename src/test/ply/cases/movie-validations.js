@@ -3,19 +3,19 @@
 /** 
  * Negative testing to prove swagger validations.
  */
-const limberest = require('limberest');
-const demo = require('../lib/limberest-demo');
-const Case = limberest.Case;
+const ply = require('ply-ct');
+const demo = require('../lib/ply-demo');
+const Case = ply.Case;
 
 var options = demo.getOptions();
 const testCase = new Case('movie-validations', options);
 testCase.authHeader = demo.getAuthHeader();
-const values = {'base-url': 'https://limberest.io/demo', id: '435b30ad'};
+const values = {'base-url': 'https://ply-ct.com/demo/api', id: '435b30ad'};
 const logger = demo.getLogger('movies-api', testCase.name);
 
 var group = 'movies-api.postman';
 
-limberest.loadGroup(options.location + '/' + group)
+ply.loadGroup(options.location + '/' + group)
 .then(loadedGroup => {
   group = loadedGroup;
   // start clean
@@ -52,13 +52,13 @@ limberest.loadGroup(options.location + '/' + group)
 })
 .then(response => {
   // load results
-  return limberest.loadFile(options, 'results/expected/movies-api/movie-validations.yaml');
+  return ply.loadFile(options, 'results/expected/movies-api/movie-validations.yaml');
 })
 .then(expectedResult => {
   // compare expected vs actual
   var res = testCase.verifyResult(expectedResult, values);
   if (demo.getUiCallback()) {
-    // tell the UI (limberest-ui)
+    // tell the UI (ply-ui)
     demo.getUiCallback()(null, res, values);
   }
 })
