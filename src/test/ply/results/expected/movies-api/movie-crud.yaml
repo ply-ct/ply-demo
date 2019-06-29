@@ -1,6 +1,6 @@
 test: create movie
 request:
-  url: '${base-url}/movies'
+  url: '${baseUrl}/movies'
   method: POST
   headers:
     Accept: application/json
@@ -47,7 +47,7 @@ response:
     message: Created
   headers:
     content-type: application/json
-    location: '${base-url}/movies/${id}'
+    location: '${baseUrl}/movies/${id}'
   body: |-
     {
       "credits": [
@@ -87,7 +87,7 @@ response:
     }
 test: update rating
 request:
-  url: '${base-url}/movies/${id}'
+  url: '${baseUrl}/movies/${id}'
   method: PUT
   headers:
     Accept: application/json
@@ -145,7 +145,7 @@ response:
     }
 test: confirm update
 request:
-  url: '${base-url}/movies/${id}'
+  url: '${baseUrl}/movies/${id}'
   method: GET
   headers:
     Accept: application/json
@@ -195,7 +195,7 @@ response:
     }
 test: delete movie
 request:
-  url: '${base-url}/movies/${id}'
+  url: '${baseUrl}/movies/${id}'
   method: DELETE
   headers:
     Accept: application/json
@@ -214,7 +214,7 @@ response:
     }
 test: confirm delete
 request:
-  url: '${base-url}/movies/${id}'
+  url: '${baseUrl}/movies/${id}'
   method: GET
   headers:
     Accept: application/json

@@ -79,7 +79,7 @@ PlyDemo.prototype.cleanupMovie = function(group, values) {
   testCase.authHeader = this.getAuthHeader();
   return new Promise(function(resolve, reject) {
     // Run the DELETE request against ply-ct.com
-    var request = group.getRequest('DELETE', 'movies/{id}');
+    var request = group.getRequest('DELETE', 'Delete Movie');
     testCase.run(request, values, 'delete movie')
     .then(response => {
       if (response.status.code === 200 || response.status.code === 404) {

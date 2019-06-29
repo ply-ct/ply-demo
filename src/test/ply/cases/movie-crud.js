@@ -14,42 +14,43 @@ const testCase = new Case('movie-crud', options);
 testCase.authHeader = demo.getAuthHeader();
 
 const values = {
-  'base-url': 'https://ply-ct.com/demo/api',
+  'baseUrl': 'https://ply-ct.com/demo/api',
   id: '435b30ad'
 };
 const logger = demo.getLogger('movies-api', testCase.name);
 
-var group = 'movies-api.postman'; // to be replaced once loaded
+var suiteName = 'movies-api.postman';
+var group;
 
-ply.loadGroup(options.location + '/' + group)
+ply.loadGroup(options.location + '/' + suiteName)
 .then(loadedGroup => {
   group = loadedGroup;
   return demo.cleanupMovie(group, values);
 })
 .then(() => {
   logger.info('Cleanup completed for movie: ' + values.id);
-  var post = group.getRequest('POST', 'movies');
+  var post = group.getRequest('POST', 'Create Movie');
   return testCase.run(post, values, 'create movie');
 })
 .then(response => {
   // update it (with programmatically-set rating)
   values.rating = 4.5;
-  var put = group.getRequest('PUT', 'movies/{id}');
+  var put = group.getRequest('PUT', 'Update Movie');
   return testCase.run(put, values, 'update rating');
 })
 .then(response => {
   // confirm update
-  var get = group.getRequest('GET', 'movies/{id}');
+  var get = group.getRequest('GET', 'Movie by ID');
   return testCase.run(get, values, 'confirm update');
 })
 .then(response => {
   // delete it
-  var del = group.getRequest('DELETE', 'movies/{id}');
+  var del = group.getRequest('DELETE', 'Delete Movie');
   return testCase.run(del, values, 'delete movie');
 })
 .then(response => {
   // confirm delete
-  var get = group.getRequest('GET', 'movies/{id}');
+  var get = group.getRequest('GET', 'Movie by ID');
   return testCase.run(get, values, 'confirm delete');
 })
 .then(response => {

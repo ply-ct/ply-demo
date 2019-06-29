@@ -7,16 +7,15 @@ const Case = ply.Case;
 var options = demo.getOptions();
 const testCase = new Case('movie-queries', options);
 
-// to be replaced once loaded
-var group = 'movies-api.postman';
-var values = {'base-url': 'https://ply-ct.com/demo/api'};
+var suiteName = 'movies-api.postman';
+var values = {'baseUrl': 'https://ply-ct.com/demo/api'};
 var request;
 
-ply.loadGroup(options.location + '/' + group)
+ply.loadGroup(options.location + '/' + suiteName)
 .then(loadedGroup => {
-  group = loadedGroup;
+  var group = loadedGroup;
   values.query = 'rating=5&year=1935'; 
-  request = group.getRequest('GET', 'movies?{query}');
+  request = group.getRequest('GET', 'Movies Query');
   return testCase.run(request, values, '5-star movies from 1935');
 })
 .then(response => {

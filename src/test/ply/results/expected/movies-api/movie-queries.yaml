@@ -1,6 +1,6 @@
 test: 5-star movies from 1935
 request:
-  url: '${base-url}/movies?rating=5&year=1935'
+  url: '${baseUrl}/movies?rating=5&year=1935'
   method: GET
   headers:
     Accept: application/json
@@ -55,7 +55,7 @@ response:
     }
 test: movies with Phantom in the title
 request:
-  url: '${base-url}/movies?title=Phantom'
+  url: '${baseUrl}/movies?title=Phantom'
   method: GET
   headers:
     Accept: application/json
@@ -421,7 +421,7 @@ response:
     }
 test: prohibition-era stinkers
 request:
-  url: '${base-url}/movies?rating=<2.5&year=<=1933'
+  url: '${baseUrl}/movies?rating=<2.5&year=<=1933'
   method: GET
   headers:
     Accept: application/json
@@ -552,7 +552,7 @@ response:
 test: top three movies with Bela Lugosi
 request:
   url: >-
-    ${base-url}/movies?sort=rating&descending=true&max=3&search=Bela
+    ${baseUrl}/movies?sort=rating&descending=true&max=3&search=Bela
     Lugosi
   method: GET
   headers:
@@ -684,7 +684,7 @@ response:
     }
 test: earliest movie directed by Alfred Hitchcock
 request:
-  url: '${base-url}/movies?sort=year&max=1&search=Alfred Hitchcock'
+  url: '${baseUrl}/movies?sort=year&max=1&search=Alfred Hitchcock'
   method: GET
   headers:
     Accept: application/json
@@ -737,7 +737,7 @@ response:
     }
 test: query by id
 request:
-  url: '${base-url}/movies?id=8f180e68'
+  url: '${baseUrl}/movies?id=8f180e68'
   method: GET
   headers:
     Accept: application/json

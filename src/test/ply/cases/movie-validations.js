@@ -10,19 +10,20 @@ const Case = ply.Case;
 var options = demo.getOptions();
 const testCase = new Case('movie-validations', options);
 testCase.authHeader = demo.getAuthHeader();
-const values = {'base-url': 'https://ply-ct.com/demo/api', id: '435b30ad'};
+const values = {'baseUrl': 'https://ply-ct.com/demo/api', id: '435b30ad'};
 const logger = demo.getLogger('movies-api', testCase.name);
 
-var group = 'movies-api.postman';
+var suiteName = 'movies-api.postman';
+var group;
 
-ply.loadGroup(options.location + '/' + group)
+ply.loadGroup(options.location + '/' + suiteName)
 .then(loadedGroup => {
   group = loadedGroup;
   // start clean
   return demo.cleanupMovie(group, values);
 })
 .then(response => {
-  var post = group.getRequest('POST', 'movies');
+  var post = group.getRequest('POST', 'Create Movie');
   var movie = post.json();
   delete movie.title; // no title
   movie.year = 1812;  // invalid year
@@ -31,23 +32,23 @@ ply.loadGroup(options.location + '/' + group)
 })
 .then(response => {
   // create good movie
-  var post = group.getRequest('POST', 'movies');
+  var post = group.getRequest('POST', 'Create Movie');
   return testCase.run(post, values, 'create movie');
 })
 .then(response => {
   // rating is parameterized, so set through values
   values.rating = 5.2; // bad on two counts
-  var put = group.getRequest('PUT', 'movies/{id}');
+  var put = group.getRequest('PUT', 'Update Movie');
   return testCase.run(put, values);
 })
 .then(response => {
   // confirm it didn't take
-  var get = group.getRequest('GET', 'movies/{id}');
+  var get = group.getRequest('GET', 'Movie by ID');
   return testCase.run(get, values);
 })
 .then(response => {
   // clean up
-  var del = group.getRequest('DELETE', 'movies/{id}');
+  var del = group.getRequest('DELETE', 'Delete Movie');
   return testCase.run(del, values);
 })
 .then(response => {
