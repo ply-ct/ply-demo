@@ -3,3 +3,6 @@
 bin/
 movies.json
 /notes/
+.idea/**/*.iml
+.idea/workspace.xml
+.idea/tasks.xml
