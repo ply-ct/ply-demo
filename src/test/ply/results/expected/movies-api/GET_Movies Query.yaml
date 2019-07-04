@@ -1,6 +1,6 @@
-test: 'GET:movies?{query}'
+test: 'GET:Movies Query'
 request:
-  url: '${base-url}/movies?${query}'  # value expressions
+  url: '${baseUrl}/movies?${query}'  # value expressions
   method: GET
   headers:
     Accept: application/json

@@ -1,6 +1,6 @@
-test: 'GET:movies/{id}'
+test: 'GET:Movie by ID'
 request:
-  url: '${base-url}/movies/${id}'
+  url: '${baseUrl}/movies/${id}'
   method: GET
   headers:
     Accept: application/json
@@ -40,7 +40,6 @@ response:
       ],
       "id": "${id}",
       "poster": "cothd.jpg",
-      "rating": ${rating},
       "title": "The Case of the Howling Dog",
       "webRef": {
         "ref": "tt0024958",
