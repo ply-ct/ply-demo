@@ -69,7 +69,7 @@ PlyDemo.prototype.getAuthHeader = function() {
     return 'Basic ' + btoa(auth.user + ':' + auth.password);
   }
   else {
-    return 'Basic ' + new Buffer(auth.user + ':' + auth.password).toString('base64');
+    return 'Basic ' + Buffer.from(auth.user + ':' + auth.password).toString('base64');
   }
 };
 
