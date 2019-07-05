@@ -5,7 +5,7 @@ moviesQuery:
     Accept: application/json
 
 movieById:
-  url: '${baseUrl}/movies/year=${year}'
+  url: '${baseUrl}/movies/${id}'
   method: GET
   headers:
     Accept: application/json
