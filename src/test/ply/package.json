@@ -1,6 +1,6 @@
 {
   "name": "ply-demo",
-  "version": "1.0.16",
+  "version": "1.1.5",
   "description": "Sample test cases for ply",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "ply-ct": "^1.0.16"
+    "ply-ct": "^1.1.5"
   },
   "bugs": {
     "url": "https://github.com/ply-ct/ply-demo/issues"

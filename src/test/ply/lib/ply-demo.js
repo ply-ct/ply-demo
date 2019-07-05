@@ -3,7 +3,7 @@
 // Helper for ply demo test cases.
 
 const ply = require('ply-ct');
-// const ply = require('../../../ply/lib/ply');
+// const ply = require('../../../../../ply/src/ply.js');
 const Logger = ply.Logger;
 const Case = ply.Case;
 
@@ -51,7 +51,7 @@ PlyDemo.prototype.getAuth = function(options) {
     return this.auth;
   }
   else {
-    return ply.loadValuesSync(options.location + '/auth.values');
+    return ply.loadValues(options.location + '/values/auth.values.json');
   }
 };
 
@@ -73,13 +73,13 @@ PlyDemo.prototype.getAuthHeader = function() {
   }
 };
 
-PlyDemo.prototype.cleanupMovie = function(group, values) {
+PlyDemo.prototype.cleanupMovie = function(requests, values) {
   var options = Object.assign({}, this.getOptions(), {retainResult: false, retainLog: false});
   const testCase = new Case('movie-cleanup', options);
   testCase.authHeader = this.getAuthHeader();
   return new Promise(function(resolve, reject) {
     // Run the DELETE request against ply-ct.com
-    var request = group.getRequest('DELETE', 'Delete Movie');
+    var request = requests['Delete Movie'];
     testCase.run(request, values, 'delete movie')
     .then(response => {
       if (response.status.code === 200 || response.status.code === 404) {

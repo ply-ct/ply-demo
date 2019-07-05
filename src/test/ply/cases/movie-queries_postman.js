@@ -1,23 +1,19 @@
 'use strict';
 
 const ply = require('ply-ct');
+// const ply = require('../../../../../ply/src/ply.js');
 const demo = require('../lib/ply-demo');
 const Case = ply.Case;
 
 var options = demo.getOptions();
 const testCase = new Case('movie-queries', options);
 
-var suiteName = 'movies-api.postman';
+const requests = ply.loadRequests(options.location + '/requests/movies-api.postman_collection.json');
+const request = requests['Movies Query'];
 var values = {'baseUrl': 'https://ply-ct.com/demo/api'};
-var request;
+values.query = 'rating=5&year=1935'; 
 
-ply.loadGroup(options.location + '/' + suiteName)
-.then(loadedGroup => {
-  var group = loadedGroup;
-  values.query = 'rating=5&year=1935'; 
-  request = group.getRequest('GET', 'Movies Query');
-  return testCase.run(request, values, '5-star movies from 1935');
-})
+testCase.run(request, values, '5-star movies from 1935')
 .then(response => {
   values.query = 'title=Phantom'
   return testCase.run(request, values, 'movies with Phantom in the title');
@@ -40,19 +36,10 @@ ply.loadGroup(options.location + '/' + suiteName)
 })
 .then(response => {
   // load results
-  return ply.loadFile(options, 'results/expected/movies-api/movie-queries.yaml');
-})
-.then(expectedResult => {
+  const expected = ply.loadFile(options.location + '/results/expected/movies-api/movie-queries.yaml');
   // compare expected vs actual
-  var res = testCase.verifyResult(expectedResult, values);
-  if (demo.getUiCallback()) {
-    // tell the UI (ply-ui)
-    demo.getUiCallback()(null, res, values);
-  }
+  const res = testCase.verifyResult(expected, values);
 })
 .catch(err => {
   testCase.handleError(err);
-  if (demo.getUiCallback()) {
-    demo.getUiCallback()(err);
-  }
 });
