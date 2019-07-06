@@ -1,6 +1,6 @@
-test: 'DEL:movies/{id}'
+test: 'DEL:Delete Movie'
 request:
-  url: '${base-url}/movies/${id}'
+  url: '${baseUrl}/movies/${id}'
   method: DELETE
   headers:
     Accept: application/json

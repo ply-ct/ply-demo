@@ -1,6 +1,6 @@
-test: 'PUT:movies/{id}'
+test: 'PUT:Update Movie'
 request:
-  url: '${base-url}/movies/${id}'
+  url: '${baseUrl}/movies/${id}'
   method: PUT
   headers:
     Accept: application/json

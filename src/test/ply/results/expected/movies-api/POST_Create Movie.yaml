@@ -1,6 +1,6 @@
-test: 'POST:movies' # comments are ignored when comparing
+test: 'POST:Create Movie' # comments are ignored when comparing
 request:
-  url: '${base-url}/movies'
+  url: '${baseUrl}/movies'
   method: POST
   headers:
     Accept: application/json
