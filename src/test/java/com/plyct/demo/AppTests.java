@@ -1,5 +1,8 @@
 package com.plyct.demo;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +18,7 @@ public class AppTests {
 
 	@Test
 	public void somethingElse() {
+		assertEquals("x", "x");
 	}
 
 }

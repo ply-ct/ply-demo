@@ -1,9 +1,9 @@
 'use strict';
 
-/** 
- * Programmatically run an orchestrated sequence of tests 
+/**
+ * Programmatically run an orchestrated sequence of tests
  * using promise syntax. TODO: regex example
- */ 
+ */
 
 const ply = require('ply-ct');
 // const ply = require('../../../../../ply/src/ply.js');

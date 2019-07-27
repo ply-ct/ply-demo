@@ -1,5 +1,12 @@
+# general purpose query
 moviesQuery:
-  url: '${baseUrl}/movies/year=${year}'
+  url: '${baseUrl}/movies?${query}'
+  method: GET
+  headers:
+    Accept: application/json
+
+moviesByYear:
+  url: '${baseUrl}/movies?year=${year}'
   method: GET
   headers:
     Accept: application/json
