@@ -11,7 +11,7 @@ function PlyDemo() {
 }
 
 PlyDemo.prototype.isBrowser = function() {
-  return (typeof window !== 'undefined');  
+  return (typeof window !== 'undefined');
 };
 
 PlyDemo.prototype.setRemote = function(remote) {
@@ -21,11 +21,11 @@ PlyDemo.prototype.isRemote = function() {
   return this.remote || this.isBrowser();
 }
 
-// Returns options as appropriate for browser vs local. 
+// Returns options as appropriate for browser vs local.
 PlyDemo.prototype.getOptions = function() {
   var testsLoc = '..';
   var path = null;
-  
+
   if (this.isRemote()) {
     // in browser
     testsLoc = 'https://raw.githubusercontent.com/ply-ct/ply-demo/master/src/test/ply';
@@ -69,7 +69,9 @@ PlyDemo.prototype.getAuthHeader = function() {
     return 'Basic ' + btoa(auth.user + ':' + auth.password);
   }
   else {
-    return 'Basic ' + Buffer.from(auth.user + ':' + auth.password).toString('base64');
+    const a = 'Basic ' + Buffer.from(auth.user + ':' + auth.password).toString('base64');
+    console.log("A: '" + a + "'");
+    return a;
   }
 };
 
@@ -101,10 +103,10 @@ PlyDemo.prototype.getLogger = function(group, caseName) {
   return new Logger({
     level: options.debug ? 'debug' : 'info',
     location: options.resultLocation + '/' + group,
-    name: caseName + '.log', 
+    name: caseName + '.log',
     retain: false
   });
-  
+
 };
 
 module.exports = new PlyDemo();
