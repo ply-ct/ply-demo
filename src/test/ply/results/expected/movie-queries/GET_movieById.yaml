@@ -1,4 +1,4 @@
-test: 'GET:movieById'
+test: 'movieById'
 request:
   url: '${baseUrl}/movies/${id}'
   method: GET

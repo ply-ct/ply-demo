@@ -1,5 +1,0 @@
-deleteMovie:
-  url: '${baseUrl}/movies/${id}'
-  method: DELETE
-  headers:
-    Accept: application/json

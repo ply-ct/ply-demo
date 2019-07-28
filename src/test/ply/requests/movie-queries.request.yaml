@@ -1,3 +1,15 @@
+movieById:
+  url: '${baseUrl}/movies/${id}'
+  method: GET
+  headers:
+    Accept: application/json
+
+moviesByYearAndRating:
+  url: '${baseUrl}/movies?year=${year}&rating=${rating}'
+  method: GET
+  headers:
+    Accept: application/json
+
 # general purpose query
 moviesQuery:
   url: '${baseUrl}/movies?${query}'
@@ -5,14 +17,3 @@ moviesQuery:
   headers:
     Accept: application/json
 
-moviesByYear:
-  url: '${baseUrl}/movies?year=${year}'
-  method: GET
-  headers:
-    Accept: application/json
-
-movieById:
-  url: '${baseUrl}/movies/${id}'
-  method: GET
-  headers:
-    Accept: application/json
