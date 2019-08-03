@@ -28,7 +28,7 @@ testCase.run(request, values, '5-star movies from 1935')
 })
 .then(response => {
   values.query = 'sort=year&max=1&search=Alfred Hitchcock'
-  return testCase.run(request, values, 'earliest movie directed by Alfred Hitchcock');
+  return testCase.run(request, values, 'earliest directed by Alfred Hitchcock');
 })
 .then(response => {
   values.query = 'id=8f180e68'

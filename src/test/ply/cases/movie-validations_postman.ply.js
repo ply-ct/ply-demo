@@ -1,6 +1,6 @@
 'use strict';
 
-/** 
+/**
  * Negative testing to prove swagger validations.
  */
 const ply = require('ply-ct');
@@ -24,7 +24,7 @@ demo.cleanupMovie(requests, values)
   delete movie.title; // no title
   movie.year = 1812;  // invalid year
   post.json(movie);
-  return testCase.run(post, values, 'bad post');  
+  return testCase.run(post, values, 'bad post');
 })
 .then(response => {
   // create good movie
