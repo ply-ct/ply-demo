@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"ply.logpanel": true
+		"ply.logpanel": true,
+		"ply.plyPath": "../ply"
 	}
 }
