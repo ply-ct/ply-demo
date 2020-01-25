@@ -1,5 +1,0 @@
-subByYearAndRating:
-  url: '${baseUrl}/movies?year=${year}&rating=${rating}'
-  method: GET
-  headers:
-    Accept: application/json
