@@ -6,6 +6,11 @@
 	],
 	"settings": {
 		"ply.logpanel": true,
-		"ply.plyPath": "../ply"
+		"ply.plyPath": "../ply",
+		"diffEditor.renderIndicators": false,
+		// "workbench.colorCustomizations": {
+		// 	"editorGutter.background": "#ff5733",
+		//  "diffEditor.insertedTextBackground":"#00000000",
+		// }
 	}
 }
