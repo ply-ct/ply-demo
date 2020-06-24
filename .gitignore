@@ -1,8 +1,7 @@
-.gradle/
-/build/
-bin/
-movies.json
+.DS_Store
+node_modules/
 /notes/
-.idea/**/*.iml
-.idea/workspace.xml
-.idea/tasks.xml
+/npm-debug.log
+dist/
+*.code-workspace
+temp/
