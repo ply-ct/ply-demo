@@ -22,8 +22,8 @@ repositories {
 }
 
 dependencies {
-	compile "org.springframework.boot:spring-boot-starter-web"
-	compile "io.limberest:limberest:${limberestVersion}"
+  compile "org.springframework.boot:spring-boot-starter-web"
+  compile "io.limberest:limberest:${limberestVersion}"
   compile 'io.swagger:swagger-annotations:1.5.19'
   testCompile('org.springframework.boot:spring-boot-starter-test')
 }
