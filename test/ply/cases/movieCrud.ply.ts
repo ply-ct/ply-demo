@@ -1,6 +1,6 @@
-import ply from '../../../src/index';
+import ply from 'ply-ct';
 import { assert } from 'chai';
-import { suite, test, before, after } from '../../../src/index';
+import { suite, test, before, after } from 'ply-ct';
 
 @suite('movie-crud')
 export class MovieCrud {
@@ -23,6 +23,7 @@ export class MovieCrud {
 
     @test('add new movie')
     async createMovie(values: any) {
+        ply.options.verbose = true;
         const requestSuite = await ply.loadSuite('test/ply/requests/movies-api.ply.yaml');
         const result = await requestSuite.run('createMovie', values);
         assert.exists(result.response);

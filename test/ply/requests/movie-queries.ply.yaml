@@ -1,10 +1,10 @@
-plyMoviesByYearAndRating:
+moviesByYearAndRating:
   url: '${baseUrl}?year=${year}&rating=${rating}'
   method: GET
   headers:
     Accept: application/json
-# temp comment
-plyMovieById:
+
+movieById:
   # id comes from previous response body
   url:  '${baseUrl}/${@moviesByYearAndRating.response.body.movies[1].id}'
   method: GET
@@ -12,7 +12,7 @@ plyMovieById:
     Accept: application/json
 
 # general purpose query
-plyMoviesQuery:
+moviesQuery:
   url: '${baseUrl}?${query}'
   method: GET
   headers:
