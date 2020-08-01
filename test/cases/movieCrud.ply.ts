@@ -12,7 +12,7 @@ export class MovieCrud {
      */
     @before
     async beforeAll(values: any) {
-        const requestSuite = await ply.loadSuite('test/ply/requests/movies-api.ply.yaml');
+        const requestSuite = await ply.loadSuite('test/requests/movies-api.ply.yaml');
         const deleteMovie = requestSuite.get('deleteMovie');
         assert.exists(deleteMovie);
         const response = await deleteMovie!.submit({...values, id: '435b30ad'});
@@ -23,8 +23,7 @@ export class MovieCrud {
 
     @test('add new movie')
     async createMovie(values: any) {
-        ply.options.verbose = true;
-        const requestSuite = await ply.loadSuite('test/ply/requests/movies-api.ply.yaml');
+        const requestSuite = await ply.loadSuite('test/requests/movies-api.ply.yaml');
         const result = await requestSuite.run('createMovie', values);
         assert.exists(result.response);
         assert.exists(result.response?.body);
@@ -35,7 +34,7 @@ export class MovieCrud {
 
     @test('update rating')
     async updateRating(values: any) {
-        const requestSuite = await ply.loadSuite('test/ply/requests/movies-api.ply.yaml');
+        const requestSuite = await ply.loadSuite('test/requests/movies-api.ply.yaml');
         // update movie rating -- using id returned from createMovie request
         values.id = this.movieId;
         values.rating = 4.5;
@@ -46,7 +45,7 @@ export class MovieCrud {
 
     @test('remove movie')
     async deleteMovie(values: any) {
-        const requestSuite = await ply.loadSuite('test/ply/requests/movies-api.ply.yaml');
+        const requestSuite = await ply.loadSuite('test/requests/movies-api.ply.yaml');
         // delete movie
         await requestSuite.run('deleteMovie', values);
         // confirm the delete
