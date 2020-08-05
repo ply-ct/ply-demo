@@ -1,3 +1,4 @@
 {
-    "ply.verbose": false
+    "ply.verbose": false,
+    "ply.excludes": "**/{node_modules,bin,dist,out,notes}/**"
 }
