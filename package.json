@@ -9,7 +9,9 @@
   "types": "dist/src",
   "scripts": {
     "build": "tsc",
-    "server": "node dist/src/main.js"
+    "preply": "./node_modules/ply-movies/dist/cli.js start &",
+    "ply": "ply",
+    "postply": "./node_modules/ply-movies/dist/cli.js stop"
   },
   "devDependencies": {
     "@types/chai": "^4.2.12",
