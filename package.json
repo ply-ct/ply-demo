@@ -7,6 +7,9 @@
     "dist/src"
   ],
   "types": "dist/src",
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
     "build": "tsc",
     "preply": "./node_modules/ply-movies/dist/cli.js start &",
