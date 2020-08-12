@@ -16,7 +16,7 @@
     "ply": "ply",
     "postply": "./node_modules/ply-movies/dist/cli.js stop",
     "test": "npm run ply",
-    "temp": "type tsc"
+    "locale": "node dist/locale"
   },
   "devDependencies": {
     "@types/chai": "^4.2.12",
