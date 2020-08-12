@@ -20,7 +20,7 @@ on:
 #     - run: npm test
 
 jobs:
-  build-test:
+  build_test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
