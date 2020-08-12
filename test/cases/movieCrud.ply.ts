@@ -1,6 +1,6 @@
 import ply, { Suite, Request } from 'ply-ct';
-import { assert } from 'chai';
 import { suite, test, before, after } from 'ply-ct';
+import { assert } from 'chai';
 
 @suite('movie-crud')
 export class MovieCrud {
