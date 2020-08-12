@@ -15,7 +15,8 @@
     "preply": "./node_modules/ply-movies/dist/cli.js start &",
     "ply": "ply",
     "postply": "./node_modules/ply-movies/dist/cli.js stop",
-    "test": "npm run ply"
+    "test": "npm run ply",
+    "temp": "type tsc"
   },
   "devDependencies": {
     "@types/chai": "^4.2.12",

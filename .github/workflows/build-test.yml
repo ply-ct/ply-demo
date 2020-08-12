@@ -28,7 +28,9 @@ jobs:
       with:
         node-version: '12.x'
     - run: npm install
+    - run: npm install -g tsc
     - run: npm install -g ply-ct
+    - run: npm run build
     - run: npm test
 
 # jobs:
