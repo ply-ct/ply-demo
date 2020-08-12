@@ -1,3 +1,3 @@
-import * as osLocale from 'os-locale';
+import { util } from 'ply-ct';
 
-console.log("LOCALE: " + osLocale.sync());
+console.log("LOCALE: " + util.locale());
