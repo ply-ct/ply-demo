@@ -16,8 +16,5 @@ jobs:
       with:
         node-version: '12.x'
     - run: npm install
-    # todo remove
-    - run: npm run build
-    - run: npm run locale
     - run: npm install -g ply-ct
     - run: npm test
