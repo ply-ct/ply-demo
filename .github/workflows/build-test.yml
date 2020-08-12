@@ -32,7 +32,7 @@ on:
 #         echo test, and deploy your project.
 
 jobs:
-  build_test:
+  build-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
