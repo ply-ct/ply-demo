@@ -1,0 +1,5 @@
+{
+  "testsLocation": "test",
+  "skip": "requests/movies-api.ply.yaml",
+  "verbose": false
+}
