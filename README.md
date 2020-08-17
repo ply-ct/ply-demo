@@ -1,7 +1,8 @@
 # ply-demo
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ply-ct/ply-demo/ply-demo%20ci)
 
-Illustrates how to use Ply for automated API testing.
+Illustrates how to use Ply for automated API testing. Includes an example GitHub workflow to demonstrate
+Ply continuous testing.
 
 ## Run all tests
 ```
@@ -34,3 +35,11 @@ Test 'moviesQuery' PASSED in 6 ms
 Overall Results: {"Passed":3,"Failed":0,"Errored":0,"Pending":0,"Not Verified":0}
 Overall Time: 225 ms
 ```
+
+## GitHub workflow
+This simple CI [workflow](https://github.com/ply-ct/ply-demo/blob/master/.github/workflows/build-test.yml)
+shows how to use npm scripts to automatically execute all requests and cases whenever a commit is pushed
+on the master branch.
+
+This readme file includes a GitHub workflow status badge hosted by shields.io: https://github.com/badges/shields#quickstart.
+
