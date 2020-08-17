@@ -1,5 +1,9 @@
 {
   "testsLocation": "test",
   "skip": "requests/movies-api.ply.yaml",
-  "verbose": false
+  "valuesFiles": [
+    "test/values/global.json",
+    "test/values/localhost.json",
+    "~/.ply/auth.json"
+  ]
 }
