@@ -36,10 +36,14 @@ Overall Results: {"Passed":3,"Failed":0,"Errored":0,"Pending":0,"Not Verified":0
 Overall Time: 225 ms
 ```
 
-## GitHub workflow
+## Visual Studio Code
+Install Ply's [VS Code extension](https://github.com/ply-ct/vscode-ply#vscode-ply) to run tests in 
+the Test Explorer sidebar.
+
+## GitHub Workflow
 This simple CI [workflow](https://github.com/ply-ct/ply-demo/blob/master/.github/workflows/build-test.yml)
 shows how to use npm scripts to automatically execute all requests and cases whenever a commit is pushed
 on the master branch.
 
-This readme file includes a GitHub workflow status badge hosted by shields.io: https://github.com/badges/shields#quickstart.
+This readme file includes a GitHub Workflow status badge hosted by shields.io: https://github.com/badges/shields#quickstart.
 
