@@ -3,7 +3,6 @@
   "skip": "requests/movies-api.ply.yaml",
   "valuesFiles": [
     "test/values/global.json",
-    "test/values/localhost.json",
-    "~/.ply/auth.json"
+    "test/values/localhost.json"
   ]
 }
