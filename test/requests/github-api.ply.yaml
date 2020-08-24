@@ -11,7 +11,7 @@ repositoryTopicsQuery:
   headers:
     Authorization: Bearer ${githubToken}
     Content-Type: application/json
-    User-Agent: ply-ct
+    User-Agent: ${github.organization}
   body: |-
     query {
       repository(owner: "${github.organization}", name: "${github.repository}") {
@@ -23,6 +23,36 @@ repositoryTopicsQuery:
               }
             }
           }
+        }
+      }
+    }
+
+findRepositoryId:
+  url: 'https://api.github.com/graphql'
+  method: POST
+  headers:
+    Authorization: Bearer ${githubToken}
+    Content-Type: application/json
+    User-Agent: ${github.organization}
+  body: |-
+    query findRepositoryId {
+      repository(owner:"${github.organization}", name:"${github.repository}") {
+        id
+      }
+    }
+
+starRepository:
+  url: 'https://api.github.com/graphql'
+  method: POST
+  headers:
+    Authorization: Bearer ${githubToken}
+    Content-Type: application/json
+    User-Agent: ${github.organization}
+  body: |-  # repository id comes from findRepositoryId response
+    mutation starRepository {
+      addStar(input:{starrableId:"${@findRepositoryId.response.body.data.repository.id}"}) {
+        starrable {
+          viewerHasStarred
         }
       }
     }

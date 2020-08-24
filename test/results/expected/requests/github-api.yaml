@@ -27,7 +27,7 @@ repositoryTopicsQuery:
     method: POST
     headers:
       Content-Type: application/json
-      User-Agent: ply-ct
+      User-Agent: ${github.organization}
     body: |-
       query {
         repository(owner: "${github.organization}", name: "${github.repository}") {
@@ -47,6 +47,7 @@ repositoryTopicsQuery:
       code: 200
       message: OK
     headers:
+      content-type: application/json; charset=utf-8
       x-github-media-type: github.v4; format=json
     body: |-
       {
@@ -83,6 +84,68 @@ repositoryTopicsQuery:
                   }
                 }
               ]
+            }
+          }
+        }
+      }
+
+findRepositoryId:
+  request:
+    url: 'https://api.github.com/graphql'
+    method: POST
+    headers:
+      Content-Type: application/json
+      User-Agent: ${github.organization}
+    body: |-
+      query findRepositoryId {
+        repository(owner:"${github.organization}", name:"${github.repository}") {
+          id
+        }
+      }
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      x-github-media-type: github.v4; format=json
+    body: |-  # id matched against regex
+      {
+        "data": {
+          "repository": {
+            "id": "${~.*}"
+          }
+        }
+      }
+
+starRepository:
+  request:
+    url: 'https://api.github.com/graphql'
+    method: POST
+    headers:
+      Content-Type: application/json
+      User-Agent: ply-ct
+    body: |-  # repository id comes from findRepositoryId response
+      mutation starRepository {
+        addStar(input:{starrableId:"${@findRepositoryId.response.body.data.repository.id}"}) {
+          starrable {
+            viewerHasStarred
+          }
+        }
+      }
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      x-github-media-type: github.v4; format=json
+    body: |-
+      {
+        "data": {
+          "addStar": {
+            "starrable": {
+              "viewerHasStarred": true
             }
           }
         }
