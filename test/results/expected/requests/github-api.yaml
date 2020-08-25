@@ -17,7 +17,10 @@ repositoryTopics:
           "rest-api",
           "testing",
           "ply",
-          "example-project"
+          "example-project",
+          "graphql",
+          "typescript",
+          "github-workflow"
         ]
       }
 
@@ -80,6 +83,27 @@ repositoryTopicsQuery:
                   "node": {
                     "topic": {
                       "name": "example-project"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "graphql"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "typescript"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "github-workflow"
                     }
                   }
                 }
