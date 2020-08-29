@@ -13,6 +13,7 @@
   "scripts": {
     "build": "tsc",
     "start-movies": "ply-movies start &",
+	"start-movies-windows": "start /b ply-movies start",
     "stop-movies": "ply-movies stop",
     "ply": "ply",
     "pretest": "npm run start-movies",
