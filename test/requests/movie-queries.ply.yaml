@@ -6,15 +6,26 @@ moviesByYearAndRating:
 
 movieById:
   # id comes from previous response body
-  url:  '${baseUrl}/${@moviesByYearAndRating.response.body.movies[1].id}'
+  url:  '${baseUrl}/${@moviesByYearAndRating.response.body.movies[0].id}'
   method: GET
   headers:
     Accept: application/json
 
 # general purpose query
-moviesQuery:
-  url: '${baseUrl}?${query}'
+greatFilmsOf1935:
+  url: '${baseUrl}?${queries.highlyRated1935}'
   method: GET
   headers:
     Accept: application/json
 
+bestMovieOf1935:
+  url: '${baseUrl}?${queries.tipTop1935}'
+  method: GET
+  headers:
+    Accept: application/json
+
+stinkersOf1932:
+  url: '${baseUrl}?${queries.poorlyRated1932}'
+  method: GET
+  headers:
+    Accept: application/json
