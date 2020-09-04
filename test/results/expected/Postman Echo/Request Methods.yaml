@@ -1,0 +1,168 @@
+GET Request:
+  request:
+    url: 'https://postman-echo.com/get?foo1=bar1&foo2=bar2'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "args": {
+          "foo1": "bar1",
+          "foo2": "bar2"
+        },
+        "headers": {
+          "accept": "*/*",
+          "accept-encoding": "gzip,deflate",
+          "host": "postman-echo.com",
+          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "x-amzn-trace-id": "${~.*}",
+          "x-forwarded-port": "443",
+          "x-forwarded-proto": "https"
+        },
+        "url": "https://postman-echo.com/get?foo1=bar1&foo2=bar2"
+      }
+POST Raw Text:
+  request:
+    url: 'https://postman-echo.com/post'
+    method: POST
+    headers: {}
+    body: This is expected to be sent back as part of response body.
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "args": {
+        },
+        "data": "This is expected to be sent back as part of response body.",
+        "files": {
+        },
+        "form": {
+        },
+        "headers": {
+          "accept": "*/*",
+          "accept-encoding": "gzip,deflate",
+          "content-length": "58",
+          "content-type": "text/plain;charset=UTF-8",
+          "host": "postman-echo.com",
+          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "x-amzn-trace-id": "${~.*}",
+          "x-forwarded-port": "443",
+          "x-forwarded-proto": "https"
+        },
+        "json": null,
+        "url": "https://postman-echo.com/post"
+      }
+PUT Request:
+  request:
+    url: 'https://postman-echo.com/put'
+    method: PUT
+    headers: {}
+    body: This is expected to be sent back as part of response body.
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "args": {
+        },
+        "data": "This is expected to be sent back as part of response body.",
+        "files": {
+        },
+        "form": {
+        },
+        "headers": {
+          "accept": "*/*",
+          "accept-encoding": "gzip,deflate",
+          "content-length": "58",
+          "content-type": "text/plain;charset=UTF-8",
+          "host": "postman-echo.com",
+          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "x-amzn-trace-id": "${~.*}",
+          "x-forwarded-port": "443",
+          "x-forwarded-proto": "https"
+        },
+        "json": null,
+        "url": "https://postman-echo.com/put"
+      }
+PATCH Request:
+  request:
+    url: 'https://postman-echo.com/patch'
+    method: PATCH
+    headers: {}
+    body: This is expected to be sent back as part of response body.
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "args": {
+        },
+        "data": "This is expected to be sent back as part of response body.",
+        "files": {
+        },
+        "form": {
+        },
+        "headers": {
+          "accept": "*/*",
+          "accept-encoding": "gzip,deflate",
+          "content-length": "58",
+          "content-type": "text/plain;charset=UTF-8",
+          "host": "postman-echo.com",
+          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "x-amzn-trace-id": "${~.*}",
+          "x-forwarded-port": "443",
+          "x-forwarded-proto": "https"
+        },
+        "json": null,
+        "url": "https://postman-echo.com/patch"
+      }
+DELETE Request:
+  request:
+    url: 'https://postman-echo.com/delete'
+    method: DELETE
+    headers: {}
+    body: This is expected to be sent back as part of response body.
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "args": {
+        },
+        "data": "This is expected to be sent back as part of response body.",
+        "files": {
+        },
+        "form": {
+        },
+        "headers": {
+          "accept": "*/*",
+          "accept-encoding": "gzip,deflate",
+          "content-length": "58",
+          "content-type": "text/plain;charset=UTF-8",
+          "host": "postman-echo.com",
+          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "x-amzn-trace-id": "${~.*}",
+          "x-forwarded-port": "443",
+          "x-forwarded-proto": "https"
+        },
+        "json": null,
+        "url": "https://postman-echo.com/delete"
+      }

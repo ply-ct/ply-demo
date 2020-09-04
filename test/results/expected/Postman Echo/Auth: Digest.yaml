@@ -1,0 +1,12 @@
+DigestAuth Request:
+  request:
+    url: 'https://postman-echo.com/digest-auth'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      www-authenticate: 'Digest realm="Users", nonce="${~.*}", qop="auth"'
+    body: Unauthorized

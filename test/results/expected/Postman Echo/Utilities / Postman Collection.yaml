@@ -1,0 +1,94 @@
+Transform collection from format v1 to v2:
+  request:
+    url: 'https://postman-echo.com/transform/collection?from=1&to=2'
+    method: POST
+    headers:
+      Content-Type: application/json
+    body: |-
+      {
+        "id": "7875be4b-917d-4aff-8cc4-5606c36bf418",
+        "name": "Sample Postman Collection",
+        "description": "A sample collection to demonstrate collections as a set of related requests",
+        "order": [
+          "4d9134be-e8bf-4693-9cd7-1c0fc66ae739",
+          "141ba274-cc50-4377-a59c-e080066f375e"
+        ],
+        "folders": [],
+        "requests": [
+          {
+            "id": "4d9134be-e8bf-4693-9cd7-1c0fc66ae739",
+            "name": "A simple GET request",
+            "collectionId": "877b9dae-a50e-4152-9b89-870c37216f78",
+            "method": "GET",
+            "headers": "",
+            "data": [],
+            "rawModeData": "",
+            "tests": "tests['response code is 200'] = (responseCode.code === 200);",
+            "preRequestScript": "",
+            "url": "https://postman-echo.com/get?source=newman-sample-github-collection"
+          },
+          {
+            "id": "141ba274-cc50-4377-a59c-e080066f375e",
+            "name": "A simple POST request",
+            "collectionId": "877b9dae-a50e-4152-9b89-870c37216f78",
+            "method": "POST",
+            "headers": "Content-Type: text/plain",
+            "dataMode": "raw",
+            "data": [],
+            "rawModeData": "Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...",
+            "url": "https://postman-echo.com/post"
+          }
+        ]
+      }
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+      transfer-encoding: chunked
+    body: ''
+Transform collection from format v2 to v1:
+  request:
+    url: 'https://postman-echo.com/transform/collection?from=2&to=1'
+    method: POST
+    headers:
+      Content-Type: application/json
+    body: |-
+      {
+        "info": {
+          "name": "Sample Postman Collection",
+          "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+          "description": "A sample collection to demonstrate collections as a set of related requests"
+        },
+
+        "item": [{
+          "name": "A simple GET request",
+          "request": {
+            "url": "https://postman-echo.com/get?source=newman-sample-github-collection",
+            "method": "GET"
+          }
+        }, {
+          "name": "A simple POST request",
+          "request": {
+            "url": "https://postman-echo.com/post",
+            "method": "POST",
+            "header": [{
+              "key": "Content-Type",
+              "value": "text/plain"
+            }],
+            "body": {
+              "mode": "raw",
+              "raw": "Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium..."
+            }
+          }
+        }]
+      }
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+      transfer-encoding: chunked
+    body: ''

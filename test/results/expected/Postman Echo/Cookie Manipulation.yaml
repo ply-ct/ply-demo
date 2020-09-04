@@ -1,0 +1,51 @@
+Set Cookies:
+  request:
+    url: 'https://postman-echo.com/cookies/set?foo1=bar1&foo2=bar2'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "cookies": {
+        }
+      }
+Get Cookies:
+  request:
+    url: 'https://postman-echo.com/cookies'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "cookies": {
+        }
+      }
+Delete Cookies:
+  request:
+    url: 'https://postman-echo.com/cookies/delete?foo1&foo2'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "cookies": {
+        }
+      }

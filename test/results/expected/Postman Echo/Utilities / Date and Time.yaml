@@ -1,0 +1,194 @@
+Current UTC time:
+  request:
+    url: 'https://postman-echo.com/time/now'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: text/html; charset=utf-8
+    body: '${~.*} GMT'
+Timestamp validity:
+  request:
+    url: 'https://postman-echo.com/time/valid?timestamp=2016-10-10'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "valid": true
+      }
+Format timestamp:
+  request:
+    url: 'https://postman-echo.com/time/format?timestamp=2016-10-10&format=mm'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "format": "20"
+      }
+Extract timestamp unit:
+  request:
+    url: 'https://postman-echo.com/time/unit?timestamp=2016-10-10&unit=day'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "unit": 1
+      }
+Time addition:
+  request:
+    url: 'https://postman-echo.com/time/add?timestamp=2016-10-10&years=100'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "sum": "Sat Oct 10 2116 00:00:00 GMT+0000"
+      }
+Time subtraction:
+  request:
+    url: 'https://postman-echo.com/time/subtract?timestamp=2016-10-10&years=50'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "difference": "Mon Oct 10 1966 00:00:00 GMT+0000"
+      }
+Start of time:
+  request:
+    url: 'https://postman-echo.com/time/start?timestamp=2016-10-10&unit=month'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "start": "Sat Oct 01 2016 00:00:00 GMT+0000"
+      }
+Object representation:
+  request:
+    url: 'https://postman-echo.com/time/object?timestamp=2016-10-10'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "date": 10,
+        "hours": 0,
+        "milliseconds": 0,
+        "minutes": 0,
+        "months": 9,
+        "seconds": 0,
+        "years": 2016
+      }
+Before comparisons:
+  request:
+    url: 'https://postman-echo.com/time/before?timestamp=2016-10-10&target=2017-10-10'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "before": true
+      }
+After comparisons:
+  request:
+    url: 'https://postman-echo.com/time/after?timestamp=2016-10-10&target=2017-10-10'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "after": false
+      }
+Between timestamps:
+  request:
+    url: 'https://postman-echo.com/time/between?timestamp=2016-10-10&start=2017-10-10&end=2019-10-10'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "between": false
+      }
+Leap year check:
+  request:
+    url: 'https://postman-echo.com/time/leap?timestamp=2016-10-10'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "leap": true
+      }

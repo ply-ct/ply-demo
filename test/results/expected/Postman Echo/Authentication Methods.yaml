@@ -1,0 +1,63 @@
+Basic Auth:
+  request:
+    url: 'https://postman-echo.com/basic-auth'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      www-authenticate: Basic realm="Users"
+    body: Unauthorized
+DigestAuth Success:
+  request:
+    url: 'https://postman-echo.com/digest-auth'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "authenticated": true
+      }
+Hawk Auth:
+  request:
+    url: 'https://postman-echo.com/auth/hawk'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "error": "Unauthorized",
+        "message": "Unauthorized",
+        "statusCode": 401
+      }
+OAuth1.0 (verify signature):
+  request:
+    url: 'https://postman-echo.com/oauth1'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      content-type: application/json; charset=utf-8
+      set-cookie: sails.sid=${~.*}; Path=/; HttpOnly
+    body: |-
+      {
+        "message": "Timestamp is missing or is not a number",
+        "status": "fail"
+      }

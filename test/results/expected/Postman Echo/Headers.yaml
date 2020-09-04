@@ -1,0 +1,41 @@
+Request Headers:
+  request:
+    url: 'https://postman-echo.com/headers'
+    method: GET
+    headers:
+      my-sample-header: Lorem ipsum dolor sit amet
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "headers": {
+          "accept": "*/*",
+          "accept-encoding": "gzip,deflate",
+          "host": "postman-echo.com",
+          "my-sample-header": "Lorem ipsum dolor sit amet",
+          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "x-amzn-trace-id": "${~.*}",
+          "x-forwarded-port": "443",
+          "x-forwarded-proto": "https"
+        }
+      }
+Response Headers:
+  request:
+    url: 'https://postman-echo.com/response-headers?foo1=bar1&foo2=bar2'
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "foo1": "bar1",
+        "foo2": "bar2"
+      }
