@@ -18,6 +18,7 @@
     "start-movies": "run-script-os",
     "start-movies:default": "ply-movies start -p $npm_package_config_port -q &",
     "start-movies:windows": "start /b ply-movies start -p %npm_package_config_port% -q",
+    "start-movies-foreground": "ply-movies start -p $npm_package_config_port",
     "stop-movies": "run-script-os",
     "stop-movies:default": "ply-movies stop -p $npm_package_config_port",
     "stop-movies:windows": "ply-movies stop -p %npm_package_config_port%",

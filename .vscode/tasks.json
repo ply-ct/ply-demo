@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "start-movies-foreground",
+            "problemMatcher": [],
+            "label": "npm: start-movies",
+            "isBackground": true
+        },
+        {
+            "type": "npm",
+            "script": "stop-movies",
+            "problemMatcher": [],
+            "label": "npm: stop-movies"
+        }
+    ]
+}
