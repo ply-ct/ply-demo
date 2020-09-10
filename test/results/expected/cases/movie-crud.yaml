@@ -86,6 +86,7 @@ add new movie:
           },
           "year": 1934
         }
+
 update rating:
   updateMovie:
     request:
@@ -161,6 +162,7 @@ update rating:
           },
           "year": 1934
         }
+
 remove movie:
   deleteMovie:
     request:

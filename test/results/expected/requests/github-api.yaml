@@ -23,6 +23,7 @@ repositoryTopics:
           "github-workflow"
         ]
       }
+
 repositoryTopicsQuery:
   request:
     url: 'https://api.github.com/graphql'
@@ -111,6 +112,7 @@ repositoryTopicsQuery:
           }
         }
       }
+
 findRepositoryId:
   request:
     url: 'https://api.github.com/graphql'
@@ -139,6 +141,8 @@ findRepositoryId:
           }
         }
       }
+
+# returns HTTP 200 even if already starred
 starRepository:
   request:
     url: 'https://api.github.com/graphql'

@@ -91,6 +91,7 @@ moviesByYearAndRating:
           }
         ]
       }
+
 movieById:
   request:
     url: '${baseUrl}/${@moviesByYearAndRating.response.body.movies[0].id}' # id from previous response
@@ -142,6 +143,7 @@ movieById:
         },
         "year": ${year}
       }
+
 greatFilmsOf1935:
   request:
     url: '${baseUrl}?${queries.highlyRated1935}'
@@ -235,6 +237,7 @@ greatFilmsOf1935:
           }
         ]
       }
+
 bestMovieOf1935:
   request:
     url: '${baseUrl}?${queries.tipTop1935}'
@@ -290,6 +293,7 @@ bestMovieOf1935:
           }
         ]
       }
+
 stinkersOf1932:
   request:
     url: '${baseUrl}?${queries.poorlyRated1932}'
