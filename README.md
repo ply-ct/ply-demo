@@ -4,23 +4,10 @@
 Illustrates how to use Ply for automated API testing. Includes an example GitHub workflow to demonstrate
 Ply continuous testing.
 
-## Run all tests
-```
-git clone https://github.com/ply-ct/ply-demo.git
-cd ply-demo
-npm install
-npm test
-```
-In package.json scripts, "pretest" starts [ply-movies](https://github.com/ply-ct/ply-movies),
-which serves up the REST API exercised by many of our Ply [requests](test/requests) and [cases](test/cases).
-Check out the [docs](https://ply-ct.github.io/ply/topics/requests) for further explanation.
-
-## Run a single request suite
+## Run a request suite
 ```
 cd ply-demo
-npm run start-movies
-ply test/requests/movie-queries.ply.yaml
-npm run stop-movies
+npx ply test/requests/movie-queries.ply.yaml
 ```
 
 The output indicates that all movie-queries requests have passed:
@@ -35,6 +22,17 @@ Test 'moviesQuery' PASSED in 6 ms
 Overall Results: {"Passed":3,"Failed":0,"Errored":0,"Pending":0,"Not Verified":0}
 Overall Time: 225 ms
 ```
+
+## Run all tests
+```
+git clone https://github.com/ply-ct/ply-demo.git
+cd ply-demo
+npm install
+npm test
+```
+In package.json scripts, "pretest" starts [ply-movies](https://github.com/ply-ct/ply-movies),
+which serves up the REST API exercised by many of our Ply [requests](test/requests) and [cases](test/cases).
+Check out the [docs](https://ply-ct.github.io/ply/topics/requests) for further explanation.
 
 ## Visual Studio Code
 Install Ply's [VS Code extension](https://github.com/ply-ct/vscode-ply#vscode-ply) to run tests in 
