@@ -16,7 +16,7 @@ export class MovieCrud {
     }
 
     /**
-     * Clean up movie left over from previous failed tests.
+     * Clean up movie left over from previous test(s) that failed to complete.
      */
     @before
     async beforeAll(values: any) {
