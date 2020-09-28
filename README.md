@@ -1,8 +1,8 @@
 # ply-demo
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ply-ct/ply-demo/ply-demo%20ci)
 
-Illustrates how to use Ply for automated API testing. Includes an example GitHub workflow to demonstrate
-Ply continuous testing.
+Illustrates how to use [Ply](https://ply-ct.github.io/ply/) for automated API testing. 
+Includes an example GitHub workflow to demonstrate Ply continuous testing.
 
 ## Run a request suite
 ```
@@ -30,7 +30,10 @@ cd ply-demo
 npm install
 npm test
 ```
-In package.json scripts, "pretest" starts [ply-movies](https://github.com/ply-ct/ply-movies),
+**Note**: Run [ply-movies locally](https://ply-ct.github.io/ply/topics/cases#ply-movies) for 
+destructive tests to succeed.
+
+In package.json scripts, "pretest" starts ply-movies,
 which serves up the REST API exercised by many of our Ply [requests](test/requests) and [cases](test/cases).
 Check out the [docs](https://ply-ct.github.io/ply/topics/requests) for further explanation.
 
