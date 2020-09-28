@@ -30,12 +30,11 @@ cd ply-demo
 npm install
 npm test
 ```
-**Note**: Run [ply-movies locally](https://ply-ct.github.io/ply/topics/cases#ply-movies) for 
-destructive tests to succeed.
-
-In package.json scripts, "pretest" starts ply-movies,
+In package.json scripts, "pretest" starts [ply-movies](https://github.com/ply-ct/ply-movies#readme),
 which serves up the REST API exercised by many of our Ply [requests](test/requests) and [cases](test/cases).
-Check out the [docs](https://ply-ct.github.io/ply/topics/requests) for further explanation.
+
+**Note**: Run [ply-movies locally](https://ply-ct.github.io/ply/topics/cases#ply-movies) in order for 
+destructive tests to succeed.
 
 ## Visual Studio Code
 Install Ply's [VS Code extension](https://github.com/ply-ct/vscode-ply#vscode-ply) to run tests in 
