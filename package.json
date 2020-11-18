@@ -2,6 +2,11 @@
   "name": "ply-demo",
   "version": "1.0.2",
   "description": "Illustrate Ply automated testing",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ply-ct/ply-demo.git"
+  },
   "main": "dist/src/main.js",
   "files": [
     "dist/src"
