@@ -1,30 +1,31 @@
 attributes:
   NodeStyle: BoxIcon
   display: 'x=23,y=18,w=156,h=27'
+  values: '[["id","435b30ad"]]'
 steps:
   - id: s1
     name: Start
     path: start
     attributes:
-      display: 'x=50,y=240,w=60,h=40'
+      display: 'x=47,y=250,w=60,h=40'
     links:
       - id: l5
         to: s7
         type: link
         attributes:
-          display: 'type=Elbow,x=178,y=255,xs=114&146,ys=260&260'
+          display: 'type=Elbow,x=181,y=264,xs=111&146,ys=269&269'
   - id: s2
     name: Stop
     path: stop
     attributes:
-      display: 'x=850,y=240,w=60,h=40'
+      display: 'x=850,y=250,w=60,h=40'
   - id: s7
     name: |-
       Create
       Movie
-    path: request.ts
+    path: request
     attributes:
-      display: 'x=150,y=230,w=100,h=60'
+      display: 'x=150,y=230,w=100,h=80'
       url: '${baseUrl}'
       method: POST
       body: |-
@@ -69,15 +70,15 @@ steps:
         to: s8
         type: link
         attributes:
-          display: 'type=Elbow,x=271,y=260,xs=254&286,ys=260&260'
+          display: 'type=Elbow,x=272,y=270,xs=254&286,ys=270&270'
     type: step
   - id: s8
     name: |-
       Update
       Rating
-    path: request.ts
+    path: request
     attributes:
-      display: 'x=290,y=230,w=100,h=60'
+      display: 'x=290,y=230,w=100,h=80'
       url: '${baseUrl}/${id}'
       method: PATCH
       body: |-
@@ -90,15 +91,15 @@ steps:
         to: s9
         type: link
         attributes:
-          display: 'type=Elbow,x=410,y=260,xs=394&426,ys=260&260'
+          display: 'type=Elbow,x=410,y=270,xs=394&426,ys=270&270'
     type: step
   - id: s9
     name: |-
       Confirm
       Update
-    path: request.ts
+    path: request
     attributes:
-      display: 'x=430,y=230,w=100,h=60'
+      display: 'x=430,y=230,w=100,h=80'
       url: '${baseUrl}/${id}'
       method: GET
       headers: '[["Accept","application/json"]]'
@@ -107,15 +108,15 @@ steps:
         to: s10
         type: link
         attributes:
-          display: 'type=Elbow,x=552,y=260,xs=534&566,ys=260&260'
+          display: 'type=Elbow,x=552,y=270,xs=534&566,ys=270&270'
     type: step
   - id: s10
     name: |-
       Delete
       Movie
-    path: request.ts
+    path: request
     attributes:
-      display: 'x=570,y=230,w=100,h=60'
+      display: 'x=570,y=230,w=100,h=80'
       url: '${baseUrl}/${id}'
       method: DELETE
       headers: '[["Accept","application/json"]]'
@@ -124,15 +125,15 @@ steps:
         to: s11
         type: link
         attributes:
-          display: 'type=Elbow,x=690,y=260,xs=674&706,ys=260&260'
+          display: 'type=Elbow,x=691,y=270,xs=674&706,ys=270&270'
     type: step
   - id: s11
     name: |-
       Confirm
       Delete
-    path: request.ts
+    path: request
     attributes:
-      display: 'x=710,y=230,w=100,h=60'
+      display: 'x=710,y=230,w=100,h=80'
       url: '${baseUrl}/${id}'
       method: GET
       headers: '[["Accept","application/json"]]'
@@ -141,7 +142,7 @@ steps:
         to: s2
         type: link
         attributes:
-          display: 'type=Elbow,x=832,y=260,xs=814&846,ys=260&260'
+          display: 'type=Elbow,x=832,y=270,xs=814&846,ys=270&270'
     type: step
 subflows:
   - steps:
@@ -155,24 +156,25 @@ subflows:
             to: s5
             type: link
             attributes:
-              display: 'type=Elbow,x=150,y=90,xs=124&176,ys=90&90'
+              display: 'type=Elbow,x=151,y=90,xs=124&176,ys=90&90'
         type: step
       - id: s5
         name: |-
           Delete
           Movie
-        path: request.ts
+        path: request
         attributes:
-          display: 'x=180,y=60,w=100,h=60'
+          display: 'x=180,y=50,w=100,h=80'
           method: DELETE
           url: '${baseUrl}/${id}'
           headers: '[["Accept","application/json"]]'
+          submit: 'true'
         links:
           - id: l4
             to: s6
             type: link
             attributes:
-              display: 'type=Elbow,x=315,y=90,xs=284&346,ys=90&90'
+              display: 'type=Elbow,x=316,y=90,xs=284&346,ys=90&90'
         type: step
       - id: s6
         name: Stop
@@ -186,6 +188,7 @@ subflows:
       embeddedFlowType: subflow
       visibility: EMBEDDED
       display: 'x=40,y=30,w=400,h=120'
+      when: Before
     id: f1
     name: Before All
     type: subflow
