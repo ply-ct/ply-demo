@@ -7,13 +7,13 @@ steps:
     name: Start
     path: start
     attributes:
-      display: 'x=47,y=250,w=60,h=40'
+      display: 'x=36,y=250,w=60,h=40'
     links:
       - id: l5
         to: s7
         type: link
         attributes:
-          display: 'type=Elbow,x=181,y=264,xs=111&146,ys=269&269'
+          display: 'type=Elbow,x=192,y=262,xs=100&146,ys=270&270'
   - id: s2
     name: Stop
     path: stop
