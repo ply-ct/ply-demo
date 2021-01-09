@@ -1,9 +1,6 @@
 .DS_Store
 node_modules/
-/notes/
-/npm-debug.log
-dist/
-*.code-workspace
-temp/
+/dist/
 /movies.json
 /test/Postman Echo
+/notes/
