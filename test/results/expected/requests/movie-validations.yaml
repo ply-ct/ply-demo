@@ -1,6 +1,6 @@
 postBadYear:
   request:
-    url: '${baseUrl}'
+    url: '${baseUrl}/movies'
     method: POST
     headers:
       Content-Type: application/json
@@ -111,7 +111,7 @@ getMovieId:
 
 patchBadRating:
   request:
-    url: '${baseUrl}/${@getMovieId.response.body.movies[0].id}'
+    url: '${baseUrl}/movies/${@getMovieId.response.body.movies[0].id}'
     method: PATCH
     headers:
       Content-Type: application/json

@@ -4,7 +4,7 @@ Start:
 By Title:
   id: s3
   request:
-    url: '${baseUrl}?title=${title}'
+    url: '${baseUrl}/movies?title=${title}'
     method: GET
     headers:
       Accept: application/json
