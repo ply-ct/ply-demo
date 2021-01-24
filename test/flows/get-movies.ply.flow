@@ -40,7 +40,7 @@ steps:
       display: 'x=360,y=50,w=100,h=80'
       headers: '[["Accept","application/json"]]'
       method: GET
-      url: '${baseUrl}/movies/${@Movie by Title.response.body.movies[0].id}'
+      url: '${baseUrl}/movies/${@s3.response.body.movies[0].id}'
     id: s4
     links:
       - attributes:
