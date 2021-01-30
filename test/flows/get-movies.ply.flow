@@ -4,18 +4,18 @@ attributes:
   values: '[["title","Dracula"]]'
 steps:
   - attributes:
-      display: 'x=49,y=72,w=60,h=40'
+      display: 'x=41,y=71,w=60,h=40'
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=147,y=92,xs=113&176,ys=92&92'
+          display: 'type=Elbow,x=145,y=91,xs=105&176,ys=91&91'
         id: l1
         to: s3
         type: link
     name: Start
     path: start
   - attributes:
-      display: 'x=530,y=70,w=60,h=40'
+      display: 'x=550,y=70,w=60,h=40'
     id: s2
     name: Stop
     path: stop
@@ -23,7 +23,7 @@ steps:
       display: 'x=180,y=50,w=100,h=80'
       headers: '[["Accept","application/json"]]'
       method: GET
-      url: '${baseUrl}/movies?title=Dracula'
+      url: '${baseUrl}/movies?title=${title}'
     id: s3
     links:
       - attributes:
@@ -44,7 +44,7 @@ steps:
     id: s4
     links:
       - attributes:
-          display: 'type=Elbow,x=503,y=90,xs=464&526,ys=90&90'
+          display: 'type=Elbow,x=515,y=96,xs=464&546,ys=90&90'
         id: l3
         to: s2
         type: link
