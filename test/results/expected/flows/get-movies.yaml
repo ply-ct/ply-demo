@@ -103,7 +103,7 @@ Movie by ID:
         "id": "${@s3.response.body.movies[0].id}",
         "poster": "drac.jpg",
         "rating": 5,
-        "title": "${@s3.response.body.movies[0].title}",
+        "title": "Dracula",
         "webRef": {
           "ref": "tt0021814",
           "site": "imdb.com"
