@@ -18,4 +18,5 @@ jobs:
       with:
         node-version: '12.x'
     - run: npm install
+    - run: npx ply --version
     - run: npm test
