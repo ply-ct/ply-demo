@@ -3,17 +3,97 @@ attributes:
   display: 'x=23,y=18,w=156,h=27'
 steps:
   - attributes:
-      display: 'x=56,y=97,w=60,h=40'
+      display: 'x=60,y=100,w=60,h=40'
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=261,y=117,xs=120&402,ys=117&117'
+          display: 'type=Elbow,x=179,y=120,xs=124&216,ys=120&120'
         id: l1
-        to: s2
+        to: s3
+        type: link
     name: Start
     path: start
   - attributes:
-      display: 'x=406,y=97,w=60,h=40'
+      display: 'x=810,y=100,w=60,h=40'
     id: s2
     name: Stop
     path: stop
+  - attributes:
+      body: |-
+        query {
+          repository(owner: "${github.organization}", name: "${github.repository}") {
+            repositoryTopics(first: 10) {
+              edges {
+                node {
+                  topic {
+                    name
+                  }
+                }
+              }
+            }
+          }
+        }
+      display: 'x=220,y=80,w=100,h=80'
+      headers: "[[\"Authorization\",\"Bearer\_${githubToken}\"],[\"Content-Type\",\"application/json\"],[\"User-Agent\",\"${github.organization}\"]]"
+      method: POST
+      url: 'https://api.github.com/graphql'
+    id: s3
+    links:
+      - attributes:
+          display: 'type=Elbow,x=365,y=120,xs=324&406,ys=120&120'
+        id: l2
+        to: s4
+        type: link
+    name: |-
+      Repository
+      Topics
+    path: request
+    type: step
+  - attributes:
+      body: |-
+        query findRepositoryId {
+          repository(owner:"${github.organization}", name:"${github.repository}") {
+            id
+          }
+        }
+      display: 'x=410,y=80,w=100,h=80'
+      headers: "[[\"Authorization\",\"Bearer\_${githubToken}\"],[\"Content-Type\",\"application/json\"],[\"User-Agent\",\"${github.organization}\"]]"
+      method: POST
+      url: 'https://api.github.com/graphql'
+    id: s4
+    links:
+      - attributes:
+          display: 'type=Elbow,x=560,y=120,xs=514&606,ys=120&120'
+        id: l3
+        to: s5
+        type: link
+    name: |-
+      Find
+      Repository ID
+    path: request
+    type: step
+  - attributes:
+      body: |-
+        mutation starRepository {
+          addStar(input:{starrableId:"${@findRepositoryId.response.body.data.repository.id}"}) {
+            starrable {
+              viewerHasStarred
+            }
+          }
+        }
+      display: 'x=610,y=80,w=100,h=80'
+      headers: "[[\"Authorization\",\"Bearer\_${githubToken}\"],[\"Content-Type\",\"application/json\"],[\"User-Agent\",\"${github.organization}\"]]"
+      method: POST
+      url: 'https://api.github.com/graphql'
+    id: s5
+    links:
+      - attributes:
+          display: 'type=Elbow,x=760,y=120,xs=714&806,ys=120&120'
+        id: l4
+        to: s2
+        type: link
+    name: |-
+      Star
+      Repository
+    path: request
+    type: step
