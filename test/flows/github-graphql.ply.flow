@@ -34,7 +34,7 @@ steps:
           }
         }
       display: 'x=220,y=80,w=100,h=80'
-      headers: "[[\"Authorization\",\"Bearer\_${githubToken}\"],[\"Content-Type\",\"application/json\"],[\"User-Agent\",\"${github.organization}\"]]"
+      headers: '[["Authorization","Bearer ${githubToken}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
       method: POST
       url: 'https://api.github.com/graphql'
     id: s3
@@ -57,7 +57,7 @@ steps:
           }
         }
       display: 'x=410,y=80,w=100,h=80'
-      headers: "[[\"Authorization\",\"Bearer\_${githubToken}\"],[\"Content-Type\",\"application/json\"],[\"User-Agent\",\"${github.organization}\"]]"
+      headers: '[["Authorization","Bearer ${githubToken}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
       method: POST
       url: 'https://api.github.com/graphql'
     id: s4
@@ -82,7 +82,7 @@ steps:
           }
         }
       display: 'x=610,y=80,w=100,h=80'
-      headers: "[[\"Authorization\",\"Bearer\_${githubToken}\"],[\"Content-Type\",\"application/json\"],[\"User-Agent\",\"${github.organization}\"]]"
+      headers: '[["Authorization","Bearer ${githubToken}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
       method: POST
       url: 'https://api.github.com/graphql'
     id: s5
