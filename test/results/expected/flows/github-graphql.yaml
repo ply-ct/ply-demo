@@ -25,36 +25,73 @@ Repository Topics:
       }
   response:  # 277 ms
     status:
-      code: 401
-      message: Unauthorized
+      code: 200
+      message: OK
     headers:
-      access-control-allow-origin: '*'
-      access-control-expose-headers: 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset'
-      connection: close
-      content-length: '126'
-      content-security-policy: default-src 'none'
       content-type: application/json; charset=utf-8
-      date: 'Sun, 07 Mar 2021 22:25:31 GMT'
-      referrer-policy: 'origin-when-cross-origin, strict-origin-when-cross-origin'
-      server: GitHub.com
-      strict-transport-security: max-age=31536000; includeSubdomains; preload
-      vary: 'Accept-Encoding, Accept, X-Requested-With'
-      x-content-type-options: nosniff
-      x-frame-options: deny
       x-github-media-type: github.v4; format=json
-      x-github-request-id: 'F72A:1B0E:2AE2079:46117AD:604552DB'
-      x-ratelimit-limit: '0'
-      x-ratelimit-remaining: '0'
-      x-ratelimit-reset: '1615159531'
-      x-ratelimit-used: '0'
-      x-xss-protection: 1; mode=block
     body: |-
       {
-        "documentation_url": "https://docs.github.com/v3/#authentication",
-        "message": "This endpoint requires you to be authenticated."
+        "data": {
+          "repository": {
+            "repositoryTopics": {
+              "edges": [
+                {
+                  "node": {
+                    "topic": {
+                      "name": "rest-api"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "testing"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "ply"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "example-project"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "graphql"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "typescript"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "github-workflow"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
       }
   status: Completed
-Find Repository ID:  # 3/7/2021, 17:01:55:538
+Find Repository ID:
   id: s4
   request:
     url: 'https://api.github.com/graphql'
@@ -68,38 +105,23 @@ Find Repository ID:  # 3/7/2021, 17:01:55:538
           id
         }
       }
-  response:  # 223 ms
+  response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 200
+      message: OK
     headers:
-      access-control-allow-origin: '*'
-      access-control-expose-headers: 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset'
-      connection: close
-      content-length: '126'
-      content-security-policy: default-src 'none'
       content-type: application/json; charset=utf-8
-      date: 'Mon, 08 Mar 2021 00:01:56 GMT'
-      referrer-policy: 'origin-when-cross-origin, strict-origin-when-cross-origin'
-      server: GitHub.com
-      strict-transport-security: max-age=31536000; includeSubdomains; preload
-      vary: 'Accept-Encoding, Accept, X-Requested-With'
-      x-content-type-options: nosniff
-      x-frame-options: deny
       x-github-media-type: github.v4; format=json
-      x-github-request-id: 'F8CF:571A:57B00C:1306652:60456974'
-      x-ratelimit-limit: '0'
-      x-ratelimit-remaining: '0'
-      x-ratelimit-reset: '1615165316'
-      x-ratelimit-used: '0'
-      x-xss-protection: 1; mode=block
     body: |-
       {
-        "documentation_url": "https://docs.github.com/v3/#authentication",
-        "message": "This endpoint requires you to be authenticated."
+        "data": {
+          "repository": {
+            "id": "MDEwOlJlcG9zaXRvcnkxMjk1NTMyNDM="
+          }
+        }
       }
-  status: Completed  
-Star Repository:  # 3/7/2021, 17:01:55:783
+  status: Completed
+Star Repository:
   id: s5
   request:
     url: 'https://api.github.com/graphql'
@@ -115,35 +137,33 @@ Star Repository:  # 3/7/2021, 17:01:55:783
           }
         }
       }
-  response:  # 214 ms
+  response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 200
+      message: OK
     headers:
-      access-control-allow-origin: '*'
-      access-control-expose-headers: 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset'
-      connection: close
-      content-length: '126'
-      content-security-policy: default-src 'none'
       content-type: application/json; charset=utf-8
-      date: 'Mon, 08 Mar 2021 00:01:57 GMT'
-      referrer-policy: 'origin-when-cross-origin, strict-origin-when-cross-origin'
-      server: GitHub.com
-      strict-transport-security: max-age=31536000; includeSubdomains; preload
-      vary: 'Accept-Encoding, Accept, X-Requested-With'
-      x-content-type-options: nosniff
-      x-frame-options: deny
       x-github-media-type: github.v4; format=json
-      x-github-request-id: 'F8D0:5AE5:31A7A63:4D55FB0:60456975'
-      x-ratelimit-limit: '0'
-      x-ratelimit-remaining: '0'
-      x-ratelimit-reset: '1615165317'
-      x-ratelimit-used: '0'
-      x-xss-protection: 1; mode=block
     body: |-
       {
-        "documentation_url": "https://docs.github.com/v3/#authentication",
-        "message": "This endpoint requires you to be authenticated."
+        "data": {
+          "addStar": null
+        },
+        "errors": [
+          {
+            "locations": [
+              {
+                "column": 3,
+                "line": 2
+              }
+            ],
+            "message": "Could not resolve to a node with the global id of '${__ply_results.findRepositoryId.response.body.data.repository.id}'",
+            "path": [
+              "addStar"
+            ],
+            "type": "NOT_FOUND"
+          }
+        ]
       }
   status: Completed
 Stop:
