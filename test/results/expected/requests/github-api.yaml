@@ -15,11 +15,12 @@ repositoryTopics:
         "names": [
           "rest-api",
           "testing",
-          "ply",
-          "example-project",
-          "graphql",
           "typescript",
-          "github-workflow"
+          "nodejs",
+          "test-automation",
+          "continuous-testing",
+          "graphql",
+          "workflow"
         ]
       }
 
@@ -74,14 +75,28 @@ repositoryTopicsQuery:
                 {
                   "node": {
                     "topic": {
-                      "name": "ply"
+                      "name": "typescript"
                     }
                   }
                 },
                 {
                   "node": {
                     "topic": {
-                      "name": "example-project"
+                      "name": "nodejs"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "test-automation"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "continuous-testing"
                     }
                   }
                 },
@@ -95,14 +110,7 @@ repositoryTopicsQuery:
                 {
                   "node": {
                     "topic": {
-                      "name": "typescript"
-                    }
-                  }
-                },
-                {
-                  "node": {
-                    "topic": {
-                      "name": "github-workflow"
+                      "name": "workflow"
                     }
                   }
                 }
