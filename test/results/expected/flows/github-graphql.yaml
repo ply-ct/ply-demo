@@ -11,7 +11,7 @@ Repository Topics:
       User-Agent: ply-ct
     body: |-
       query {
-        repository(owner: "ply-ct", name: "ply-demo") {
+        repository(owner: "${github.organization}", name: "${github.repository}") {
           repositoryTopics(first: 10) {
             edges {
               node {
@@ -53,14 +53,28 @@ Repository Topics:
                 {
                   "node": {
                     "topic": {
-                      "name": "ply"
+                      "name": "typescript"
                     }
                   }
                 },
                 {
                   "node": {
                     "topic": {
-                      "name": "example-project"
+                      "name": "nodejs"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "test-automation"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "topic": {
+                      "name": "continuous-testing"
                     }
                   }
                 },
@@ -74,14 +88,7 @@ Repository Topics:
                 {
                   "node": {
                     "topic": {
-                      "name": "typescript"
-                    }
-                  }
-                },
-                {
-                  "node": {
-                    "topic": {
-                      "name": "github-workflow"
+                      "name": "workflow"
                     }
                   }
                 }
@@ -101,7 +108,7 @@ Find Repository ID:
       User-Agent: ply-ct
     body: |-
       query findRepositoryId {
-        repository(owner:"ply-ct", name:"ply-demo") {
+        repository(owner:"${github.organization}", name:"${github.repository}") {
           id
         }
       }
@@ -116,7 +123,7 @@ Find Repository ID:
       {
         "data": {
           "repository": {
-            "id": "MDEwOlJlcG9zaXRvcnkxMjk1NTMyNDM="
+            "id": "MDEwOlJlcG9zaXRvcnkxMjk1NDk0ODk="
           }
         }
       }
@@ -131,7 +138,7 @@ Star Repository:
       User-Agent: ply-ct
     body: |-
       mutation starRepository {
-        addStar(input:{starrableId:"${__ply_results.findRepositoryId.response.body.data.repository.id}"}) {
+        addStar(input:{starrableId:"${@s4.response.body.data.repository.id}"}) {
           starrable {
             viewerHasStarred
           }
@@ -147,23 +154,12 @@ Star Repository:
     body: |-
       {
         "data": {
-          "addStar": null
-        },
-        "errors": [
-          {
-            "locations": [
-              {
-                "column": 3,
-                "line": 2
-              }
-            ],
-            "message": "Could not resolve to a node with the global id of '${__ply_results.findRepositoryId.response.body.data.repository.id}'",
-            "path": [
-              "addStar"
-            ],
-            "type": "NOT_FOUND"
+          "addStar": {
+            "starrable": {
+              "viewerHasStarred": true
+            }
           }
-        ]
+        }
       }
   status: Completed
 Stop:

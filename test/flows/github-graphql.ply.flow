@@ -75,7 +75,7 @@ steps:
   - attributes:
       body: |-
         mutation starRepository {
-          addStar(input:{starrableId:"${@findRepositoryId.response.body.data.repository.id}"}) {
+          addStar(input:{starrableId:"${@s4.response.body.data.repository.id}"}) {
             starrable {
               viewerHasStarred
             }
