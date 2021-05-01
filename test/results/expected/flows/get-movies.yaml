@@ -4,7 +4,7 @@ Start:
 Movie by Title:
   id: s3
   request:
-    url: '${baseUrl}/movies?title=${title}'
+    url: ${baseUrl}/movies?title=${title}
     method: GET
     headers:
       Accept: application/json
@@ -61,7 +61,7 @@ Movie by Title:
 Movie by ID:
   id: s4
   request:
-    url: '${baseUrl}/movies/${@s3.response.body.movies[0].id}'
+    url: ${baseUrl}/movies/${@s3.response.body.movies[0].id}
     method: GET
     headers:
       Accept: application/json

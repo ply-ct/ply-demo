@@ -4,7 +4,7 @@ Start:
 Repository Topics:
   id: s3
   request:
-    url: 'https://api.github.com/graphql'
+    url: https://api.github.com/graphql
     method: POST
     headers:
       Content-Type: application/json
@@ -101,7 +101,7 @@ Repository Topics:
 Find Repository ID:
   id: s4
   request:
-    url: 'https://api.github.com/graphql'
+    url: https://api.github.com/graphql
     method: POST
     headers:
       Content-Type: application/json
@@ -131,7 +131,7 @@ Find Repository ID:
 Star Repository:
   id: s5
   request:
-    url: 'https://api.github.com/graphql'
+    url: https://api.github.com/graphql
     method: POST
     headers:
       Content-Type: application/json

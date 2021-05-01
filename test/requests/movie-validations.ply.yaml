@@ -1,5 +1,5 @@
 postBadYear:
-  url: '${baseUrl}/movies'
+  url: ${baseUrl}/movies
   method: POST
   headers:
     Content-Type: application/json
@@ -41,13 +41,13 @@ postBadYear:
     }
 
 getMovieId:
-  url: '${baseUrl}/movies?title=The Bat Whispers'
+  url: ${baseUrl}/movies?title=The Bat Whispers
   method: GET
   headers:
     Accept: application/json
 
 patchBadRating:
-  url: '${baseUrl}/movies/${@getMovieId.response.body.movies[0].id}'
+  url: ${baseUrl}/movies/${@getMovieId.response.body.movies[0].id}
   method: PATCH
   headers:
     Content-Type: application/json

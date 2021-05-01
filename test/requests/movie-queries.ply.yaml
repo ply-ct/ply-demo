@@ -1,31 +1,31 @@
 moviesByYearAndRating:
-  url: '${baseUrl}/movies?year=${year}&rating=${rating}'
+  url: ${baseUrl}/movies?year=${year}&rating=${rating}
   method: GET
   headers:
     Accept: application/json
 
 movieById:
   # id comes from previous response body
-  url:  '${baseUrl}/movies/${@moviesByYearAndRating.response.body.movies[0].id}'
+  url: ${baseUrl}/movies/${@moviesByYearAndRating.response.body.movies[0].id}
   method: GET
   headers:
     Accept: application/json
 
 # general purpose query
 greatFilmsOf1935:
-  url: '${baseUrl}/movies?${queries.highlyRated1935}'
+  url: ${baseUrl}/movies?${queries.highlyRated1935}
   method: GET
   headers:
     Accept: application/json
 
 bestMovieOf1935:
-  url: '${baseUrl}/movies?${queries.tipTop1935}'
+  url: ${baseUrl}/movies?${queries.tipTop1935}
   method: GET
   headers:
     Accept: application/json
 
 stinkersOf1932:
-  url: '${baseUrl}/movies?${queries.poorlyRated1932}'
+  url: ${baseUrl}/movies?${queries.poorlyRated1932}
   method: GET
   headers:
     Accept: application/json

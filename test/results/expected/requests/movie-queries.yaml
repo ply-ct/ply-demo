@@ -1,6 +1,6 @@
 moviesByYearAndRating:
   request:
-    url: '${baseUrl}/movies?year=${year}&rating=${rating}'
+    url: ${baseUrl}/movies?year=${year}&rating=${rating}
     method: GET
     headers:
       Accept: application/json
@@ -94,7 +94,7 @@ moviesByYearAndRating:
 
 movieById:
   request:
-    url: '${baseUrl}/movies/${@moviesByYearAndRating.response.body.movies[0].id}' # id from previous response
+    url: ${baseUrl}/movies/${@moviesByYearAndRating.response.body.movies[0].id} # id from previous response
     method: GET
     headers:
       Accept: application/json
@@ -146,7 +146,7 @@ movieById:
 
 greatFilmsOf1935:
   request:
-    url: '${baseUrl}/movies?${queries.highlyRated1935}'
+    url: ${baseUrl}/movies?${queries.highlyRated1935}
     method: GET
     headers:
       Accept: application/json
@@ -240,7 +240,7 @@ greatFilmsOf1935:
 
 bestMovieOf1935:
   request:
-    url: '${baseUrl}/movies?${queries.tipTop1935}'
+    url: ${baseUrl}/movies?${queries.tipTop1935}
     method: GET
     headers:
       Accept: application/json
@@ -296,7 +296,7 @@ bestMovieOf1935:
 
 stinkersOf1932:
   request:
-    url: '${baseUrl}/movies?${queries.poorlyRated1932}'
+    url: ${baseUrl}/movies?${queries.poorlyRated1932}
     method: GET
     headers:
       Accept: application/json

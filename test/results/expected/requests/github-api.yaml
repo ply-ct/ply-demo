@@ -1,6 +1,6 @@
 repositoryTopics:
   request:
-    url: 'https://api.github.com/repos/${github.organization}/${github.repository}/topics'
+    url: https://api.github.com/repos/${github.organization}/${github.repository}/topics
     method: GET
     headers:
       Accept: application/vnd.github.mercy-preview+json
@@ -26,7 +26,7 @@ repositoryTopics:
 
 repositoryTopicsQuery:
   request:
-    url: 'https://api.github.com/graphql'
+    url: https://api.github.com/graphql
     method: POST
     headers:
       Content-Type: application/json
@@ -122,7 +122,7 @@ repositoryTopicsQuery:
 
 findRepositoryId:
   request:
-    url: 'https://api.github.com/graphql'
+    url: https://api.github.com/graphql
     method: POST
     headers:
       Content-Type: application/json
@@ -152,7 +152,7 @@ findRepositoryId:
 # returns HTTP 200 even if already starred
 starRepository:
   request:
-    url: 'https://api.github.com/graphql'
+    url: https://api.github.com/graphql
     method: POST
     headers:
       Content-Type: application/json
