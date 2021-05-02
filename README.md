@@ -1,8 +1,5 @@
 # ply-demo
 <a href="https://github.com/ply-ct/ply-demo/actions">
-  <img src="https://github.com/ply-ct/ply-demo/workflows/build/badge.svg" />
-</a>
-<a href="https://github.com/ply-ct/ply-demo/actions">
   <img src="https://badgen.net/badge/ply/passing/148f99?color=148f99&icon=https://raw.githubusercontent.com/ply-ct/ply/master/docs/brand/Logo/Icon/Icon_white.svg" />
 </a>
 
