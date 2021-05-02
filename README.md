@@ -1,5 +1,10 @@
 # ply-demo
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ply-ct/ply-demo/ply-demo%20ci)
+<a href="https://github.com/ply-ct/ply-demo/actions">
+  <img src="https://github.com/ply-ct/ply-demo/workflows/build/badge.svg" />
+</a>
+<a href="https://github.com/ply-ct/ply-demo/actions">
+  <img src="https://badgen.net/badge/ply/passing/148f99?color=148f99&icon=https://raw.githubusercontent.com/ply-ct/ply/master/docs/brand/Logo/Icon/Icon_white.svg" />
+</a>
 
 Illustrates how to use [Ply](https://ply-ct.github.io/ply/) for automated API testing. 
 Includes an example GitHub workflow to demonstrate Ply continuous testing.

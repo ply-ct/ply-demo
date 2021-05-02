@@ -1,5 +1,5 @@
 # basic github workflow to exercise ply tests
-name: 'ply-demo ci'
+name: build
 
 on:
   push:
