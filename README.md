@@ -1,6 +1,6 @@
 # ply-demo
 <a href="https://github.com/ply-ct/ply-demo/actions">
-    <img src="https://ply-ct.com/ply/badge/passing.svg" />
+    <img src="https://github.com/ply-ct/ply-demo/workflows/build/badge.svg" />
 </a>
 
 Illustrates how to use [Ply](https://ply-ct.github.io/ply/) for automated API testing. 
