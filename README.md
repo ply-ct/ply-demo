@@ -6,6 +6,7 @@
   <img src="https://ply-ct.com/badges/ply-ct/ply-demo/workflows/build" />
 </a>
 Other Badge   
+
 ![badge](https://ply-ct.com/badges/ply-ct/ply-demo/workflows/build)
 
 Illustrates how to use [Ply](https://ply-ct.github.io/ply/) for automated API testing. 
