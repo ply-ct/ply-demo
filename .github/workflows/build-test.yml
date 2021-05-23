@@ -19,4 +19,7 @@ jobs:
         node-version: '12.x'
     - run: npm install
     - run: npx ply --version
-    - run: npm test
+    - uses: ply-ct/ply-action@v0.1.2
+      with:
+        ply-path: node_modules/ply-ct/dist
+
