@@ -19,7 +19,10 @@ jobs:
         node-version: '12.x'
     - run: npm install
     - run: npx ply --version
-    - uses: ply-ct/ply-action@v0.1.2
+    - run: npm test
+    - name: ply
+      if: always()
+      uses: ply-ct/ply-action@v0.1.2
       with:
-        ply-path: node_modules/ply-ct/dist
+        result-file: test/results/actual/ply-results.json
 

@@ -4,5 +4,6 @@
   "valuesFiles": [
     "test/values/global.json",
     "test/values/localhost.json"
-  ]
+  ],
+  "outputFile": "test/results/actual/ply-results.json"
 }
