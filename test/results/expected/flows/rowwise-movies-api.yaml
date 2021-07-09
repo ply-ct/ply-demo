@@ -1,22 +1,10 @@
-Before All:
-  id: f1
-  Start:
-    id: s4
-    status: Completed
-  Delete Movie:
-    id: s5
-    status: Completed
-  Stop:
-    id: s6
-    status: Completed
-  status: Completed
 Start:
   id: s1
   status: Completed
 Create Movie:
-  id: s7
+  id: s3
   request:
-    url: http://localhost:3000/movies
+    url: ${baseUrl}/movies
     method: POST
     headers:
       Accept: application/json
@@ -104,9 +92,9 @@ Create Movie:
       }
   status: Completed
 Update Rating:
-  id: s8
+  id: s4
   request:
-    url: ${baseUrl}/movies/${@s7.response.body.id}
+    url: ${baseUrl}/movies/${@s3.response.body.id}
     method: PATCH
     headers:
       Accept: application/json
@@ -130,9 +118,9 @@ Update Rating:
       }
   status: Completed
 Confirm Update:
-  id: s9
+  id: s5
   request:
-    url: ${baseUrl}/movies/${@s7.response.body.id}
+    url: ${baseUrl}/movies/${@s3.response.body.id}
     method: GET
     headers:
       Accept: application/json
@@ -170,7 +158,7 @@ Confirm Update:
             "role": "${credits[5].role}"
           }
         ],
-        "id": "${@s7.response.body.id}",
+        "id": "${@s3.response.body.id}",
         "poster": "${poster}",
         "rating": 4.5,
         "title": "${title}",
@@ -182,9 +170,9 @@ Confirm Update:
       }
   status: Completed
 Delete Movie:
-  id: s10
+  id: s6
   request:
-    url: ${baseUrl}/movies/${@s7.response.body.id}
+    url: ${baseUrl}/movies/${@s3.response.body.id}
     method: DELETE
     headers:
       Accept: application/json
@@ -203,9 +191,9 @@ Delete Movie:
       }
   status: Completed
 Confirm Delete:
-  id: s11
+  id: s7
   request:
-    url: ${baseUrl}/movies/${@s7.response.body.id}
+    url: ${baseUrl}/movies/${@s3.response.body.id}
     method: GET
     headers:
       Accept: application/json
@@ -219,7 +207,7 @@ Confirm Delete:
       {
         "status": {
           "code": 404,
-          "message": "Movie not found: ${@s7.response.body.id}"
+          "message": "Movie not found: ${@s3.response.body.id}"
         }
       }
   status: Completed

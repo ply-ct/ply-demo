@@ -3,17 +3,143 @@ attributes:
   display: 'x=23,y=18,w=156,h=27'
 steps:
   - attributes:
-      display: 'x=56,y=97,w=60,h=40'
+      display: 'x=30,y=100,w=60,h=40'
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=261,y=117,xs=120&402,ys=117&117'
+          display: 'type=Elbow,x=116,y=120,xs=94&136,ys=120&120'
         id: l1
-        to: s2
+        to: s3
     name: Start
     path: start
   - attributes:
-      display: 'x=406,y=97,w=60,h=40'
+      display: 'x=890,y=100,w=60,h=40'
     id: s2
     name: Stop
     path: stop
+  - attributes:
+      body: |-
+        {
+          "credits": [
+            {
+              "name": "${credits[0].name}",
+              "role": "${credits[0].role}"
+            },
+            {
+              "name": "${credits[1].name}",
+              "role": "${credits[1].role}"
+            },
+            {
+              "name": "${credits[2].name}",
+              "role": "${credits[2].role}"
+            },
+            {
+              "name": "${credits[3].name}",
+              "role": "${credits[3].role}"
+            },
+            {
+              "name": "${credits[4].name}",
+              "role": "${credits[4].role}"
+            },
+            {
+              "name": "${credits[5].name}",
+              "role": "${credits[5].role}"
+            }
+          ],
+          "poster": "${poster}",
+          "rating": ${rating},
+          "title": "${title}",
+          "webRef": {
+            "ref": "${webRef.ref}",
+            "site": "${webRef.site}"
+          },
+          "year": ${year}
+        }
+      display: 'x=140,y=80,w=100,h=80'
+      headers: '[["Accept","application/json"],["Content-Type","application/json"]]'
+      method: POST
+      url: '${baseUrl}/movies'
+    id: s3
+    links:
+      - attributes:
+          display: 'type=Elbow,x=266,y=120,xs=244&286,ys=120&120'
+        id: l2
+        to: s4
+        type: link
+    name: |-
+      Create
+      Movie
+    path: request
+    type: step
+  - attributes:
+      body: |-
+        {
+          "rating": 4.5
+        }
+      display: 'x=290,y=80,w=100,h=80'
+      headers: '[["Accept","application/json"],["Content-Type","application/json"]]'
+      method: PATCH
+      url: '${baseUrl}/movies/${@s3.response.body.id}'
+    id: s4
+    links:
+      - attributes:
+          display: 'type=Elbow,x=417,y=120,xs=394&436,ys=120&120'
+        id: l3
+        to: s5
+        type: link
+    name: |-
+      Update
+      Rating
+    path: request
+    type: step
+  - attributes:
+      display: 'x=440,y=80,w=100,h=80'
+      headers: '[["Accept","application/json"]]'
+      method: GET
+      url: '${baseUrl}/movies/${@s3.response.body.id}'
+    id: s5
+    links:
+      - attributes:
+          display: 'type=Elbow,x=565,y=120,xs=544&586,ys=120&120'
+        id: l4
+        to: s6
+        type: link
+    name: |-
+      Confirm
+      Update
+    path: request
+    type: step
+  - attributes:
+      display: 'x=590,y=80,w=100,h=80'
+      headers: '[["Accept","application/json"]]'
+      method: DELETE
+      url: '${baseUrl}/movies/${@s3.response.body.id}'
+    id: s6
+    links:
+      - attributes:
+          display: 'type=Elbow,x=720,y=120,xs=694&736,ys=120&120'
+        id: l5
+        to: s7
+        type: link
+    name: |-
+      Delete
+      Movie
+    path: request
+    type: step
+  - attributes:
+      display: 'x=740,y=80,w=100,h=80'
+      headers: '[["Accept","application/json"]]'
+      method: GET
+      url: '${baseUrl}/movies/${@s3.response.body.id}'
+    id: s7
+    links:
+      - attributes:
+          display: 'type=Elbow,x=865,y=120,xs=844&886,ys=120&120'
+        id: l6
+        to: s2
+        type: link
+    name: |-
+      Confirm
+      Delete
+    path: request
+    type: step
