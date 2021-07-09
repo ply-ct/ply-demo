@@ -50,7 +50,7 @@ postBadYear:
       {
         "status": {
           "code": 400,
-          "message": "Value for 'year' (1812) should be between 1930 and 1939"
+          "message": "Value for 'year' (1812) should be between 1930 and 1945"
         }
       }
 getMovieId:
