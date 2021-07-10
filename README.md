@@ -50,5 +50,5 @@ This simple CI [workflow](https://github.com/ply-ct/ply-demo/blob/master/.github
 shows how to use npm scripts to automatically execute all requests and cases whenever a commit is pushed
 on the master branch.
 
-This readme file includes a GitHub Workflow status badge hosted by shields.io: https://github.com/badges/shields#quickstart.
+This readme file includes the [Ply Action](https://github.com/ply-ct/ply-action#readme) status badge.
 
