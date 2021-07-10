@@ -22,7 +22,7 @@ export class MovieCrud {
     async beforeAll(values: any) {
         const deleteMovie = this.requestSuite.get('deleteMovie');
         assert.exists(deleteMovie);
-        const response = await deleteMovie!.submit({...values, id: '435b30ad'});
+        const response = await deleteMovie!.submit({...values, movieId: '435b30ad'});
         this.requestSuite.log.info('Cleanup response status code', response.status.code);
         // response status should either be 200 or 404 (we don't care which during cleanup)
         assert.ok(response.status.code === 200 || response.status.code === 404);

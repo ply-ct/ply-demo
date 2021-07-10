@@ -44,7 +44,7 @@ createMovie: # POST
     }
 
 updateMovie: # PATCH
-  url: ${baseUrl}/movies/${id}
+  url: ${baseUrl}/movies/${movieId}
   method: PATCH
   headers:
     Accept: application/json
@@ -55,19 +55,19 @@ updateMovie: # PATCH
     }
 
 retrieveMovie: # GET
-  url: ${baseUrl}/movies/${id}
+  url: ${baseUrl}/movies/${movieId}
   method: GET
   headers:
     Accept: application/json
 
 deleteMovie: # DELETE
-  url: ${baseUrl}/movies/${id}
+  url: ${baseUrl}/movies/${movieId}
   method: DELETE
   headers:
     Accept: application/json
 
 replaceMovie: # POST
-  url: ${baseUrl}/movies/${id}
+  url: ${baseUrl}/movies/${movieId}
   method: PUT
   headers:
     Accept: application/json

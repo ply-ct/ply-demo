@@ -1,7 +1,7 @@
 attributes:
   NodeStyle: BoxIcon
   display: 'x=23,y=18,w=156,h=27'
-  values: '[["id","435b30ad"]]'
+  values: '[["movieId","435b30ad"]]'
 notes:
   - attributes:
       display: 'x=470,y=50,w=171.82666015625,h=40'
@@ -88,7 +88,7 @@ steps:
       display: 'x=290,y=230,w=100,h=80'
       headers: '[["Accept","application/json"],["Content-Type","application/json"]]'
       method: PATCH
-      url: '${baseUrl}/movies/${id}'
+      url: '${baseUrl}/movies/${movieId}'
     id: s8
     links:
       - attributes:
@@ -105,7 +105,7 @@ steps:
       display: 'x=430,y=230,w=100,h=80'
       headers: '[["Accept","application/json"]]'
       method: GET
-      url: '${baseUrl}/movies/${id}'
+      url: '${baseUrl}/movies/${movieId}'
     id: s9
     links:
       - attributes:
@@ -122,7 +122,7 @@ steps:
       display: 'x=570,y=230,w=100,h=80'
       headers: '[["Accept","application/json"]]'
       method: DELETE
-      url: '${baseUrl}/movies/${id}'
+      url: '${baseUrl}/movies/${movieId}'
     id: s10
     links:
       - attributes:
@@ -139,7 +139,7 @@ steps:
       display: 'x=710,y=230,w=100,h=80'
       headers: '[["Accept","application/json"]]'
       method: GET
-      url: '${baseUrl}/movies/${id}'
+      url: '${baseUrl}/movies/${movieId}'
     id: s11
     links:
       - attributes:
@@ -178,7 +178,7 @@ subflows:
           headers: '[["Accept","application/json"]]'
           method: DELETE
           submit: 'true'
-          url: '${baseUrl}/${id}'
+          url: '${baseUrl}/movies/${id}'
         id: s5
         links:
           - attributes:
