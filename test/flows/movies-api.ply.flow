@@ -178,7 +178,7 @@ subflows:
           headers: '[["Accept","application/json"]]'
           method: DELETE
           submit: 'true'
-          url: '${baseUrl}/movies/${id}'
+          url: '${baseUrl}/movies/${movieId}'
         id: s5
         links:
           - attributes:
