@@ -39,13 +39,11 @@ postBadYear:
       },
       "year": 1812
     }
-
 getMovieId:
   url: ${baseUrl}/movies?title=The Bat Whispers
   method: GET
   headers:
     Accept: application/json
-
 patchBadRating:
   url: ${baseUrl}/movies/${@getMovieId.response.body.movies[0].id}
   method: PATCH

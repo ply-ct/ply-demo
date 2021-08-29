@@ -1,11 +1,10 @@
 createMovie:
   request:
-    url: http://localhost:3000/movies
+    url: ${baseUrl}/movies
     method: POST
     headers:
       Accept: application/json
       Content-Type: application/json
-      new-header: new-value
     body: |-
       {
         "credits": [
@@ -14,7 +13,7 @@ createMovie:
             "role": "director"
           },
           {
-            "name": "Warren Williams",
+            "name": "Warren William",
             "role": "actor"
           },
           {
@@ -48,7 +47,7 @@ createMovie:
       message: Created
     headers:
       content-type: application/json; charset=utf-8
-      location: http://localhost:3000/movies/435b30ad
+      location: ${baseUrl}/movies/435b30ad
     body: |-
       {
         "credits": [
@@ -57,7 +56,7 @@ createMovie:
             "role": "director"
           },
           {
-            "name": "Warren Williams",
+            "name": "Warren William",
             "role": "actor"
           },
           {
@@ -88,7 +87,7 @@ createMovie:
       }
 updateMovie:
   request:
-    url: http://localhost:3000/movies/435b30ad
+    url: ${baseUrl}/movies/${movieId}
     method: PATCH
     headers:
       Accept: application/json
@@ -112,7 +111,7 @@ updateMovie:
       }
 retrieveMovie:
   request:
-    url: http://localhost:3000/movies/435b30ad
+    url: ${baseUrl}/movies/435b30ad
     method: GET
     headers:
       Accept: application/json
@@ -130,7 +129,7 @@ retrieveMovie:
             "role": "director"
           },
           {
-            "name": "Warren Williams",
+            "name": "Warren William",
             "role": "actor"
           },
           {
@@ -162,7 +161,7 @@ retrieveMovie:
       }
 deleteMovie:
   request:
-    url: http://localhost:3000/movies/435b30ad
+    url: ${baseUrl}/movies/435b30ad
     method: DELETE
     headers:
       Accept: application/json
@@ -181,7 +180,7 @@ deleteMovie:
       }
 replaceMovie:
   request:
-    url: http://localhost:3000/movies/435b30ad
+    url: ${baseUrl}/movies/435b30ad
     method: PUT
     headers:
       Accept: application/json

@@ -1,4 +1,4 @@
-createMovie: # POST
+createMovie:
   url: ${baseUrl}/movies
   method: POST
   headers:
@@ -41,8 +41,7 @@ createMovie: # POST
       },
       "year": ${year}
     }
-
-updateMovie: # PATCH
+updateMovie:
   url: ${baseUrl}/movies/${@createMovie.response.body.id}
   method: PATCH
   headers:
@@ -52,16 +51,13 @@ updateMovie: # PATCH
     {
       "rating": 4.5
     }
-
-retrieveMovie: # GET
+retrieveMovie:
   url: ${baseUrl}/movies/${@createMovie.response.body.id}
   method: GET
   headers:
     Accept: application/json
-
-deleteMovie: # DELETE
+deleteMovie:
   url: ${baseUrl}/movies/${@createMovie.response.body.id}
   method: DELETE
   headers:
     Accept: application/json
-

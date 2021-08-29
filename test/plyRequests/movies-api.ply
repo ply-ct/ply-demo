@@ -1,48 +1,4 @@
 createMovie:
-  source:
-    path: /Users/donald/ply/ply-demo/test/plyRequests/movies-api.ply#createMovie
-    text: |-
-      createMovie:
-        url: ${baseUrl}/movies
-        method: POST
-        headers:
-          Accept: application/json
-          Content-Type: application/json
-        body: |-
-          {
-            "credits": [
-              {
-                "name": "Alan Crosland",
-                "role": "director"
-              },
-              {
-                "name": "Warren William",
-                "role": "actor"
-              },
-              {
-                "name": "Mary Astor",
-                "role": "actor"
-              },
-              {
-                "name": "Allen Jenkins",
-                "role": "actor"
-              },
-              {
-                "name": "Grant Mitchell",
-                "role": "actor"
-              },
-              {
-                "name": "Helen Trenholme",
-                "role": "actor"
-              }
-            ],
-            "poster": "cothd.jpg",
-            "title": "The Case of the Howling Dog",
-            "webRef": {
-              "ref": "tt0024958",
-              "site": "imdb.com"
-            },
-            "year": 1934
   url: ${baseUrl}/movies
   method: POST
   headers:
@@ -84,21 +40,7 @@ createMovie:
       },
       "year": 1934
     }
-  __start: 0
-  __end: 87
 updateMovie:
-  source:
-    path: /Users/donald/ply/ply-demo/test/plyRequests/movies-api.ply#updateMovie
-    text: |-
-      updateMovie:
-        url: ${baseUrl}/movies/${movieId}
-        method: PATCH
-        headers:
-          Accept: application/json
-          Content-Type: application/json
-        body: |-
-          {
-            "rating": ${rating}
   url: ${baseUrl}/movies/${movieId}
   method: PATCH
   headers:
@@ -108,83 +50,17 @@ updateMovie:
     {
       "rating": ${rating}
     }
-  __start: 88
-  __end: 111
 retrieveMovie:
-  source:
-    path: /Users/donald/ply/ply-demo/test/plyRequests/movies-api.ply#retrieveMovie
-    text: |-
-      retrieveMovie:
-        url: ${baseUrl}/movies/${movieId}
-        method: GET
-        headers:
   url: ${baseUrl}/movies/${movieId}
   method: GET
   headers:
     Accept: application/json
-  __start: 112
-  __end: 125
 deleteMovie:
-  source:
-    path: /Users/donald/ply/ply-demo/test/plyRequests/movies-api.ply#deleteMovie
-    text: |-
-      deleteMovie:
-        url: ${baseUrl}/movies/${movieId}
-        method: DELETE
-        headers:
   url: ${baseUrl}/movies/435b30ad
   method: DELETE
   headers:
     Accept: application/json
-  __start: 126
-  __end: 139
 replaceMovie:
-  source:
-    path: /Users/donald/ply/ply-demo/test/plyRequests/movies-api.ply#replaceMovie
-    text: |-
-      replaceMovie:
-        url: ${baseUrl}/movies/${movieId}
-        method: PUT
-        headers:
-          Accept: application/json
-          Content-Type: application/json
-        body: |-
-          {
-            "credits": [
-              {
-                "name": "Alan Crosland",
-                "role": "director"
-              },
-              {
-                "name": "Warren William",
-                "role": "actor"
-              },
-              {
-                "name": "Mary Astor",
-                "role": "actor"
-              },
-              {
-                "name": "Allen Jenkins",
-                "role": "actor"
-              },
-              {
-                "name": "Grant Mitchell",
-                "role": "actor"
-              },
-              {
-                "name": "Helen Trenholme",
-                "role": "actor"
-              }
-            ],
-            "id": "${id}",
-            "poster": "cothd.jpg",
-            "rating": ${rating},
-            "title": "The Case of the Howling Dog",
-            "webRef": {
-              "ref": "tt0024958",
-              "site": "imdb.com"
-            },
-            "year": 1934
   url: ${baseUrl}/movies/${movieId}
   method: PUT
   headers:
@@ -228,5 +104,3 @@ replaceMovie:
       },
       "year": 1934
     }
-  __start: 140
-  __end: 231
