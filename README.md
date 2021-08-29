@@ -3,7 +3,7 @@
     <img src="https://github.com/ply-ct/ply-demo/workflows/build/badge.svg" />
 </a>
 <a href="https://github.com/ply-ct/ply-demo/actions">
-  <img src="https://ply-ct.com/badges/ply-ct/ply-demo/workflows/build" />
+  <img src="https://ply-ct.org/badges/ply-ct/ply-demo/workflows/build" />
 </a>
 
 Illustrates how to use [Ply](https://ply-ct.github.io/ply/) for automated API testing. 

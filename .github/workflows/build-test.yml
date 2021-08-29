@@ -21,7 +21,7 @@ jobs:
     - run: npx ply --version
     - run: npm test
     - name: ply
-      uses: ply-ct/ply-action@v1.0.1
+      uses: ply-ct/ply-action@v1.0.3
       with:
         result-file: test/results/actual/ply-results.json
 

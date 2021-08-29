@@ -1,0 +1,389 @@
+moviesByYearAndRating:
+  request:
+    url: ${baseUrl}/movies?year=1931&rating=5
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "Tod Browning",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Helen Chandler",
+                "role": "actor"
+              },
+              {
+                "name": "David Manners",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              },
+              {
+                "name": "Edward Van Sloan",
+                "role": "actor"
+              }
+            ],
+            "description": "What's even more amazing than Lugosi's out-of-body performance is the fact that the finest horror movie ever made was filmed within 2 years of the advent of talking pictures.",
+            "id": "269b34c1",
+            "poster": "drac.jpg",
+            "rating": 5,
+            "title": "Dracula",
+            "webRef": {
+              "ref": "tt0021814",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "James Whale",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Colin Clive",
+                "role": "actor"
+              },
+              {
+                "name": "Mae Clarke",
+                "role": "actor"
+              },
+              {
+                "name": "John Boles",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              }
+            ],
+            "description": "Frankenstein solidified Universal's place as the premier horror studio of the era, and stands as the definitive American take on the school of German Expressionism.",
+            "id": "e2bca0d",
+            "poster": "frank.jpg",
+            "rating": 5,
+            "title": "Frankenstein",
+            "webRef": {
+              "ref": "tt0021884",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          }
+        ]
+      }
+movieById:
+  request:
+    url: http://localhost:3000/movies/269b34c1
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "credits": [
+          {
+            "name": "Tod Browning",
+            "role": "director"
+          },
+          {
+            "name": "Bela Lugosi",
+            "role": "actor"
+          },
+          {
+            "name": "Helen Chandler",
+            "role": "actor"
+          },
+          {
+            "name": "David Manners",
+            "role": "actor"
+          },
+          {
+            "name": "Dwight Frye",
+            "role": "actor"
+          },
+          {
+            "name": "Edward Van Sloan",
+            "role": "actor"
+          }
+        ],
+        "description": "What's even more amazing than Lugosi's out-of-body performance is the fact that the finest horror movie ever made was filmed within 2 years of the advent of talking pictures.",
+        "id": "269b34c1",
+        "poster": "drac.jpg",
+        "rating": 5,
+        "title": "Dracula",
+        "webRef": {
+          "ref": "tt0021814",
+          "site": "imdb.com"
+        },
+        "year": 1931
+      }
+greatFilmsOf1935:
+  request:
+    url: http://localhost:3000/movies?year=1935&rating=>4&sort=rating&descending=true
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "James Whale",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Colin Clive",
+                "role": "actor"
+              },
+              {
+                "name": "Valerie Hobson",
+                "role": "actor"
+              },
+              {
+                "name": "Ernest Thesiger",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              }
+            ],
+            "description": "James Whale's poignant, horrifying, hilarious masterpiece demonstrates his genius and surpasses the original as a cathartic, visionary tour de force.",
+            "id": "f236166",
+            "poster": "tbof.jpg",
+            "rating": 5,
+            "title": "Bride of Frankenstein",
+            "webRef": {
+              "ref": "tt0026138",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          },
+          {
+            "credits": [
+              {
+                "name": "Alfred Hitchcock",
+                "role": "director"
+              },
+              {
+                "name": "Robert Donat",
+                "role": "actor"
+              },
+              {
+                "name": "Madeleine Carroll",
+                "role": "actor"
+              },
+              {
+                "name": "Lucie Mannheim",
+                "role": "actor"
+              },
+              {
+                "name": "Godfrey Tearle",
+                "role": "actor"
+              },
+              {
+                "name": "Peggy Ashcroft",
+                "role": "actor"
+              }
+            ],
+            "description": "The best of Hitchcock's early features, with a truly thrilling series of chase sequences and a richly developed romantic interest; only slightly sullied by the ludicrous shenanigans during the last five minutes.",
+            "id": "494ecd62",
+            "poster": "ttns.jpg",
+            "rating": 4.5,
+            "title": "The Thirty-Nine Steps",
+            "webRef": {
+              "ref": "tt0026029",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          }
+        ]
+      }
+bestMovieOf1935:
+  request:
+    url: http://localhost:3000/movies?year=1935&sort=rating&descending=true&max=1
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "James Whale",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Colin Clive",
+                "role": "actor"
+              },
+              {
+                "name": "Valerie Hobson",
+                "role": "actor"
+              },
+              {
+                "name": "Ernest Thesiger",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              }
+            ],
+            "description": "James Whale's poignant, horrifying, hilarious masterpiece demonstrates his genius and surpasses the original as a cathartic, visionary tour de force.",
+            "id": "f236166",
+            "poster": "tbof.jpg",
+            "rating": 5,
+            "title": "Bride of Frankenstein",
+            "webRef": {
+              "ref": "tt0026138",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          }
+        ]
+      }
+stinkersOf1932:
+  request:
+    url: http://localhost:3000/movies?year=1932&rating=<=2
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "Armand Schaefer",
+                "role": "director"
+              },
+              {
+                "name": "Jack Mulhall",
+                "role": "actor"
+              },
+              {
+                "name": "Phyllis Barrington",
+                "role": "actor"
+              },
+              {
+                "name": "Crauford Kent",
+                "role": "actor"
+              },
+              {
+                "name": "Mischa Auer",
+                "role": "actor"
+              },
+              {
+                "name": "Louis Natheaux",
+                "role": "actor"
+              }
+            ],
+            "description": "There's a reason you've never heard of Willis Kent Productions, and it has everything to do with uninspired and stiffly-acted features like this limp excuse for a murder mystery.",
+            "id": "6606dab7",
+            "poster": "sh.jpg",
+            "rating": 2,
+            "title": "Sinister Hands",
+            "webRef": {
+              "ref": "tt0023478",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          },
+          {
+            "credits": [
+              {
+                "name": "Hampton Del Ruth",
+                "role": "director"
+              },
+              {
+                "name": "Phil Whitman",
+                "role": "director"
+              },
+              {
+                "name": "Regis Toomey",
+                "role": "actor"
+              },
+              {
+                "name": "June Clyde",
+                "role": "actor"
+              },
+              {
+                "name": "Lucille La Verne",
+                "role": "actor"
+              },
+              {
+                "name": "Jason Robards Sr.",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              }
+            ],
+            "description": "An utterly forgettable offering from tiny, unprolific Chadwick Productions, packed with all the cliches and none of the charm of other early-talkie drawing room mysteries.",
+            "id": "3c094e3a",
+            "poster": "twmc.jpg",
+            "rating": 2,
+            "title": "The Wayne Murder Case",
+            "webRef": {
+              "ref": "tt0023520",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          }
+        ]
+      }
