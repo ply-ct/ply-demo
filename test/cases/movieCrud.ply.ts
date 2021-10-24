@@ -1,5 +1,5 @@
-import ply, { Suite, Request } from 'ply-ct';
-import { suite, test, before, after } from 'ply-ct';
+import ply, { Suite, Request } from '@ply-ct/ply';
+import { suite, test, before, after } from '@ply-ct/ply';
 import { assert } from 'chai';
 
 @suite('movie-crud')
