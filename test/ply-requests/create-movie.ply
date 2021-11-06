@@ -1,7 +1,8 @@
-postBadYear:
+createMovie:
   url: ${baseUrl}/movies
   method: POST
   headers:
+    Accept: application/json
     Content-Type: application/json
   body: |-
     {
@@ -37,19 +38,5 @@ postBadYear:
         "ref": "tt0024958",
         "site": "imdb.com"
       },
-      "year": 1812
-    }
-getMovieId:
-  url: ${baseUrl}/movies?title=The Bat Whispers
-  method: GET
-  headers:
-    Accept: application/json
-patchBadRating:
-  url: ${baseUrl}/movies/${@getMovieId.response.body.movies[0].id}
-  method: PATCH
-  headers:
-    Content-Type: application/json
-  body: |-
-    {
-      "rating": 5.2
+      "year": 1934
     }

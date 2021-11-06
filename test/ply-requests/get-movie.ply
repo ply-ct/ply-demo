@@ -1,0 +1,5 @@
+get-movie:
+  url: https://ply-ct.org/movies?title=Dracula
+  method: get
+  headers:
+    Accept: application/json
