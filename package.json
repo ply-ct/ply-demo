@@ -1,6 +1,6 @@
 {
   "name": "@ply-ct/ply-demo",
-  "version": "3.0.16",
+  "version": "3.0.21",
   "description": "Illustrate Ply automated testing",
   "license": "MIT",
   "repository": {
@@ -32,7 +32,7 @@
     "test": "npm-run-all ply stop-movies --continue-on-error"
   },
   "devDependencies": {
-    "@ply-ct/ply": "^3.0.16",
+    "@ply-ct/ply": "^3.0.21",
     "@ply-ct/ply-movies": "^1.1.8",
     "@types/chai": "^4.2.8",
     "@types/node": "^13.13.15",
