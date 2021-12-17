@@ -55,7 +55,7 @@ postBadYear:
       }
 getMovieId:
   request:
-    url: http://localhost:3000/movies?title=The Bat Whispers
+    url: ${baseUrl}/movies?title=The Bat Whispers
     method: GET
     headers:
       Accept: application/json
