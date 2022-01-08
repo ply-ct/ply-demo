@@ -1,10 +1,10 @@
 attributes:
   NodeStyle: BoxIcon
-  display: 'x=23,y=18,w=156,h=27'
+  display: x=23,y=18,w=156,h=27
   values: '[["movieId","435b30ad"]]'
 notes:
   - attributes:
-      display: 'x=470,y=50,w=171.82666015625,h=40'
+      display: x=470,y=50,w=171.82666015625,h=40
     id: n1
     text: |-
       Clean up any leftover
@@ -12,18 +12,18 @@ notes:
     type: note
 steps:
   - attributes:
-      display: 'x=40,y=250,w=60,h=40'
+      display: x=40,y=250,w=60,h=40
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=188,y=264,xs=104&146,ys=270&270'
+          display: type=Elbow,x=188,y=264,xs=104&146,ys=270&270
         id: l5
         to: s7
         type: link
     name: Start
     path: start
   - attributes:
-      display: 'x=850,y=250,w=60,h=40'
+      display: x=860,y=250,w=60,h=40
     id: s2
     name: Stop
     path: stop
@@ -64,14 +64,14 @@ steps:
           },
           "year": 1934
         }
-      display: 'x=150,y=230,w=100,h=80'
+      display: x=150,y=230,w=100,h=80
       headers: '[["Accept","application/json"],["Content-Type","application/json"]]'
       method: POST
-      url: '${baseUrl}/movies'
+      url: ${baseUrl}/movies
     id: s7
     links:
       - attributes:
-          display: 'type=Elbow,x=272,y=270,xs=254&286,ys=270&270'
+          display: type=Elbow,x=272,y=270,xs=254&286,ys=270&270
         id: l6
         to: s8
         type: link
@@ -85,14 +85,14 @@ steps:
         {
           "rating": ${rating}
         }
-      display: 'x=290,y=230,w=100,h=80'
+      display: x=290,y=230,w=100,h=80
       headers: '[["Accept","application/json"],["Content-Type","application/json"]]'
       method: PATCH
-      url: '${baseUrl}/movies/${movieId}'
+      url: ${baseUrl}/movies/${movieId}
     id: s8
     links:
       - attributes:
-          display: 'type=Elbow,x=410,y=270,xs=394&426,ys=270&270'
+          display: type=Elbow,x=410,y=270,xs=394&426,ys=270&270
         id: l7
         to: s9
         type: link
@@ -102,14 +102,14 @@ steps:
     path: request
     type: step
   - attributes:
-      display: 'x=430,y=230,w=100,h=80'
+      display: x=430,y=230,w=100,h=80
       headers: '[["Accept","application/json"]]'
       method: GET
-      url: '${baseUrl}/movies/${movieId}'
+      url: ${baseUrl}/movies/${movieId}
     id: s9
     links:
       - attributes:
-          display: 'type=Elbow,x=552,y=270,xs=534&566,ys=270&270'
+          display: type=Elbow,x=552,y=270,xs=534&566,ys=270&270
         id: l8
         to: s10
         type: link
@@ -119,14 +119,14 @@ steps:
     path: request
     type: step
   - attributes:
-      display: 'x=570,y=230,w=100,h=80'
+      display: x=570,y=230,w=100,h=80
       headers: '[["Accept","application/json"]]'
       method: DELETE
-      url: '${baseUrl}/movies/${movieId}'
+      url: ${baseUrl}/movies/${movieId}
     id: s10
     links:
       - attributes:
-          display: 'type=Elbow,x=691,y=270,xs=674&706,ys=270&270'
+          display: type=Elbow,x=691,y=270,xs=674&706,ys=270&270
         id: l9
         to: s11
         type: link
@@ -136,14 +136,14 @@ steps:
     path: request
     type: step
   - attributes:
-      display: 'x=710,y=230,w=100,h=80'
+      display: x=710,y=230,w=100,h=80
       headers: '[["Accept","application/json"]]'
       method: GET
-      url: '${baseUrl}/movies/${movieId}'
+      url: ${baseUrl}/movies/${movieId}
     id: s11
     links:
       - attributes:
-          display: 'type=Elbow,x=832,y=270,xs=814&846,ys=270&270'
+          display: type=Elbow,x=839,y=270,xs=814&856,ys=270&270
         id: l10
         to: s2
         type: link
@@ -154,7 +154,7 @@ steps:
     type: step
 subflows:
   - attributes:
-      display: 'x=40,y=30,w=400,h=120'
+      display: x=40,y=30,w=400,h=120
       embeddedFlowType: subflow
       visibility: EMBEDDED
       when: Before
@@ -162,11 +162,11 @@ subflows:
     name: Before All
     steps:
       - attributes:
-          display: 'x=60,y=70,w=60,h=40'
+          display: x=60,y=70,w=60,h=40
         id: s4
         links:
           - attributes:
-              display: 'type=Elbow,x=151,y=90,xs=124&176,ys=90&90'
+              display: type=Elbow,x=151,y=90,xs=124&176,ys=90&90
             id: l3
             to: s5
             type: link
@@ -174,15 +174,15 @@ subflows:
         path: start
         type: step
       - attributes:
-          display: 'x=180,y=50,w=100,h=80'
+          display: x=180,y=50,w=100,h=80
           headers: '[["Accept","application/json"]]'
           method: DELETE
           submit: 'true'
-          url: '${baseUrl}/movies/${movieId}'
+          url: ${baseUrl}/movies/${movieId}
         id: s5
         links:
           - attributes:
-              display: 'type=Elbow,x=316,y=90,xs=284&346,ys=90&90'
+              display: type=Elbow,x=316,y=90,xs=284&346,ys=90&90
             id: l4
             to: s6
             type: link
@@ -192,8 +192,8 @@ subflows:
         path: request
         type: step
       - attributes:
-          display: 'x=350,y=70,w=60,h=40'
-          url: '${baseUrl}/${id}'
+          display: x=350,y=70,w=60,h=40
+          url: ${baseUrl}/${id}
         id: s6
         links: []
         name: Stop

@@ -1,19 +1,19 @@
 attributes:
   NodeStyle: BoxIcon
-  display: 'x=23,y=18,w=156,h=27'
+  display: x=23,y=18,w=156,h=27
 steps:
   - attributes:
-      display: 'x=30,y=100,w=60,h=40'
+      display: x=30,y=100,w=60,h=40
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=117,y=120,xs=94&136,ys=120&120'
+          display: type=Elbow,x=120,y=120,xs=94&136,ys=120&120
         id: l1
         to: s3
     name: Start
     path: start
   - attributes:
-      display: 'x=890,y=100,w=60,h=40'
+      display: x=890,y=100,w=60,h=40
     id: s2
     name: Stop
     path: stop
@@ -55,14 +55,14 @@ steps:
           },
           "year": ${year}
         }
-      display: 'x=140,y=80,w=100,h=80'
+      display: x=140,y=80,w=100,h=80
       headers: '[["Accept","application/json"],["Content-Type","application/json"]]'
       method: POST
-      url: '${baseUrl}/movies'
+      url: ${baseUrl}/movies
     id: s3
     links:
       - attributes:
-          display: 'type=Elbow,x=266,y=120,xs=244&286,ys=120&120'
+          display: type=Elbow,x=266,y=120,xs=244&286,ys=120&120
         id: l2
         to: s4
         type: link
@@ -76,14 +76,14 @@ steps:
         {
           "rating": 4.5
         }
-      display: 'x=290,y=80,w=100,h=80'
+      display: x=290,y=80,w=100,h=80
       headers: '[["Accept","application/json"],["Content-Type","application/json"]]'
       method: PATCH
-      url: '${baseUrl}/movies/${@s3.response.body.id}'
+      url: ${baseUrl}/movies/${@s3.response.body.id}
     id: s4
     links:
       - attributes:
-          display: 'type=Elbow,x=417,y=120,xs=394&436,ys=120&120'
+          display: type=Elbow,x=417,y=120,xs=394&436,ys=120&120
         id: l3
         to: s5
         type: link
@@ -93,14 +93,14 @@ steps:
     path: request
     type: step
   - attributes:
-      display: 'x=440,y=80,w=100,h=80'
+      display: x=440,y=80,w=100,h=80
       headers: '[["Accept","application/json"]]'
       method: GET
-      url: '${baseUrl}/movies/${@s3.response.body.id}'
+      url: ${baseUrl}/movies/${@s3.response.body.id}
     id: s5
     links:
       - attributes:
-          display: 'type=Elbow,x=565,y=120,xs=544&586,ys=120&120'
+          display: type=Elbow,x=565,y=120,xs=544&586,ys=120&120
         id: l4
         to: s6
         type: link
@@ -110,14 +110,14 @@ steps:
     path: request
     type: step
   - attributes:
-      display: 'x=590,y=80,w=100,h=80'
+      display: x=590,y=80,w=100,h=80
       headers: '[["Accept","application/json"]]'
       method: DELETE
-      url: '${baseUrl}/movies/${@s3.response.body.id}'
+      url: ${baseUrl}/movies/${@s3.response.body.id}
     id: s6
     links:
       - attributes:
-          display: 'type=Elbow,x=720,y=120,xs=694&736,ys=120&120'
+          display: type=Elbow,x=720,y=120,xs=694&736,ys=120&120
         id: l5
         to: s7
         type: link
@@ -127,14 +127,14 @@ steps:
     path: request
     type: step
   - attributes:
-      display: 'x=740,y=80,w=100,h=80'
+      display: x=740,y=80,w=100,h=80
       headers: '[["Accept","application/json"]]'
       method: GET
-      url: '${baseUrl}/movies/${@s3.response.body.id}'
+      url: ${baseUrl}/movies/${@s3.response.body.id}
     id: s7
     links:
       - attributes:
-          display: 'type=Elbow,x=865,y=120,xs=844&886,ys=120&120'
+          display: type=Elbow,x=865,y=120,xs=844&886,ys=120&120
         id: l6
         to: s2
         type: link

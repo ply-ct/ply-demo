@@ -1,20 +1,20 @@
 attributes:
   NodeStyle: BoxIcon
-  display: 'x=23,y=18,w=156,h=27'
+  display: x=23,y=18,w=156,h=27
 steps:
   - attributes:
-      display: 'x=60,y=100,w=60,h=40'
+      display: x=60,y=100,w=60,h=40
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=180,y=120,xs=124&216,ys=120&120'
+          display: type=Elbow,x=181,y=120,xs=124&216,ys=120&120
         id: l1
         to: s3
         type: link
     name: Start
     path: start
   - attributes:
-      display: 'x=810,y=100,w=60,h=40'
+      display: x=810,y=100,w=60,h=40
     id: s2
     name: Stop
     path: stop
@@ -33,14 +33,14 @@ steps:
             }
           }
         }
-      display: 'x=220,y=80,w=100,h=80'
+      display: x=220,y=80,w=100,h=80
       headers: '[["Authorization","Bearer ${githubToken}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
       method: POST
-      url: 'https://api.github.com/graphql'
+      url: https://api.github.com/graphql
     id: s3
     links:
       - attributes:
-          display: 'type=Elbow,x=365,y=120,xs=324&406,ys=120&120'
+          display: type=Elbow,x=365,y=120,xs=324&406,ys=120&120
         id: l2
         to: s4
         type: link
@@ -56,14 +56,14 @@ steps:
             id
           }
         }
-      display: 'x=410,y=80,w=100,h=80'
+      display: x=410,y=80,w=100,h=80
       headers: '[["Authorization","Bearer ${githubToken}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
       method: POST
-      url: 'https://api.github.com/graphql'
+      url: https://api.github.com/graphql
     id: s4
     links:
       - attributes:
-          display: 'type=Elbow,x=560,y=120,xs=514&606,ys=120&120'
+          display: type=Elbow,x=560,y=120,xs=514&606,ys=120&120
         id: l3
         to: s5
         type: link
@@ -81,14 +81,14 @@ steps:
             }
           }
         }
-      display: 'x=610,y=80,w=100,h=80'
+      display: x=610,y=80,w=100,h=80
       headers: '[["Authorization","Bearer ${githubToken}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
       method: POST
-      url: 'https://api.github.com/graphql'
+      url: https://api.github.com/graphql
     id: s5
     links:
       - attributes:
-          display: 'type=Elbow,x=760,y=120,xs=714&806,ys=120&120'
+          display: type=Elbow,x=760,y=120,xs=714&806,ys=120&120
         id: l4
         to: s2
         type: link
