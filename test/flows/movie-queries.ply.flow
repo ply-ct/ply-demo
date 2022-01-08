@@ -4,11 +4,11 @@ attributes:
   display: 'x=23,y=18,w=156,h=27'
 steps:
   - attributes:
-      display: 'x=60,y=110,w=60,h=40'
+      display: 'x=50,y=110,w=60,h=40'
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=155,y=130,xs=124&186,ys=130&130'
+          display: 'type=Elbow,x=151,y=130,xs=114&186,ys=130&130'
         id: l1
         to: s3
     name: Start

@@ -4,11 +4,11 @@ attributes:
   values: '[["title","Dracula"]]'
 steps:
   - attributes:
-      display: 'x=41,y=71,w=60,h=40'
+      display: 'x=40,y=70,w=60,h=40'
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=145,y=91,xs=105&176,ys=91&91'
+          display: 'type=Elbow,x=146,y=90,xs=104&176,ys=90&90'
         id: l1
         to: s3
         type: link

@@ -12,11 +12,11 @@ notes:
     type: note
 steps:
   - attributes:
-      display: 'x=36,y=250,w=60,h=40'
+      display: 'x=40,y=250,w=60,h=40'
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=192,y=262,xs=100&146,ys=270&270'
+          display: 'type=Elbow,x=188,y=264,xs=104&146,ys=270&270'
         id: l5
         to: s7
         type: link

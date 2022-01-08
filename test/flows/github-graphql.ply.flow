@@ -7,7 +7,7 @@ steps:
     id: s1
     links:
       - attributes:
-          display: 'type=Elbow,x=179,y=120,xs=124&216,ys=120&120'
+          display: 'type=Elbow,x=180,y=120,xs=124&216,ys=120&120'
         id: l1
         to: s3
         type: link
