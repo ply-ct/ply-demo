@@ -1,4 +1,4 @@
 get-movies:
   url: https://ply-ct.org/movies
-  method: get
+  method: GET
   headers: {}
