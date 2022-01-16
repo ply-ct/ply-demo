@@ -9,37 +9,37 @@ Create Movie:
       {
         "credits": [
           {
-            "name": "Alan Crosland",
+            "name": "Michael Curtiz",
             "role": "director"
           },
           {
-            "name": "Warren William",
+            "name": "John Barrymore",
             "role": "actor"
           },
           {
-            "name": "Mary Astor",
+            "name": "Marian Marsh",
             "role": "actor"
           },
           {
-            "name": "Allen Jenkins",
+            "name": "Charles Butterworth",
             "role": "actor"
           },
           {
-            "name": "Grant Mitchell",
+            "name": "Donald Cook",
             "role": "actor"
           },
           {
-            "name": "Helen Trenholme",
+            "name": "Luis Alberni",
             "role": "actor"
           }
         ],
-        "poster": "cothd.jpg",
-        "title": "The Case of the Howling Dog",
+        "poster": "mg.jpg",
+        "title": "The Mad Genius",
         "webRef": {
-          "ref": "tt0024958",
+          "ref": "tt0022103",
           "site": "imdb.com"
         },
-        "year": 1934
+        "year": 1931
       }
   response:
     status:
@@ -47,41 +47,41 @@ Create Movie:
       message: Created
     headers:
       content-type: application/json; charset=utf-8
-      location: http://localhost:3000/movies/435b30ad
+      location: ${baseUrl}/movies/4fba651b
     body: |-
       {
         "credits": [
           {
-            "name": "Alan Crosland",
+            "name": "Michael Curtiz",
             "role": "director"
           },
           {
-            "name": "Warren William",
+            "name": "John Barrymore",
             "role": "actor"
           },
           {
-            "name": "Mary Astor",
+            "name": "Marian Marsh",
             "role": "actor"
           },
           {
-            "name": "Allen Jenkins",
+            "name": "Charles Butterworth",
             "role": "actor"
           },
           {
-            "name": "Grant Mitchell",
+            "name": "Donald Cook",
             "role": "actor"
           },
           {
-            "name": "Helen Trenholme",
+            "name": "Luis Alberni",
             "role": "actor"
           }
         ],
-        "id": "435b30ad",
-        "poster": "cothd.jpg",
-        "title": "The Case of the Howling Dog",
+        "id": "4fba651b",
+        "poster": "mg.jpg",
+        "title": "The Mad Genius",
         "webRef": {
-          "ref": "tt0024958",
+          "ref": "tt0022103",
           "site": "imdb.com"
         },
-        "year": 1934
+        "year": 1931
       }
