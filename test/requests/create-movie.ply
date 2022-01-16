@@ -8,35 +8,35 @@ Create Movie:
     {
       "credits": [
         {
-          "name": "Alan Crosland",
+          "name": "Michael Curtiz",
           "role": "director"
         },
         {
-          "name": "Warren William",
+          "name": "John Barrymore",
           "role": "actor"
         },
         {
-          "name": "Mary Astor",
+          "name": "Marian Marsh",
           "role": "actor"
         },
         {
-          "name": "Allen Jenkins",
+          "name": "Charles Butterworth",
           "role": "actor"
         },
         {
-          "name": "Grant Mitchell",
+          "name": "Donald Cook",
           "role": "actor"
         },
         {
-          "name": "Helen Trenholme",
+          "name": "Luis Alberni",
           "role": "actor"
         }
       ],
-      "poster": "cothd.jpg",
-      "title": "The Case of the Howling Dog",
+      "poster": "mg.jpg",
+      "title": "The Mad Genius",
       "webRef": {
-        "ref": "tt0024958",
+        "ref": "tt0022103",
         "site": "imdb.com"
       },
-      "year": 1934
+      "year": 1931
     }
