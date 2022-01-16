@@ -1,4 +1,4 @@
-createMovie:
+Create Movie:
   url: ${baseUrl}/movies
   method: POST
   headers:

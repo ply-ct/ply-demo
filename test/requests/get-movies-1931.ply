@@ -1,0 +1,4 @@
+get-movies-1931:
+  url: ${baseUrl}/movies?year=1931
+  method: GET
+  headers: {}

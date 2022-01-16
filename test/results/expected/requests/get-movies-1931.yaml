@@ -1,0 +1,815 @@
+get-movies-1931:
+  request:
+    url: ${baseUrl}/movies?year=1931
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "Hamilton MacFadden",
+                "role": "director"
+              },
+              {
+                "name": "Warner Oland",
+                "role": "actor"
+              },
+              {
+                "name": "Sally Eilers",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Dorothy Revier",
+                "role": "actor"
+              },
+              {
+                "name": "Robert Young",
+                "role": "actor"
+              }
+            ],
+            "description": "Detective Charlie Chan of the Honolulu police works a murder investigation where Lugosi is a prime suspect in this engaging effort which constitutes the earliest surviving Chan mystery.",
+            "id": "26e44cd5",
+            "poster": "tbc.jpg",
+            "rating": 3.5,
+            "title": "The Black Camel",
+            "webRef": {
+              "ref": "tt0021668",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "George Cochrane",
+                "role": "director"
+              },
+              {
+                "name": "Thurston Charlotte Wynters",
+                "role": "actor"
+              },
+              {
+                "name": "Frank Shannon",
+                "role": "actor"
+              },
+              {
+                "name": "Arthur Aylesworth",
+                "role": "actor"
+              },
+              {
+                "name": "Frank Readick",
+                "role": "actor"
+              }
+            ],
+            "description": "This first in a series of six shorts narrated by The Shadow has great atmospherics and is the only episode to feature the voice of Frank Readick from the original \"Detective Story Hour\" radio program on which the series is based. ",
+            "id": "1f055489",
+            "poster": "bttr.jpg",
+            "rating": 3.5,
+            "title": "A Burglar to the Rescue (Short)",
+            "webRef": {
+              "ref": "tt0174527",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Stuart Paton",
+                "role": "director"
+              },
+              {
+                "name": "Carmel Myers",
+                "role": "actor"
+              },
+              {
+                "name": "Rex Lease",
+                "role": "actor"
+              },
+              {
+                "name": "Barbara Kent",
+                "role": "actor"
+              },
+              {
+                "name": "Edmund Breese",
+                "role": "actor"
+              }
+            ],
+            "id": "4955deaa",
+            "poster": "cad.jpg",
+            "title": "Chinatown after Dark",
+            "webRef": {
+              "ref": "tt0021743",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Tod Browning",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Helen Chandler",
+                "role": "actor"
+              },
+              {
+                "name": "David Manners",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              },
+              {
+                "name": "Edward Van Sloan",
+                "role": "actor"
+              }
+            ],
+            "description": "What's even more amazing than Lugosi's out-of-body performance is the fact that the finest horror movie ever made was filmed within 2 years of the advent of talking pictures.",
+            "id": "269b34c1",
+            "poster": "drac.jpg",
+            "rating": 5,
+            "title": "Dracula",
+            "webRef": {
+              "ref": "tt0021814",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "George B. Seitz",
+                "role": "director"
+              },
+              {
+                "name": "Warner Oland",
+                "role": "actor"
+              },
+              {
+                "name": "June Collyer",
+                "role": "actor"
+              },
+              {
+                "name": "Lloyd Hughes",
+                "role": "actor"
+              },
+              {
+                "name": "Clara Blandick",
+                "role": "actor"
+              },
+              {
+                "name": "Mischa Auer",
+                "role": "actor"
+              }
+            ],
+            "description": "Warner Oland is supremely menacing in the role of Dr. Boris Karlov (don't ask), and Mischa Auer is perfect as his devoted henchman in this tale of sinister vengeance wrought with a sadistic relish.",
+            "id": "af07f452",
+            "poster": "tdoj.jpg",
+            "rating": 4,
+            "title": "The Drums of Jeopardy",
+            "webRef": {
+              "ref": "tt0021820",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "George Melford",
+                "role": "director"
+              },
+              {
+                "name": "Rose Hobart",
+                "role": "actor"
+              },
+              {
+                "name": "Charles Bickford",
+                "role": "actor"
+              },
+              {
+                "name": "Georges Renavent",
+                "role": "actor"
+              },
+              {
+                "name": "Lupita Tovar",
+                "role": "actor"
+              },
+              {
+                "name": "Noble Johnson",
+                "role": "actor"
+              }
+            ],
+            "description": "The jungle thrills in this early talkie from Universal are abundant and effective, but the acting (except Renavent's sinister portrayal of the evil Prince Hashim), leaves much to be desired.",
+            "id": "127e8942",
+            "poster": "eob.jpg",
+            "rating": 3,
+            "title": "East of Borneo",
+            "webRef": {
+              "ref": "tt0021828",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "James Whale",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Colin Clive",
+                "role": "actor"
+              },
+              {
+                "name": "Mae Clarke",
+                "role": "actor"
+              },
+              {
+                "name": "John Boles",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              }
+            ],
+            "description": "Frankenstein solidified Universal's place as the premier horror studio of the era, and stands as the definitive American take on the school of German Expressionism.",
+            "id": "e2bca0d",
+            "poster": "frank.jpg",
+            "rating": 5,
+            "title": "Frankenstein",
+            "webRef": {
+              "ref": "tt0021884",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Walter Forde",
+                "role": "director"
+              },
+              {
+                "name": "Jack Hulbert",
+                "role": "actor"
+              },
+              {
+                "name": "Cicely Courtneidge",
+                "role": "actor"
+              },
+              {
+                "name": "Ann Todd",
+                "role": "actor"
+              },
+              {
+                "name": "Cyril Raymond",
+                "role": "actor"
+              }
+            ],
+            "id": "58c6fa84",
+            "poster": "gt.jpg",
+            "title": "Ghost Train",
+            "webRef": {
+              "ref": "tt0021907",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Richard Thorpe",
+                "role": "director"
+              },
+              {
+                "name": "Barbara Kent",
+                "role": "actor"
+              },
+              {
+                "name": "John Holland",
+                "role": "actor"
+              },
+              {
+                "name": "Dorothy Christy",
+                "role": "actor"
+              },
+              {
+                "name": "Crauford Kent",
+                "role": "actor"
+              },
+              {
+                "name": "Lillian Rich",
+                "role": "actor"
+              }
+            ],
+            "id": "a53fc557",
+            "poster": "gst.jpg",
+            "title": "Grief Street",
+            "webRef": {
+              "ref": "tt0142340",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "W.S. Van Dyke",
+                "role": "director"
+              },
+              {
+                "name": "Lionel Barrymore",
+                "role": "director"
+              },
+              {
+                "name": "Lionel Barrymore",
+                "role": "actor"
+              },
+              {
+                "name": "Kay Francis",
+                "role": "actor"
+              },
+              {
+                "name": "Madge Evans",
+                "role": "actor"
+              },
+              {
+                "name": "William Bakewell",
+                "role": "actor"
+              },
+              {
+                "name": "C. Aubrey Smith",
+                "role": "actor"
+              }
+            ],
+            "description": "Lionel Barrymore is terrific as the barrister who'll stop at nothing to ensure his daughter's happiness, and Kay Francis is icily beautiful in this tale of murder and revenge from MGM.",
+            "id": "6eaa2c01",
+            "poster": "gh.jpg",
+            "rating": 3.5,
+            "title": "Guilty Hands",
+            "webRef": {
+              "ref": "tt0021933",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Kurt Neumann",
+                "role": "director"
+              },
+              {
+                "name": "James Durkin",
+                "role": "actor"
+              },
+              {
+                "name": "Wilfred Lucas",
+                "role": "actor"
+              },
+              {
+                "name": "Leyland Hodgson",
+                "role": "actor"
+              },
+              {
+                "name": "Frank Austin",
+                "role": "actor"
+              },
+              {
+                "name": "Geneva Mitchell",
+                "role": "actor"
+              }
+            ],
+            "description": "This subpar entry in Universal's series of short films featuring The Shadow is hampered by a confused storyline and poorly-drawn characters.",
+            "id": "dcbd88b0",
+            "poster": "tshom.jpg",
+            "rating": 2.5,
+            "title": "House of Mystery (Short)",
+            "webRef": {
+              "ref": "tt0135457",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Lewis D. Collins",
+                "role": "director"
+              },
+              {
+                "name": "Phyliss Barrington",
+                "role": "actor"
+              },
+              {
+                "name": "Jason Robards",
+                "role": "actor"
+              },
+              {
+                "name": "John Harron",
+                "role": "actor"
+              },
+              {
+                "name": "Dot Farley",
+                "role": "actor"
+              },
+              {
+                "name": "Mary Carr",
+                "role": "actor"
+              }
+            ],
+            "id": "5d80b52d",
+            "poster": "lott.jpg",
+            "title": "Law of the Tong",
+            "webRef": {
+              "ref": "tt0022061",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Fritz Lang",
+                "role": "director"
+              },
+              {
+                "name": "Peter Lorre",
+                "role": "actor"
+              },
+              {
+                "name": "Ellen Widmann",
+                "role": "actor"
+              },
+              {
+                "name": "Inge Landgut",
+                "role": "actor"
+              },
+              {
+                "name": "Otto Wernicke",
+                "role": "actor"
+              }
+            ],
+            "description": "Lang's enthrallingly suspenseful German thriller approaches its gut-wrenching subject matter with both honesty and sensitivity, avoiding simple moral outrage in favor of a more enlightened, yet all-the-more terrifying, perspective.",
+            "id": "2290ee6e",
+            "poster": "m.jpg",
+            "rating": 4,
+            "title": "M",
+            "webRef": {
+              "ref": "tt0022100",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Frank R. Strayer",
+                "role": "director"
+              },
+              {
+                "name": "Aileen Pringle",
+                "role": "actor"
+              },
+              {
+                "name": "Alice White",
+                "role": "actor"
+              },
+              {
+                "name": "Hale Hamilton",
+                "role": "actor"
+              },
+              {
+                "name": "Robert Elliot",
+                "role": "actor"
+              }
+            ],
+            "id": "45421917",
+            "poster": "mam.jpg",
+            "title": "Murder at Midnight",
+            "webRef": {
+              "ref": "tt0022172",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Edward Sloman",
+                "role": "director"
+              },
+              {
+                "name": "William Boyd",
+                "role": "actor"
+              },
+              {
+                "name": "Lilyan Tashman",
+                "role": "actor"
+              },
+              {
+                "name": "Irving Pichel",
+                "role": "actor"
+              },
+              {
+                "name": "Regis Toomey",
+                "role": "actor"
+              }
+            ],
+            "description": "Nice creepy atmosphere and a compelling premise, but ultimately the weight of the preposterous reasoning used to solve the crime does this mystery in.",
+            "id": "9260662c",
+            "poster": "mbtc.jpg",
+            "rating": 3,
+            "title": "Murder by the Clock",
+            "webRef": {
+              "ref": "tt0022173",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "William A. Wellman",
+                "role": "director"
+              },
+              {
+                "name": "Barbara Stanwyck",
+                "role": "actor"
+              },
+              {
+                "name": "Ben Lyon",
+                "role": "actor"
+              },
+              {
+                "name": "Joan Blondell",
+                "role": "actor"
+              },
+              {
+                "name": "Clark Gable",
+                "role": "actor"
+              },
+              {
+                "name": "Blanche Friderici",
+                "role": "actor"
+              }
+            ],
+            "description": "The only thing horrifying about this movie is the convoluted, nonsensical screenplay; although this is counterbalanced somewhat by the first-rate cast and some racy pre-code overtones.",
+            "id": "d9804e6",
+            "poster": "nn.jpg",
+            "rating": 3,
+            "title": "Night Nurse",
+            "webRef": {
+              "ref": "tt0022208",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Alan James",
+                "role": "director"
+              },
+              {
+                "name": "Guinn Williams",
+                "role": "actor"
+              },
+              {
+                "name": "Allene Ray",
+                "role": "actor"
+              },
+              {
+                "name": "Niles Welch",
+                "role": "actor"
+              },
+              {
+                "name": "Tom O'Brien",
+                "role": "actor"
+              }
+            ],
+            "id": "f7a23f7d",
+            "poster": "tp.jpg",
+            "rating": 2.5,
+            "title": "The Phantom",
+            "webRef": {
+              "ref": "tt0022265",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "John S. Robertson",
+                "role": "director"
+              },
+              {
+                "name": "John Gilbert",
+                "role": "actor"
+              },
+              {
+                "name": "Leila Hyams",
+                "role": "actor"
+              },
+              {
+                "name": "Lewis Stone",
+                "role": "actor"
+              },
+              {
+                "name": "Jean Hersholt",
+                "role": "actor"
+              },
+              {
+                "name": "C. Aubrey Smith",
+                "role": "actor"
+              }
+            ],
+            "description": "An intense early talkie from MGM based on a book by Gaston Leroux, this thriller is eminently watchable for the performances, despite such far-fetched antics as the wrongly-accused John Gilbert hiding in a cellar for four years before switching identities with the real killer.",
+            "id": "e4c1137",
+            "poster": "tpop.jpg",
+            "rating": 4,
+            "title": "The Phantom of Paris",
+            "webRef": {
+              "ref": "tt0022264",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Thornton Freeland",
+                "role": "director"
+              },
+              {
+                "name": "Una Merkel",
+                "role": "actor"
+              },
+              {
+                "name": "William Collier Jr.",
+                "role": "actor"
+              },
+              {
+                "name": "Zasu Pitts",
+                "role": "actor"
+              },
+              {
+                "name": "Purnell Pratt",
+                "role": "actor"
+              },
+              {
+                "name": "Ralf Harolde",
+                "role": "actor"
+              }
+            ],
+            "description": "As much a melodrama as a whodunit, this early talkie from Columbia Pictures is elevated by the pre-code archness in Una Merkel's portrayal of the sympathetic love interest.",
+            "id": "3c3030e3",
+            "poster": "tsw.jpg",
+            "rating": 3,
+            "title": "The Secret Witness",
+            "webRef": {
+              "ref": "tt0022358",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Leslie S. Hiscott",
+                "role": "director"
+              },
+              {
+                "name": "Arthur Wontner",
+                "role": "actor"
+              },
+              {
+                "name": "Ian Fleming",
+                "role": "actor"
+              },
+              {
+                "name": "Minnie Rayner",
+                "role": "actor"
+              },
+              {
+                "name": "Leslie Perrins",
+                "role": "actor"
+              },
+              {
+                "name": "Jane Welsh",
+                "role": "actor"
+              }
+            ],
+            "description": "Arthur Wontner turns in a creditable performance as the master sleuth, and the writers deliver a nice, taut, suspenseful storyline in this early talkie from England's Twickenham Studios.",
+            "id": "90954c39",
+            "poster": "shfh.jpg",
+            "rating": 3.5,
+            "title": "Sherlock Holmes' Fatal Hour",
+            "webRef": {
+              "ref": "tt0022373",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Kenneth MacKenna",
+                "role": "director"
+              },
+              {
+                "name": "William Cameron Menzies",
+                "role": "director"
+              },
+              {
+                "name": "Edmund Lowe",
+                "role": "actor"
+              },
+              {
+                "name": "Lois Moran",
+                "role": "actor"
+              },
+              {
+                "name": "El Brendel",
+                "role": "actor"
+              },
+              {
+                "name": "John Arledge",
+                "role": "actor"
+              },
+              {
+                "name": "George E. Stone",
+                "role": "actor"
+              }
+            ],
+            "id": "a0164727",
+            "poster": "tspdr.jpg",
+            "title": "The Spider",
+            "webRef": {
+              "ref": "tt0022421",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Archie Mayo",
+                "role": "director"
+              },
+              {
+                "name": "John Barrymore",
+                "role": "actor"
+              },
+              {
+                "name": "Marian Marsh",
+                "role": "actor"
+              },
+              {
+                "name": "Donald Crisp",
+                "role": "actor"
+              },
+              {
+                "name": "Bramwell Fletcher",
+                "role": "actor"
+              }
+            ],
+            "description": "Brilliant overtones of German Expressionism, along with sharp dialog and stunning camera work distinguish this Gothic masterpiece, filmed when Barrymore was 49 years old and his leading lady Marian Marsh was just 17.",
+            "id": "2a4d75b8",
+            "poster": "sv.jpg",
+            "rating": 4.5,
+            "title": "Svengali",
+            "webRef": {
+              "ref": "tt0022454",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          }
+        ]
+      }

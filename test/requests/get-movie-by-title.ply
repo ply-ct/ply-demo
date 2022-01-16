@@ -1,0 +1,5 @@
+get-movie-by-title:
+  url: ${baseUrl}/movies?title=Dracula
+  method: GET
+  headers:
+    Accept: application/json
