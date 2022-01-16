@@ -1,0 +1,206 @@
+get-movies-1930:
+  request:
+    url: ${baseUrl}/movies?year=1930
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "Roland West",
+                "role": "director"
+              },
+              {
+                "name": "Chester Morris",
+                "role": "actor"
+              },
+              {
+                "name": "Chance Ward",
+                "role": "actor"
+              },
+              {
+                "name": "Una Merkel",
+                "role": "actor"
+              },
+              {
+                "name": "Maude Eburne",
+                "role": "actor"
+              },
+              {
+                "name": "Gustav von Seyffertitz",
+                "role": "actor"
+              }
+            ],
+            "description": "Plenty of plot twists and some admirably spooky set designs ratchet up the chill level, and a healthy dose of comic relief turned in by Maude Eburne makes this an early standout of the genre.",
+            "id": "d94acc51",
+            "poster": "tbw.jpg",
+            "rating": 4,
+            "title": "The Bat Whispers",
+            "webRef": {
+              "ref": "tt0020668",
+              "site": "imdb.com"
+            },
+            "year": 1930
+          },
+          {
+            "credits": [
+              {
+                "name": "Frank Tuttle",
+                "role": "director"
+              },
+              {
+                "name": "William Powell",
+                "role": "actor"
+              },
+              {
+                "name": "Natalie Moorhead",
+                "role": "actor"
+              },
+              {
+                "name": "Eugene Pallette",
+                "role": "actor"
+              },
+              {
+                "name": "Paul Lukas",
+                "role": "actor"
+              },
+              {
+                "name": "William Boyd",
+                "role": "actor"
+              }
+            ],
+            "id": "943a33dd",
+            "poster": "tbmc.jpg",
+            "title": "The Benson Murder Case",
+            "webRef": {
+              "ref": "tt0020679",
+              "site": "imdb.com"
+            },
+            "year": 1930
+          },
+          {
+            "credits": [
+              {
+                "name": "David Burton",
+                "role": "director"
+              },
+              {
+                "name": "Nick Grinde",
+                "role": "director"
+              },
+              {
+                "name": "Basil Rathbone",
+                "role": "actor"
+              },
+              {
+                "name": "Leila Hyams",
+                "role": "actor"
+              },
+              {
+                "name": "Roland Young",
+                "role": "actor"
+              },
+              {
+                "name": "Alec B. Francis",
+                "role": "actor"
+              },
+              {
+                "name": "George F. Marion",
+                "role": "actor"
+              }
+            ],
+            "description": "Basil Rathbone delivers an intriguing portrayal of detective Philo Vance, who's called on to solve one of those drawing-room mysteries wherein every suspect seems to get eliminated by virtue of the unassailable vindication of having been murdered.",
+            "id": "febd1587",
+            "poster": "bmc.jpg",
+            "rating": 3.5,
+            "title": "The Bishop Murder Case",
+            "webRef": {
+              "ref": "tt0020695",
+              "site": "imdb.com"
+            },
+            "year": 1930
+          },
+          {
+            "credits": [
+              {
+                "name": "Alfred Hitchcock",
+                "role": "director"
+              },
+              {
+                "name": "Herbert Marshall",
+                "role": "actor"
+              },
+              {
+                "name": "Norah Baring",
+                "role": "actor"
+              },
+              {
+                "name": "Phyliss Konstam",
+                "role": "actor"
+              },
+              {
+                "name": "Edward Chapman",
+                "role": "actor"
+              },
+              {
+                "name": "Miles Mander",
+                "role": "actor"
+              }
+            ],
+            "id": "a13d8935",
+            "poster": "murd.jpg",
+            "title": "Murder",
+            "webRef": {
+              "ref": "tt0021165",
+              "site": "imdb.com"
+            },
+            "year": 1930
+          },
+          {
+            "credits": [
+              {
+                "name": "Jack Conway",
+                "role": "director"
+              },
+              {
+                "name": "Lon Chaney",
+                "role": "actor"
+              },
+              {
+                "name": "Lili Lee",
+                "role": "actor"
+              },
+              {
+                "name": "Elliot Nugent",
+                "role": "actor"
+              },
+              {
+                "name": "Harry Earles",
+                "role": "actor"
+              },
+              {
+                "name": "Ivan Linow",
+                "role": "actor"
+              }
+            ],
+            "description": "Chaney's first talkie was sadly his final movie and unfortunately not a very good one, mostly due to a lack of any really menacing villains, although Chaney as always delivers a performance teeming with complexity and pathos.",
+            "id": "e40ae3e2",
+            "poster": "uh3.jpg",
+            "rating": 3,
+            "title": "The Unholy Three",
+            "webRef": {
+              "ref": "tt0021505",
+              "site": "imdb.com"
+            },
+            "year": 1930
+          }
+        ]
+      }
