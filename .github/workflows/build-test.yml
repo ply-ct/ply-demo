@@ -16,12 +16,12 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '14.x'
     - run: npm install
     - run: npx ply --version
     - run: npm test
     - name: ply
-      uses: ply-ct/ply-action@v1.0.3
+      uses: ply-ct/ply-action@v1.0.4
       with:
         result-file: test/results/actual/ply-results.json
 
