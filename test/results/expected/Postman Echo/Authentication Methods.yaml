@@ -1,6 +1,6 @@
 Basic Auth:
   request:
-    url: 'https://postman-echo.com/basic-auth'
+    url: https://postman-echo.com/basic-auth
     method: GET
     headers: {}
   response:
@@ -12,7 +12,7 @@ Basic Auth:
     body: Unauthorized
 DigestAuth Success:
   request:
-    url: 'https://postman-echo.com/digest-auth'
+    url: https://postman-echo.com/digest-auth
     method: GET
     headers: {}
   response:
@@ -28,7 +28,7 @@ DigestAuth Success:
       }
 Hawk Auth:
   request:
-    url: 'https://postman-echo.com/auth/hawk'
+    url: https://postman-echo.com/auth/hawk
     method: GET
     headers: {}
   response:
@@ -46,7 +46,7 @@ Hawk Auth:
       }
 OAuth1.0 (verify signature):
   request:
-    url: 'https://postman-echo.com/oauth1'
+    url: https://postman-echo.com/oauth1
     method: GET
     headers: {}
   response:

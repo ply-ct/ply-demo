@@ -1,6 +1,6 @@
 Transform collection from format v1 to v2:
   request:
-    url: 'https://postman-echo.com/transform/collection?from=1&to=2'
+    url: https://postman-echo.com/transform/collection?from=1&to=2
     method: POST
     headers:
       Content-Type: application/json
@@ -50,7 +50,7 @@ Transform collection from format v1 to v2:
     body: ''
 Transform collection from format v2 to v1:
   request:
-    url: 'https://postman-echo.com/transform/collection?from=2&to=1'
+    url: https://postman-echo.com/transform/collection?from=2&to=1
     method: POST
     headers:
       Content-Type: application/json

@@ -1,6 +1,6 @@
 GET Request:
   request:
-    url: 'https://postman-echo.com/get?foo1=bar1&foo2=bar2'
+    url: https://postman-echo.com/get?foo1=bar1&foo2=bar2
     method: GET
     headers: {}
   response:
@@ -28,7 +28,7 @@ GET Request:
       }
 POST Raw Text:
   request:
-    url: 'https://postman-echo.com/post'
+    url: https://postman-echo.com/post
     method: POST
     headers: {}
     body: This is expected to be sent back as part of response body.
@@ -63,7 +63,7 @@ POST Raw Text:
       }
 PUT Request:
   request:
-    url: 'https://postman-echo.com/put'
+    url: https://postman-echo.com/put
     method: PUT
     headers: {}
     body: This is expected to be sent back as part of response body.
@@ -98,7 +98,7 @@ PUT Request:
       }
 PATCH Request:
   request:
-    url: 'https://postman-echo.com/patch'
+    url: https://postman-echo.com/patch
     method: PATCH
     headers: {}
     body: This is expected to be sent back as part of response body.
@@ -133,7 +133,7 @@ PATCH Request:
       }
 DELETE Request:
   request:
-    url: 'https://postman-echo.com/delete'
+    url: https://postman-echo.com/delete
     method: DELETE
     headers: {}
     body: This is expected to be sent back as part of response body.

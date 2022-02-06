@@ -1,6 +1,6 @@
 Set Cookies:
   request:
-    url: 'https://postman-echo.com/cookies/set?foo1=bar1&foo2=bar2'
+    url: https://postman-echo.com/cookies/set?foo1=bar1&foo2=bar2
     method: GET
     headers: {}
   response:
@@ -17,7 +17,7 @@ Set Cookies:
       }
 Get Cookies:
   request:
-    url: 'https://postman-echo.com/cookies'
+    url: https://postman-echo.com/cookies
     method: GET
     headers: {}
   response:
@@ -34,7 +34,7 @@ Get Cookies:
       }
 Delete Cookies:
   request:
-    url: 'https://postman-echo.com/cookies/delete?foo1&foo2'
+    url: https://postman-echo.com/cookies/delete?foo1&foo2
     method: GET
     headers: {}
   response:

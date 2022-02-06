@@ -1,6 +1,6 @@
 Response Status Code:
   request:
-    url: 'https://postman-echo.com/status/200'
+    url: https://postman-echo.com/status/200
     method: GET
     headers: {}
   response:
@@ -15,7 +15,7 @@ Response Status Code:
       }
 Streamed Response:
   request:
-    url: 'https://postman-echo.com/stream/5'
+    url: https://postman-echo.com/stream/5
     method: GET
     headers: {}
   response:
@@ -98,7 +98,7 @@ Streamed Response:
       }
 Delay Response:
   request:
-    url: 'https://postman-echo.com/delay/2'
+    url: https://postman-echo.com/delay/2
     method: GET
     headers: {}
   response:
@@ -113,7 +113,7 @@ Delay Response:
       }
 Get UTF8 Encoded Response:
   request:
-    url: 'https://postman-echo.com/encoding/utf8'
+    url: https://postman-echo.com/encoding/utf8
     method: GET
     headers: {}
   response:
@@ -353,7 +353,7 @@ Get UTF8 Encoded Response:
 
 GZip Compressed Response:
   request:
-    url: 'https://postman-echo.com/gzip'
+    url: https://postman-echo.com/gzip
     method: GET
     headers: {}
   response:
@@ -379,7 +379,7 @@ GZip Compressed Response:
       }
 Deflate Compressed Response:
   request:
-    url: 'https://postman-echo.com/deflate'
+    url: https://postman-echo.com/deflate
     method: GET
     headers: {}
   response:
@@ -405,7 +405,7 @@ Deflate Compressed Response:
       }
 IP address in JSON format:
   request:
-    url: 'https://postman-echo.com/ip'
+    url: https://postman-echo.com/ip
     method: GET
     headers: {}
   response:

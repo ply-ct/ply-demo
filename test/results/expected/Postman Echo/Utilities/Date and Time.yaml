@@ -1,6 +1,6 @@
 Current UTC time:
   request:
-    url: 'https://postman-echo.com/time/now'
+    url: https://postman-echo.com/time/now
     method: GET
     headers: {}
   response:
@@ -9,10 +9,10 @@ Current UTC time:
       message: OK
     headers:
       content-type: text/html; charset=utf-8
-    body: '${~.*} GMT'
+    body: ${~.*} GMT
 Timestamp validity:
   request:
-    url: 'https://postman-echo.com/time/valid?timestamp=2016-10-10'
+    url: https://postman-echo.com/time/valid?timestamp=2016-10-10
     method: GET
     headers: {}
   response:
@@ -28,7 +28,7 @@ Timestamp validity:
       }
 Format timestamp:
   request:
-    url: 'https://postman-echo.com/time/format?timestamp=2016-10-10&format=mm'
+    url: https://postman-echo.com/time/format?timestamp=2016-10-10&format=mm
     method: GET
     headers: {}
   response:
@@ -44,7 +44,7 @@ Format timestamp:
       }
 Extract timestamp unit:
   request:
-    url: 'https://postman-echo.com/time/unit?timestamp=2016-10-10&unit=day'
+    url: https://postman-echo.com/time/unit?timestamp=2016-10-10&unit=day
     method: GET
     headers: {}
   response:
@@ -60,7 +60,7 @@ Extract timestamp unit:
       }
 Time addition:
   request:
-    url: 'https://postman-echo.com/time/add?timestamp=2016-10-10&years=100'
+    url: https://postman-echo.com/time/add?timestamp=2016-10-10&years=100
     method: GET
     headers: {}
   response:
@@ -76,7 +76,7 @@ Time addition:
       }
 Time subtraction:
   request:
-    url: 'https://postman-echo.com/time/subtract?timestamp=2016-10-10&years=50'
+    url: https://postman-echo.com/time/subtract?timestamp=2016-10-10&years=50
     method: GET
     headers: {}
   response:
@@ -92,7 +92,7 @@ Time subtraction:
       }
 Start of time:
   request:
-    url: 'https://postman-echo.com/time/start?timestamp=2016-10-10&unit=month'
+    url: https://postman-echo.com/time/start?timestamp=2016-10-10&unit=month
     method: GET
     headers: {}
   response:
@@ -108,7 +108,7 @@ Start of time:
       }
 Object representation:
   request:
-    url: 'https://postman-echo.com/time/object?timestamp=2016-10-10'
+    url: https://postman-echo.com/time/object?timestamp=2016-10-10
     method: GET
     headers: {}
   response:
@@ -130,7 +130,7 @@ Object representation:
       }
 Before comparisons:
   request:
-    url: 'https://postman-echo.com/time/before?timestamp=2016-10-10&target=2017-10-10'
+    url: https://postman-echo.com/time/before?timestamp=2016-10-10&target=2017-10-10
     method: GET
     headers: {}
   response:
@@ -146,7 +146,7 @@ Before comparisons:
       }
 After comparisons:
   request:
-    url: 'https://postman-echo.com/time/after?timestamp=2016-10-10&target=2017-10-10'
+    url: https://postman-echo.com/time/after?timestamp=2016-10-10&target=2017-10-10
     method: GET
     headers: {}
   response:
@@ -162,7 +162,7 @@ After comparisons:
       }
 Between timestamps:
   request:
-    url: 'https://postman-echo.com/time/between?timestamp=2016-10-10&start=2017-10-10&end=2019-10-10'
+    url: https://postman-echo.com/time/between?timestamp=2016-10-10&start=2017-10-10&end=2019-10-10
     method: GET
     headers: {}
   response:
@@ -178,7 +178,7 @@ Between timestamps:
       }
 Leap year check:
   request:
-    url: 'https://postman-echo.com/time/leap?timestamp=2016-10-10'
+    url: https://postman-echo.com/time/leap?timestamp=2016-10-10
     method: GET
     headers: {}
   response:
