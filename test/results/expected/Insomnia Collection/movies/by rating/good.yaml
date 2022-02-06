@@ -1,0 +1,304 @@
+good movies after 1935:
+  request:
+    url: ${baseUrl}/movies?rating=>3.5&year=>1935
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "Lambert Hillyer",
+                "role": "director"
+              },
+              {
+                "name": "Gloria Holden",
+                "role": "actor"
+              },
+              {
+                "name": "Otto Kruger",
+                "role": "actor"
+              },
+              {
+                "name": "Marguerite Churchill",
+                "role": "actor"
+              },
+              {
+                "name": "Edward Van Sloane",
+                "role": "actor"
+              }
+            ],
+            "description": "Van Helsing again plays an integral part in Universal's 1936 sequel to the original Dracula, and Holden turns in a nicely chilling performance as the villainess of the title.",
+            "id": "a1831fb4",
+            "poster": "dracsd.jpg",
+            "rating": 4,
+            "title": "Dracula's Daughter",
+            "webRef": {
+              "ref": "tt0027545",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Frank Wisbar",
+                "role": "director"
+              },
+              {
+                "name": "Sybille Schmitz",
+                "role": "actor"
+              },
+              {
+                "name": "Aribert Mog",
+                "role": "actor"
+              },
+              {
+                "name": "Carl de Vogt",
+                "role": "actor"
+              },
+              {
+                "name": "Peter Vob",
+                "role": "actor"
+              },
+              {
+                "name": "Gerhard Bienert",
+                "role": "actor"
+              }
+            ],
+            "description": "This is an expressionist masterpiece from Germany with exquisite cinematography and a stunningly beautiful tragic heroine.",
+            "id": "9cbdda60",
+            "poster": "fmm.jpg",
+            "rating": 4.5,
+            "title": "Ferryman Maria",
+            "webRef": {
+              "ref": "tt0027653",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Sidney Lanfield",
+                "role": "director"
+              },
+              {
+                "name": "Richard Greene",
+                "role": "actor"
+              },
+              {
+                "name": "Basil Rathbone",
+                "role": "actor"
+              },
+              {
+                "name": "Wendie Barrie",
+                "role": "actor"
+              },
+              {
+                "name": "Nigel Bruce",
+                "role": "actor"
+              },
+              {
+                "name": "Lionel Atwill",
+                "role": "actor"
+              }
+            ],
+            "description": "Twentieth Century Fox delivers everything you could ask for in a Sherlock Holmes mystery, including the magnificently atmospheric Dartmoor visage, and an ecstatically ambiguous turn by Atwill as the village doctor.",
+            "id": "ab668e21",
+            "poster": "thotb.jpg",
+            "rating": 4.5,
+            "title": "The Hound of the Baskervilles",
+            "webRef": {
+              "ref": "tt0031448",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "Alfred Hitchcock",
+                "role": "director"
+              },
+              {
+                "name": "Margaret Lockwood",
+                "role": "actor"
+              },
+              {
+                "name": "Michael Redgrave",
+                "role": "actor"
+              },
+              {
+                "name": "Paul Lukas",
+                "role": "actor"
+              },
+              {
+                "name": "Dame May Whitty",
+                "role": "actor"
+              }
+            ],
+            "description": "Hitchcock's early Gainsborough mystery has an outstanding premise and countless fine performances by various character actors who deliver the well-chosen and clever dialog with gusto, but it's slightly marred by an implausible turn of events. ",
+            "id": "de1f7cc4",
+            "poster": "tlv.jpg",
+            "rating": 4,
+            "title": "The Lady Vanishes",
+            "webRef": {
+              "ref": "tt0030341",
+              "site": "imdb.com"
+            },
+            "year": 1938
+          },
+          {
+            "credits": [
+              {
+                "name": "Rowland V. Lee",
+                "role": "director"
+              },
+              {
+                "name": "Ann Harding",
+                "role": "actor"
+              },
+              {
+                "name": "Basil Rathbone",
+                "role": "actor"
+              },
+              {
+                "name": "Binnie Hale",
+                "role": "actor"
+              },
+              {
+                "name": "Bruce Seton",
+                "role": "actor"
+              }
+            ],
+            "description": "This is a real gem from the obscure British studio Trafalgar Films, with Rathbone demonstrating his dramatic range to terrifying effect in the role of a demented sadist fixated on doing away with his bride.",
+            "id": "818b4e58",
+            "poster": "lfas.jpg",
+            "rating": 4,
+            "title": "Love from a Stranger",
+            "webRef": {
+              "ref": "tt0029171",
+              "site": "imdb.com"
+            },
+            "year": 1937
+          },
+          {
+            "credits": [
+              {
+                "name": "Alfred Hitchcock",
+                "role": "director"
+              },
+              {
+                "name": "Silvia Sidney",
+                "role": "actor"
+              },
+              {
+                "name": "Oskar Homolka",
+                "role": "actor"
+              },
+              {
+                "name": "Desmond Tester",
+                "role": "actor"
+              },
+              {
+                "name": "John Loder",
+                "role": "actor"
+              },
+              {
+                "name": "Joyce Barbour",
+                "role": "actor"
+              }
+            ],
+            "description": "You have to give Hitchcock some major props for daring in the 1930s to have an innocent schoolboy killed off in a terrorist attack on a bus; not to mention the spousal murder he has his heroine commit right before the happy ending. ",
+            "id": "ea06b370",
+            "poster": "sbtg.jpg",
+            "rating": 4,
+            "title": "Sabotage",
+            "webRef": {
+              "ref": "tt0028212",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Rowland V. Lee",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Basil Rathbone",
+                "role": "actor"
+              },
+              {
+                "name": "Lionel Atwill",
+                "role": "actor"
+              },
+              {
+                "name": "Josephine Hutchinson",
+                "role": "actor"
+              }
+            ],
+            "description": "Lugosi as the hunchbacked Ygor is worth the price of admission by himself, but we're also treated to Karloff's final reprise of his role as the monster, Rathbone's stiff portrayal of the mad doctor's son, and Atwill's iconic Inspector Krogh (he of the trick hand).",
+            "id": "d49a35aa",
+            "poster": "sof.jpg",
+            "rating": 4.5,
+            "title": "Son of Frankenstein",
+            "webRef": {
+              "ref": "tt0031951",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "Arthur B. Woods",
+                "role": "director"
+              },
+              {
+                "name": "Emlyn Williams",
+                "role": "actor"
+              },
+              {
+                "name": "Ernest Thesiger",
+                "role": "actor"
+              },
+              {
+                "name": "Anna Konstam",
+                "role": "actor"
+              },
+              {
+                "name": "Allan Jeayes",
+                "role": "actor"
+              }
+            ],
+            "description": "This British noir thriller from Teddington Studios does an exceptional job of evoking pathos for its wrongly-accused man on the run, and to boot it features an especially compelling performance by the one and only Ernest Thesiger.",
+            "id": "f521dfd7",
+            "poster": "tdbn.jpg",
+            "rating": 4,
+            "title": "They Drive by Night",
+            "webRef": {
+              "ref": "tt0030858",
+              "site": "imdb.com"
+            },
+            "year": 1938
+          }
+        ]
+      }

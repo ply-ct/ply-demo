@@ -1,0 +1,1552 @@
+Lugosi:
+  request:
+    url: ${baseUrl}/movies?search=Bela%20Lugosi
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "Hamilton MacFadden",
+                "role": "director"
+              },
+              {
+                "name": "Warner Oland",
+                "role": "actor"
+              },
+              {
+                "name": "Sally Eilers",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Dorothy Revier",
+                "role": "actor"
+              },
+              {
+                "name": "Robert Young",
+                "role": "actor"
+              }
+            ],
+            "description": "Detective Charlie Chan of the Honolulu police works a murder investigation where Lugosi is a prime suspect in this engaging effort which constitutes the earliest surviving Chan mystery.",
+            "id": "26e44cd5",
+            "poster": "tbc.jpg",
+            "rating": 3.5,
+            "title": "The Black Camel",
+            "webRef": {
+              "ref": "tt0021668",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Edgar G. Ulmar",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "David Manners",
+                "role": "actor"
+              },
+              {
+                "name": "Julie Bishop",
+                "role": "actor"
+              }
+            ],
+            "description": "You have to wonder why Universal would release two completely unrelated movies both called The Black Cat within the span of seven years, especially when this first film is so vastly superior, starring as it does Lugosi and Karloff each at the top of his game, so to speak.",
+            "id": "f9d8da12",
+            "poster": "tbc34.jpg",
+            "rating": 3.5,
+            "title": "The Black Cat",
+            "webRef": {
+              "ref": "tt0024894",
+              "site": "imdb.com"
+            },
+            "year": 1934
+          },
+          {
+            "credits": [
+              {
+                "name": "William Cameron Menzies",
+                "role": "director"
+              },
+              {
+                "name": "Marcel Varnel",
+                "role": "director"
+              },
+              {
+                "name": "Edmund Lowe",
+                "role": "actor"
+              },
+              {
+                "name": "Irene Ware",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Herbert Mundin",
+                "role": "actor"
+              }
+            ],
+            "description": "An enthralling storyline and top notch visual effects separate this serial from the typical potboilers of the era, especially when punctuated by Bela's super-evil portrayal of Roxor the villain.",
+            "id": "3988c342",
+            "poster": "ctm.jpg",
+            "rating": 4,
+            "title": "Chandu the Magician (Serial)",
+            "webRef": {
+              "ref": "tt0022753",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          },
+          {
+            "credits": [
+              {
+                "name": "Edwin L. Marin",
+                "role": "director"
+              },
+              {
+                "name": "David Manners",
+                "role": "actor"
+              },
+              {
+                "name": "Adrienne Ames",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Edward Van Sloan",
+                "role": "actor"
+              },
+              {
+                "name": "Alexander Carr",
+                "role": "actor"
+              }
+            ],
+            "description": "Murder mystery with a nicely concealed villain and excellent character portrayals, with half the cast of Dracula getting upstaged by the hilarious portrayal of a studio boss by Alexander Carr.",
+            "id": "97fd2381",
+            "poster": "tdk.jpg",
+            "rating": 3.5,
+            "title": "The Death Kiss",
+            "webRef": {
+              "ref": "tt0023935",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          },
+          {
+            "credits": [
+              {
+                "name": "Tod Browning",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Helen Chandler",
+                "role": "actor"
+              },
+              {
+                "name": "David Manners",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              },
+              {
+                "name": "Edward Van Sloan",
+                "role": "actor"
+              }
+            ],
+            "description": "What's even more amazing than Lugosi's out-of-body performance is the fact that the finest horror movie ever made was filmed within 2 years of the advent of talking pictures.",
+            "id": "269b34c1",
+            "poster": "drac.jpg",
+            "rating": 5,
+            "title": "Dracula",
+            "webRef": {
+              "ref": "tt0021814",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "Allan Dwan",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Lionel Atwill",
+                "role": "actor"
+              },
+              {
+                "name": "The Ritz Brothers",
+                "role": "actor"
+              },
+              {
+                "name": "Anita Louise",
+                "role": "actor"
+              }
+            ],
+            "description": "I can't bring myself to expend any energy writing a review of this movie.",
+            "id": "e918e480",
+            "poster": "tg.jpg",
+            "rating": 1.5,
+            "title": "The Gorilla",
+            "webRef": {
+              "ref": "tt0031387",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "Lambert Hillyer",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Frances Drake",
+                "role": "actor"
+              },
+              {
+                "name": "Frank Lawton",
+                "role": "actor"
+              }
+            ],
+            "description": "In their movies Karloff and Lugosi seem to take turns playing the heavy, and this time it's Karloff delivering nicely as the demented scientist while Lugosi plays the kindly doctor in a surprisingly suspenseful Universal feature.",
+            "id": "ede9938e",
+            "poster": "tir.jpg",
+            "rating": 3.5,
+            "title": "The Invisible Ray",
+            "webRef": {
+              "ref": "tt0027800",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Erle C. Kenton",
+                "role": "director"
+              },
+              {
+                "name": "Charles Laughton",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Richard Arlen",
+                "role": "actor"
+              },
+              {
+                "name": "Leila Hyams",
+                "role": "actor"
+              },
+              {
+                "name": "Kathleen Burke",
+                "role": "actor"
+              }
+            ],
+            "description": "Despite the misleading promotional copy in the poster, it's Charles Laughton's deliciously evil Dr. Moreau that dominates this film and lifts it beyond the typical horror adventure piece; although Kathleen Burke certainly does deliver quite a fetching turn as Lota the panther woman.",
+            "id": "76f99918",
+            "poster": "iols.jpg",
+            "rating": 5,
+            "title": "Island of Lost Souls",
+            "webRef": {
+              "ref": "tt0024188",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          },
+          {
+            "credits": [
+              {
+                "name": "Tod Browning",
+                "role": "director"
+              },
+              {
+                "name": "Lionel Barrymore",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Elizabeth Allen",
+                "role": "actor"
+              },
+              {
+                "name": "Lionel Atwill",
+                "role": "actor"
+              }
+            ],
+            "description": "An abundance of eerie atmosphere is what this creepfest delivers; however, the hugely promising buildup is undercut somewhat by a cop-out ending which attempts to explain the supernatural occurrences by way of more pedestrian motivations.",
+            "id": "fb1e83ae",
+            "poster": "motv.jpg",
+            "rating": 4,
+            "title": "Mark of the Vampire",
+            "webRef": {
+              "ref": "tt0026685",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          },
+          {
+            "credits": [
+              {
+                "name": "Clifford Sanforth",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "June Collyer",
+                "role": "actor"
+              },
+              {
+                "name": "Huntley Gordon",
+                "role": "actor"
+              },
+              {
+                "name": "Hattie McDaniel",
+                "role": "actor"
+              }
+            ],
+            "id": "10850a35",
+            "poster": "mbt.jpg",
+            "title": "Murder by Television",
+            "webRef": {
+              "ref": "tt0026740",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          },
+          {
+            "credits": [
+              {
+                "name": "Robert Florey",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Sidney Fox",
+                "role": "actor"
+              },
+              {
+                "name": "Leon Ames",
+                "role": "actor"
+              },
+              {
+                "name": "Bert Roach",
+                "role": "actor"
+              }
+            ],
+            "description": "Only tangentially related to Poe's story, but still with a promising outline tragically undercut by the ridiculous portrayal of the murderous brute alternately by a man in a gorilla-looking ape suit, and then by a real non-menacing chimpanzee about one-fourth the size.",
+            "id": "578ef9df",
+            "poster": "mitrm.jpg",
+            "rating": 3.5,
+            "title": "Murders in the Rue Morgue",
+            "webRef": {
+              "ref": "tt0023249",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          },
+          {
+            "credits": [
+              {
+                "name": "William Nigh",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Wallace Ford",
+                "role": "actor"
+              },
+              {
+                "name": "Arline Judge",
+                "role": "actor"
+              },
+              {
+                "name": "Lotus Long",
+                "role": "actor"
+              }
+            ],
+            "description": "Not to be confused with the Boris Karloff's detective James Lee Wong (also from Monogram), this Chinatown mystery has Lugosi playing bad guy Fu Wong and features the obligatory wisecracking reporter getting himself into one ridiculous jam after another.",
+            "id": "8458ce3d",
+            "poster": "mmw.jpg",
+            "rating": 3,
+            "title": "The Mysterious Mr. Wong",
+            "webRef": {
+              "ref": "tt0026755",
+              "site": "imdb.com"
+            },
+            "year": 1934
+          },
+          {
+            "credits": [
+              {
+                "name": "Benjamin Stoloff",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Wallace Ford",
+                "role": "actor"
+              },
+              {
+                "name": "Sally Blane",
+                "role": "actor"
+              },
+              {
+                "name": "Tully Marshall",
+                "role": "actor"
+              },
+              {
+                "name": "Mary Frey",
+                "role": "actor"
+              }
+            ],
+            "description": "I have to admit I'm overrating this movie, but I love an old-fashioned spooky house mystery yarn with secret-panels, creeping villains and plenty of red-herring murder suspects like Lugosi's Degar; plus there's a freaky double-twist surprise ending.",
+            "id": "b7f45f84",
+            "poster": "not.jpg",
+            "rating": 4,
+            "title": "Night of Terror",
+            "webRef": {
+              "ref": "tt0024382",
+              "site": "imdb.com"
+            },
+            "year": 1933
+          },
+          {
+            "credits": [
+              {
+                "name": "Ford Beebe",
+                "role": "director"
+              },
+              {
+                "name": "Saul A. Goodkind",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Robert Kent",
+                "role": "actor"
+              },
+              {
+                "name": "Dorothy Arnold",
+                "role": "actor"
+              },
+              {
+                "name": "Edwin Stanley",
+                "role": "actor"
+              },
+              {
+                "name": "Edward Van Sloan",
+                "role": "actor"
+              }
+            ],
+            "description": "The phantom creeps, alright, and so does this serial; through twelve chapters of repetitive tedium punctuated only by the vivacious Dorothy Arnold playing reporter Jean Drew.",
+            "id": "66dff81a",
+            "poster": "tpc.jpg",
+            "rating": 2.5,
+            "title": "The Phantom Creeps (Serial)",
+            "webRef": {
+              "ref": "tt0031796",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "Denison Clift",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Shirley Grey",
+                "role": "actor"
+              },
+              {
+                "name": "Arthur Margetson",
+                "role": "actor"
+              },
+              {
+                "name": "Edmund Willard",
+                "role": "actor"
+              }
+            ],
+            "description": "Nicely crafted nautical mystery from England's Hammer Films, based on the case of the infamous ship Marie Celeste; unfortunately the continuity is heavily compromised in the edited U.S. version.",
+            "id": "72896148",
+            "poster": "ps.jpg",
+            "rating": 3.5,
+            "title": "Phantom Ship",
+            "webRef": {
+              "ref": "tt0026759",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          },
+          {
+            "credits": [
+              {
+                "name": "Lew Landers",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Lester Matthews",
+                "role": "actor"
+              },
+              {
+                "name": "Irene Ware",
+                "role": "actor"
+              },
+              {
+                "name": "Samuel S. Hinds",
+                "role": "actor"
+              }
+            ],
+            "description": "Lugosi is superb as the sadistic Dr. Vollin, and Karloff is smack dab in his element as the lowlife Bateman in this tale of revenge \"suggested by\" Poe's immortal poem, featuring what surely is the sole example of interpretive dance performed to a recitation of \"The Raven\".",
+            "id": "f2e1ae56",
+            "poster": "trave.jpg",
+            "rating": 4,
+            "title": "The Raven",
+            "webRef": {
+              "ref": "tt0026912",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          },
+          {
+            "credits": [
+              {
+                "name": "Ray Taylor",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Maria Alba",
+                "role": "actor"
+              },
+              {
+                "name": "Clara Kimball Young",
+                "role": "actor"
+              },
+              {
+                "name": "Lucien Prival",
+                "role": "actor"
+              }
+            ],
+            "description": "Production values are along the lines of a Gilligan's Island episode, and the story contains serious plot inconsistencies, but the sets are excellent (they reuse the massive wooden gates from King Kong), and Bela appears in one of his rare good guy roles.",
+            "id": "be1c6c96",
+            "poster": "roc.jpg",
+            "rating": 3.5,
+            "title": "The Return of Chandu (Serial)",
+            "webRef": {
+              "ref": "tt0025712",
+              "site": "imdb.com"
+            },
+            "year": 1934
+          },
+          {
+            "credits": [
+              {
+                "name": "Robert F. Hill",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Bruce Bennett",
+                "role": "actor"
+              },
+              {
+                "name": "Joan Barclay",
+                "role": "actor"
+              },
+              {
+                "name": "Luana Walters",
+                "role": "actor"
+              }
+            ],
+            "id": "efba4be9",
+            "poster": "soct.jpg",
+            "title": "Shadow of Chinatown (Serial)",
+            "webRef": {
+              "ref": "tt0028241",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Rowland V. Lee",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Basil Rathbone",
+                "role": "actor"
+              },
+              {
+                "name": "Lionel Atwill",
+                "role": "actor"
+              },
+              {
+                "name": "Josephine Hutchinson",
+                "role": "actor"
+              }
+            ],
+            "description": "Lugosi as the hunchbacked Ygor is worth the price of admission by himself, but we're also treated to Karloff's final reprise of his role as the monster, Rathbone's stiff portrayal of the mad doctor's son, and Atwill's iconic Inspector Krogh (he of the trick hand).",
+            "id": "d49a35aa",
+            "poster": "sof.jpg",
+            "rating": 4.5,
+            "title": "Son of Frankenstein",
+            "webRef": {
+              "ref": "tt0031951",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "Colbert Clark",
+                "role": "director"
+              },
+              {
+                "name": "Albert Herman",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Viva Tattersall",
+                "role": "actor"
+              },
+              {
+                "name": "Malcolm McGregor",
+                "role": "actor"
+              },
+              {
+                "name": "George J. Lewis",
+                "role": "actor"
+              }
+            ],
+            "description": "First-rate stunts and action sequences set this apart from the usual low-budget movie serial fare; however Lugosi is ill-used in the role of Professor Strang, and the plot suffers from some highly repetitive back-and-forth possession of the stolen jewels.",
+            "id": "f6a7237d",
+            "poster": "tws.jpg",
+            "rating": 3.5,
+            "title": "The Whispering Shadow (Serial)",
+            "webRef": {
+              "ref": "tt0024768",
+              "site": "imdb.com"
+            },
+            "year": 1933
+          },
+          {
+            "credits": [
+              {
+                "name": "Victor Halperin",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Madge Bellamy",
+                "role": "actor"
+              },
+              {
+                "name": "Joseph Cawthorn",
+                "role": "actor"
+              },
+              {
+                "name": "Robert Frazer",
+                "role": "actor"
+              }
+            ],
+            "description": "The Halperin brothers and writer Garnett Weston conceived a devilishly twisted plotline beset by stagey histrionics from the cast; still, Lugosi's glowering portrayal of the demented zombie-lord Legendre along with some kick-ass sets on loan from Universal make this movie well worthwhile.",
+            "id": "848cde9d",
+            "poster": "wz.jpg",
+            "rating": 4,
+            "title": "White Zombie",
+            "webRef": {
+              "ref": "tt0023694",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          }
+        ]
+      }
+Karloff:
+  request:
+    url: https://ply-ct.org/movies?search=Boris%20Karloff
+    method: GET
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "John Francis Dillon",
+                "role": "director"
+              },
+              {
+                "name": "Jack Holt",
+                "role": "actor"
+              },
+              {
+                "name": "Constance Cummings",
+                "role": "actor"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Claude King",
+                "role": "actor"
+              },
+              {
+                "name": "Edward Van Sloan",
+                "role": "actor"
+              }
+            ],
+            "description": "It's worth the price of admission just to get a load of Karloff affecting the clipped accent of an American gangster, and Van Sloan is chilling as the evil surgeon whose hands literally drip with innocent blood.",
+            "id": "1275bef9",
+            "poster": "btm.jpg",
+            "rating": 4,
+            "title": "Behind the Mask",
+            "webRef": {
+              "ref": "tt0022663",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          },
+          {
+            "credits": [
+              {
+                "name": "Edgar G. Ulmar",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "David Manners",
+                "role": "actor"
+              },
+              {
+                "name": "Julie Bishop",
+                "role": "actor"
+              }
+            ],
+            "description": "You have to wonder why Universal would release two completely unrelated movies both called The Black Cat within the span of seven years, especially when this first film is so vastly superior, starring as it does Lugosi and Karloff each at the top of his game, so to speak.",
+            "id": "f9d8da12",
+            "poster": "tbc34.jpg",
+            "rating": 3.5,
+            "title": "The Black Cat",
+            "webRef": {
+              "ref": "tt0024894",
+              "site": "imdb.com"
+            },
+            "year": 1934
+          },
+          {
+            "credits": [
+              {
+                "name": "Roy William Neill",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Marion Marsh",
+                "role": "actor"
+              },
+              {
+                "name": "Robert Allen",
+                "role": "actor"
+              },
+              {
+                "name": "Thurston Hall",
+                "role": "actor"
+              }
+            ],
+            "description": "Despite the cornball pseudo-European costumes and dialog, this ostensibly 17th century period piece (with outdoor settings clearly filmed in the badlands of southern California) features a fine dual-role performance by Karloff.",
+            "id": "f915e9ac",
+            "poster": "tbr.jpg",
+            "rating": 3.5,
+            "title": "The Black Room",
+            "webRef": {
+              "ref": "tt0026123",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          },
+          {
+            "credits": [
+              {
+                "name": "James Whale",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Colin Clive",
+                "role": "actor"
+              },
+              {
+                "name": "Valerie Hobson",
+                "role": "actor"
+              },
+              {
+                "name": "Ernest Thesiger",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              }
+            ],
+            "description": "James Whale's poignant, horrifying, hilarious masterpiece demonstrates his genius and surpasses the original as a cathartic, visionary tour de force.",
+            "id": "f236166",
+            "poster": "tbof.jpg",
+            "rating": 5,
+            "title": "Bride of Frankenstein",
+            "webRef": {
+              "ref": "tt0026138",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          },
+          {
+            "credits": [
+              {
+                "name": "James Whale",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Colin Clive",
+                "role": "actor"
+              },
+              {
+                "name": "Mae Clarke",
+                "role": "actor"
+              },
+              {
+                "name": "John Boles",
+                "role": "actor"
+              },
+              {
+                "name": "Dwight Frye",
+                "role": "actor"
+              }
+            ],
+            "description": "Frankenstein solidified Universal's place as the premier horror studio of the era, and stands as the definitive American take on the school of German Expressionism.",
+            "id": "e2bca0d",
+            "poster": "frank.jpg",
+            "rating": 5,
+            "title": "Frankenstein",
+            "webRef": {
+              "ref": "tt0021884",
+              "site": "imdb.com"
+            },
+            "year": 1931
+          },
+          {
+            "credits": [
+              {
+                "name": "T. Hayes Hunter",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Cedric Hardwicke",
+                "role": "actor"
+              },
+              {
+                "name": "Ernest Thesiger",
+                "role": "actor"
+              },
+              {
+                "name": "Dorothy Hyson",
+                "role": "actor"
+              }
+            ],
+            "description": "How can you go wrong with a tale of an Egyptologist returning from the dead to wreak ghastly revenge upon those who stole the sacred jewel he himself had pilfered from an ancient tomb, especially when it stars Karloff and Thesiger?",
+            "id": "7702f4c3",
+            "poster": "ghoul.jpg",
+            "rating": 3.5,
+            "title": "The Ghoul",
+            "webRef": {
+              "ref": "tt0024055",
+              "site": "imdb.com"
+            },
+            "year": 1933
+          },
+          {
+            "credits": [
+              {
+                "name": "Lambert Hillyer",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Frances Drake",
+                "role": "actor"
+              },
+              {
+                "name": "Frank Lawton",
+                "role": "actor"
+              }
+            ],
+            "description": "In their movies Karloff and Lugosi seem to take turns playing the heavy, and this time it's Karloff delivering nicely as the demented scientist while Lugosi plays the kindly doctor in a surprisingly suspenseful Universal feature.",
+            "id": "ede9938e",
+            "poster": "tir.jpg",
+            "rating": 3.5,
+            "title": "The Invisible Ray",
+            "webRef": {
+              "ref": "tt0027800",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Henry Edwards",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Joan Wyndham",
+                "role": "actor"
+              },
+              {
+                "name": "Arthur Margetson",
+                "role": "actor"
+              },
+              {
+                "name": "Mona Goya",
+                "role": "actor"
+              }
+            ],
+            "id": "3a53d3ac",
+            "poster": "jn.jpg",
+            "title": "Juggernaut",
+            "webRef": {
+              "ref": "tt0027824",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Nick Grinde",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Lorna Gray",
+                "role": "actor"
+              },
+              {
+                "name": "Robert Wilcox",
+                "role": "actor"
+              },
+              {
+                "name": "Roger Pryor",
+                "role": "actor"
+              }
+            ],
+            "description": "Karloff exacts revenge for his wrongful hanging in this mildly engaging effort from Columbia Pictures; helped along by Boris's artful portrayal of the sort of mad doctor role he seems to have been born to play.",
+            "id": "2dda9492",
+            "poster": "tmtcnh.jpg",
+            "rating": 3,
+            "title": "The Man They Could Not Hang",
+            "webRef": {
+              "ref": "tt0031614",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "Robert Stevenson",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Anna Lee",
+                "role": "actor"
+              },
+              {
+                "name": "John Loder",
+                "role": "actor"
+              },
+              {
+                "name": "Frank Cellier",
+                "role": "actor"
+              }
+            ],
+            "description": "Karloff the scientist goes off his nut when his work is questioned and cobbles together the usual scientific hokum to perform mind-transference for highly dubious ends.",
+            "id": "6b72995",
+            "poster": "tmwla.jpg",
+            "rating": 3,
+            "title": "The Man Who Lived Again",
+            "webRef": {
+              "ref": "tt0027938",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Charles Brabin",
+                "role": "director"
+              },
+              {
+                "name": "Charles Vidor",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Myrna Loy",
+                "role": "actor"
+              },
+              {
+                "name": "Lewis Stone",
+                "role": "actor"
+              },
+              {
+                "name": "Karen Morley",
+                "role": "actor"
+              }
+            ],
+            "description": "Karloff is perfect for the role of evil genius bent on locating the ancient relics of Genghis Kahn which will enable him to rule the world, and Myrna Loy sizzles as his seductress daughter.",
+            "id": "60dccd17",
+            "poster": "mofm.jpg",
+            "rating": 3.5,
+            "title": "The Mask of Fu Manchu",
+            "webRef": {
+              "ref": "tt0023194",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          },
+          {
+            "credits": [
+              {
+                "name": "William Nigh",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Marjorie Reynolds",
+                "role": "actor"
+              },
+              {
+                "name": "Grant Withers",
+                "role": "actor"
+              },
+              {
+                "name": "Huntley Gordon",
+                "role": "actor"
+              }
+            ],
+            "id": "c4e5c2cd",
+            "poster": "mwict.jpg",
+            "title": "Mr. Wong in Chinatown",
+            "webRef": {
+              "ref": "tt0031680",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "William Nigh",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Grant Withers",
+                "role": "actor"
+              },
+              {
+                "name": "Maxine Jennings",
+                "role": "actor"
+              },
+              {
+                "name": "Evelyn Brent",
+                "role": "actor"
+              }
+            ],
+            "id": "f8b27c3b",
+            "poster": "mwd.jpg",
+            "title": "Mr. Wong, Detective",
+            "webRef": {
+              "ref": "tt0030473",
+              "site": "imdb.com"
+            },
+            "year": 1938
+          },
+          {
+            "credits": [
+              {
+                "name": "Karl Freund",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Zita Johann",
+                "role": "actor"
+              },
+              {
+                "name": "David Manners",
+                "role": "actor"
+              },
+              {
+                "name": "Edward Van Sloan",
+                "role": "actor"
+              }
+            ],
+            "description": "All atmosphere and not much suspense (it's hard to be terrified of a decrepit, shambling creature who could have been outrun by a tortoise); still, the Universal Studios production values ensure a worthwhile viewing experience.",
+            "id": "f082d5b8",
+            "poster": "mum.jpg",
+            "rating": 4,
+            "title": "The Mummy",
+            "webRef": {
+              "ref": "tt0023245",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          },
+          {
+            "credits": [
+              {
+                "name": "William Nigh",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Wallace Ford",
+                "role": "actor"
+              },
+              {
+                "name": "Arline Judge",
+                "role": "actor"
+              },
+              {
+                "name": "Lotus Long",
+                "role": "actor"
+              }
+            ],
+            "description": "Not to be confused with the Boris Karloff's detective James Lee Wong (also from Monogram), this Chinatown mystery has Lugosi playing bad guy Fu Wong and features the obligatory wisecracking reporter getting himself into one ridiculous jam after another.",
+            "id": "8458ce3d",
+            "poster": "mmw.jpg",
+            "rating": 3,
+            "title": "The Mysterious Mr. Wong",
+            "webRef": {
+              "ref": "tt0026755",
+              "site": "imdb.com"
+            },
+            "year": 1934
+          },
+          {
+            "credits": [
+              {
+                "name": "William Nigh",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Grant Withers",
+                "role": "actor"
+              },
+              {
+                "name": "Dorothy Tree",
+                "role": "actor"
+              },
+              {
+                "name": "Craig Reynolds",
+                "role": "actor"
+              }
+            ],
+            "id": "d2d67772",
+            "poster": "momw.jpg",
+            "title": "The Mystery of Mr. Wong",
+            "webRef": {
+              "ref": "tt0031704",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "Lloyd Corrigan",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Jean Rogers",
+                "role": "actor"
+              },
+              {
+                "name": "Warren Hull",
+                "role": "actor"
+              },
+              {
+                "name": "Samuel S. Hinds",
+                "role": "actor"
+              }
+            ],
+            "description": "An extra helping of cheese offsets the better-than-average production values in this typical Karloff vehicle, which is really more of a detective mystery than anything resembling a horror film.",
+            "id": "81c4ce1e",
+            "poster": "nk.jpg",
+            "rating": 3,
+            "title": "Night Key",
+            "webRef": {
+              "ref": "tt0029309",
+              "site": "imdb.com"
+            },
+            "year": 1937
+          },
+          {
+            "credits": [
+              {
+                "name": "James Whale",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Melvyn Douglas",
+                "role": "actor"
+              },
+              {
+                "name": "Charles Laughton",
+                "role": "actor"
+              },
+              {
+                "name": "Lilian Bond",
+                "role": "actor"
+              },
+              {
+                "name": "Ernest Thesiger",
+                "role": "actor"
+              }
+            ],
+            "description": "James Whale shows once again that he is the supreme master of cinematic horror in all its facets, from atmosphere to characterization to lighting effects; from comic timing to romantic interludes to action choreography.",
+            "id": "5551e85c",
+            "poster": "todh.jpg",
+            "rating": 5,
+            "title": "The Old Dark House",
+            "webRef": {
+              "ref": "tt0023293",
+              "site": "imdb.com"
+            },
+            "year": 1932
+          },
+          {
+            "credits": [
+              {
+                "name": "Lew Landers",
+                "role": "director"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Lester Matthews",
+                "role": "actor"
+              },
+              {
+                "name": "Irene Ware",
+                "role": "actor"
+              },
+              {
+                "name": "Samuel S. Hinds",
+                "role": "actor"
+              }
+            ],
+            "description": "Lugosi is superb as the sadistic Dr. Vollin, and Karloff is smack dab in his element as the lowlife Bateman in this tale of revenge \"suggested by\" Poe's immortal poem, featuring what surely is the sole example of interpretive dance performed to a recitation of \"The Raven\".",
+            "id": "f2e1ae56",
+            "poster": "trave.jpg",
+            "rating": 4,
+            "title": "The Raven",
+            "webRef": {
+              "ref": "tt0026912",
+              "site": "imdb.com"
+            },
+            "year": 1935
+          },
+          {
+            "credits": [
+              {
+                "name": "Rowland V. Lee",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Basil Rathbone",
+                "role": "actor"
+              },
+              {
+                "name": "Lionel Atwill",
+                "role": "actor"
+              },
+              {
+                "name": "Josephine Hutchinson",
+                "role": "actor"
+              }
+            ],
+            "description": "Lugosi as the hunchbacked Ygor is worth the price of admission by himself, but we're also treated to Karloff's final reprise of his role as the monster, Rathbone's stiff portrayal of the mad doctor's son, and Atwill's iconic Inspector Krogh (he of the trick hand).",
+            "id": "d49a35aa",
+            "poster": "sof.jpg",
+            "rating": 4.5,
+            "title": "Son of Frankenstein",
+            "webRef": {
+              "ref": "tt0031951",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "Rowland V. Lee",
+                "role": "director"
+              },
+              {
+                "name": "Basil Rathbone",
+                "role": "actor"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Barbara O'Neil",
+                "role": "actor"
+              },
+              {
+                "name": "Vincent Price",
+                "role": "actor"
+              }
+            ],
+            "description": "Basil Rathbone and Boris Karloff team up as Richard III and his henchman Mord in this horror piece masquerading as historical drama.",
+            "id": "3c6390e9",
+            "poster": "tol.jpg",
+            "rating": 3,
+            "title": "Tower of London",
+            "webRef": {
+              "ref": "tt0032049",
+              "site": "imdb.com"
+            },
+            "year": 1939
+          },
+          {
+            "credits": [
+              {
+                "name": "Michael Curtiz",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Ricardo Cortez",
+                "role": "actor"
+              },
+              {
+                "name": "Edmund Gwenn",
+                "role": "actor"
+              },
+              {
+                "name": "Marguerite Churchill",
+                "role": "actor"
+              }
+            ],
+            "id": "3a7b05c",
+            "poster": "twd.jpg",
+            "title": "The Walking Dead",
+            "webRef": {
+              "ref": "tt0028478",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          }
+        ]
+      }
