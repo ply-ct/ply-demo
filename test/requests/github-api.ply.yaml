@@ -11,7 +11,7 @@ repositoryTopicsQuery:
   method: POST
   headers:
     Authorization: Bearer ${githubToken}
-    Content-Type: application/json
+    Content-Type: application/graphql
     User-Agent: ${github.organization}
   body: |-
     query {
@@ -33,7 +33,7 @@ findRepositoryId:
   method: POST
   headers:
     Authorization: Bearer ${githubToken}
-    Content-Type: application/json
+    Content-Type: application/graphql
     User-Agent: ${github.organization}
   body: |-
     query findRepositoryId {
@@ -47,7 +47,7 @@ starRepository:
   method: POST
   headers:
     Authorization: Bearer ${githubToken}
-    Content-Type: application/json
+    Content-Type: application/graphql
     User-Agent: ${github.organization}
   body: |-  # repository id comes from findRepositoryId response
     mutation starRepository {

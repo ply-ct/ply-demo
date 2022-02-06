@@ -29,7 +29,7 @@ repositoryTopicsQuery:
     url: https://api.github.com/graphql
     method: POST
     headers:
-      Content-Type: application/json
+      Content-Type: application/graphql
       User-Agent: ${github.organization}
     body: |-
       query {
@@ -125,7 +125,7 @@ findRepositoryId:
     url: https://api.github.com/graphql
     method: POST
     headers:
-      Content-Type: application/json
+      Content-Type: application/graphql
       User-Agent: ${github.organization}
     body: |-
       query findRepositoryId {
@@ -155,7 +155,7 @@ starRepository:
     url: https://api.github.com/graphql
     method: POST
     headers:
-      Content-Type: application/json
+      Content-Type: application/graphql
       User-Agent: ply-ct
     body: |-  # repository id comes from findRepositoryId response
       mutation starRepository {
