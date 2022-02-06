@@ -7,7 +7,7 @@ resources:
     parentId: null
     modified: 1621286040503
     created: 1621286040503
-    name: Insomnia
+    name: Insomnia Collection
     description: ""
     scope: collection
     _type: workspace
@@ -317,7 +317,7 @@ resources:
     parentId: wrk_b9a5e0f141024eb895b9889c685d010a
     modified: 1621286040506
     created: 1621286040506
-    fileName: Insomnia
+    fileName: Insomnia Collection
     contents: ""
     contentType: yaml
     _type: api_spec

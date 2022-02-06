@@ -3,4 +3,5 @@ node_modules/
 /dist/
 /movies.json
 /test/Postman Echo
+/test/Insomnia Collection
 /notes/
