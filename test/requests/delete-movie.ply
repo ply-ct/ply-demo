@@ -1,0 +1,6 @@
+Delete Movie:
+  url: ${baseUrl}/movies/4fba651b
+  method: DELETE
+  headers:
+    Accept: application/json
+    Content-Type: application/json

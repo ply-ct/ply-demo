@@ -1,0 +1,20 @@
+Delete Movie:
+  request:
+    url: http://localhost:3000/movies/4fba651b
+    method: DELETE
+    headers:
+      Accept: application/json
+      Content-Type: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        }
+      }
