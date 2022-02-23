@@ -13,6 +13,18 @@
       "script": "stop-movies",
       "problemMatcher": [],
       "label": "npm: stop-movies"
+    },
+    {
+      "type": "npm",
+      "script": "load-test-sequential",
+      "problemMatcher": [],
+      "label": "load-test-sequential"
+    },
+    {
+      "type": "npm",
+      "script": "load-test-parallel",
+      "problemMatcher": [],
+      "label": "load-test-parallel"
     }
   ]
 }
