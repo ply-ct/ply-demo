@@ -19,7 +19,7 @@ GET Request:
           "accept": "*/*",
           "accept-encoding": "gzip,deflate",
           "host": "postman-echo.com",
-          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "user-agent": "Ply-CT/${~.*}",
           "x-amzn-trace-id": "${~.*}",
           "x-forwarded-port": "443",
           "x-forwarded-proto": "https"
@@ -53,7 +53,7 @@ POST Raw Text:
           "content-length": "58",
           "content-type": "text/plain;charset=UTF-8",
           "host": "postman-echo.com",
-          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "user-agent": "Ply-CT/${~.*}",
           "x-amzn-trace-id": "${~.*}",
           "x-forwarded-port": "443",
           "x-forwarded-proto": "https"
@@ -88,7 +88,7 @@ PUT Request:
           "content-length": "58",
           "content-type": "text/plain;charset=UTF-8",
           "host": "postman-echo.com",
-          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "user-agent": "Ply-CT/${~.*}",
           "x-amzn-trace-id": "${~.*}",
           "x-forwarded-port": "443",
           "x-forwarded-proto": "https"
@@ -123,7 +123,7 @@ PATCH Request:
           "content-length": "58",
           "content-type": "text/plain;charset=UTF-8",
           "host": "postman-echo.com",
-          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "user-agent": "Ply-CT/${~.*}",
           "x-amzn-trace-id": "${~.*}",
           "x-forwarded-port": "443",
           "x-forwarded-proto": "https"
@@ -158,7 +158,7 @@ DELETE Request:
           "content-length": "58",
           "content-type": "text/plain;charset=UTF-8",
           "host": "postman-echo.com",
-          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "user-agent": "Ply-CT/${~.*}",
           "x-amzn-trace-id": "${~.*}",
           "x-forwarded-port": "443",
           "x-forwarded-proto": "https"

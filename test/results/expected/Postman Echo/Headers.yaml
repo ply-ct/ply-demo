@@ -17,7 +17,7 @@ Request Headers:
           "accept-encoding": "gzip,deflate",
           "host": "postman-echo.com",
           "my-sample-header": "Lorem ipsum dolor sit amet",
-          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "user-agent": "Ply-CT/${~.*}",
           "x-amzn-trace-id": "${~.*}",
           "x-forwarded-port": "443",
           "x-forwarded-proto": "https"

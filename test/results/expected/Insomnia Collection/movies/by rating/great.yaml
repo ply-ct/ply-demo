@@ -92,7 +92,7 @@ great movies of 1931:
       }
 great movies after 1935:
   request:
-    url: https://ply-ct.org/movies?rating=5&year=>1935
+    url: ${baseUrl}/movies?rating=5&year=>1935
     method: GET
     headers: {}
   response:
