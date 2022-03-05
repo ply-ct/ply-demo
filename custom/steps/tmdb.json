@@ -1,0 +1,24 @@
+{
+  "type": "step",
+  "path": "src/tmdb.ts",
+  "name": "The Movie DB",
+  "icon": "tmdb.svg",
+  "template": {
+    "Movies": {
+      "widgets": [
+        {
+          "type": "text",
+          "attribute": "year",
+          "label": "Year"
+        }
+      ]
+    },
+    "Authentication": {
+      "widgets": {
+        "type": "text",
+        "attribute": "apiKey",
+        "label": "API Key"
+      }
+    }
+  }
+}

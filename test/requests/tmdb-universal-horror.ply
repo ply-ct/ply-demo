@@ -1,0 +1,4 @@
+TMDB Universal Horror:
+  url: https://api.themoviedb.org/3/discover/movie?year=1940&with_genres=27&with_companies=33&api_key=${tmdbKey}&language=en-US
+  method: GET
+  headers: {}

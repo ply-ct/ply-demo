@@ -1,0 +1,35 @@
+attributes:
+  NodeStyle: BoxIcon
+  display: x=23,y=18,w=156,h=27
+  values: '[["name","Leonard"]]'
+steps:
+  - attributes:
+      display: x=60,y=110,w=60,h=40
+    id: s1
+    links:
+      - attributes:
+          display: type=Elbow,x=171,y=129,xs=124&216,ys=130&130
+        id: l1
+        to: s3
+    name: Start
+    path: start
+  - attributes:
+      display: x=410,y=110,w=60,h=40
+    id: s2
+    name: Stop
+    path: stop
+  - attributes:
+      display: x=220,y=90,w=100,h=80
+      tsFile: src/greeting.ts
+    id: s3
+    links:
+      - attributes:
+          display: type=Elbow,x=367,y=130,xs=324&406,ys=130&130
+        id: l2
+        to: s2
+        type: link
+    name: |-
+      Custom
+      Script
+    path: typescript
+    type: step

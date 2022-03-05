@@ -1,0 +1,15 @@
+# configurator template for tmdb step
+Movies:
+  widgets:
+    - type: text
+      attribute: year
+      label: Year
+    - type: note
+      label: Finds Universal Pictures horror films from the specified year
+
+Authentication:
+  widgets:
+    - type: text
+      attribute: apiKey
+      label: API Key
+

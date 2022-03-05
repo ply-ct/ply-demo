@@ -1,0 +1,35 @@
+attributes:
+  NodeStyle: BoxIcon
+  display: x=23,y=18,w=156,h=27
+steps:
+  - attributes:
+      display: x=56,y=97,w=60,h=40
+    id: s1
+    links:
+      - attributes:
+          display: type=Elbow,x=161,y=117,xs=120&196,ys=117&117
+        id: l1
+        to: s3
+    name: Start
+    path: start
+  - attributes:
+      display: x=406,y=97,w=60,h=40
+    id: s2
+    name: Stop
+    path: stop
+  - attributes:
+      apiKey: ${tmdbKey}
+      display: x=200,y=80,w=100,h=80
+      year: '1940'
+    id: s3
+    links:
+      - attributes:
+          display: type=Elbow,x=355,y=117,xs=304&402,ys=117&117
+        id: l2
+        to: s2
+        type: link
+    name: |-
+      1940 TMDB
+      Univeral Horror
+    path: src/tmdb.ts
+    type: step
