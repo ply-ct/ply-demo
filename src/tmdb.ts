@@ -43,13 +43,21 @@ export default class TmdbStep extends ply.PlyExecBase {
         });
         values.plyMovies = plyMovies;
 
+        this.logger.debug('plyMovies', plyMovies);
+
         return { status: 'Passed' };
     }
 
     getTmdb(attributes: { [name: string]: string }): { [name: string]: any } {
         const tmdb: { [name: string]: any } = {};
         if (attributes.year) {
+            const y = parseInt(attributes.year);
+            if (isNaN(y) || y < 1940) {
+                throw new Error('Attribute "year" must be valid year after 1939');
+            }
             tmdb.year = attributes.year;
+        } else {
+            throw new Error('Attribute "year" is required');
         }
         if (attributes.genre) {
             tmdb.genre = genres[attributes.genre];

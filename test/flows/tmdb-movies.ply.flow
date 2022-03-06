@@ -3,35 +3,116 @@ attributes:
   display: x=23,y=18,w=156,h=27
 steps:
   - attributes:
-      display: x=56,y=97,w=60,h=40
+      display: x=40,y=50,w=60,h=40
     id: s1
     links:
       - attributes:
-          display: type=Elbow,x=161,y=117,xs=120&196,ys=117&117
+          display: type=Elbow,x=207,y=70,xs=104&286,ys=70&70
         id: l1
         to: s3
     name: Start
     path: start
   - attributes:
-      display: x=406,y=97,w=60,h=40
+      display: x=600,y=170,w=60,h=40
     id: s2
     name: Stop
     path: stop
   - attributes:
       apiKey: ${tmdbKey}
-      display: x=200,y=80,w=100,h=80
+      display: x=290,y=30,w=100,h=80
       genre: Horror
       studio: Universal Studios
       year: '1940'
     id: s3
     links:
       - attributes:
-          display: type=Elbow,x=355,y=117,xs=304&402,ys=117&117
-        id: l2
-        to: s2
+          display: type=Elbow,x=340,y=146,xs=340&340,ys=114&156
+        id: l3
+        to: s4
         type: link
     name: |-
       TMDB
       Discover
     path: src/tmdb.ts
+    type: step
+  - attributes:
+      display: x=310,y=160,w=60,h=60
+      expression: plyMovies.length === 0
+    id: s4
+    links:
+      - attributes:
+          display: type=Elbow,x=391,y=173,xs=374&436,ys=190&190
+        id: l2
+        result: 'true'
+        to: s7
+        type: link
+      - attributes:
+          display: type=Elbow,x=268,y=173,xs=306&244,ys=190&190
+        id: l4
+        result: 'false'
+        to: s6
+        type: link
+    name: Done?
+    path: decide
+    type: step
+  - attributes:
+      body: |-
+        {
+          "year": ${plyMovie.year}
+          "title": "${plyMovie.title}",
+          "rating": ${plyMovie.rating},
+          "description" "${plyMovie.description}",
+          "poster": "${plyMovie.poster}",
+          "webRef": {
+            "site": "${plyMovie.webRef.site}"
+            "ref": "${plyMovie.webRef.ref}",
+          },
+        }
+      display: x=140,y=310,w=100,h=80
+      headers: '[["Accept","application/json"],["Content-Type","application/json"]]'
+      method: POST
+      url: ${baseUrl}/movies
+    id: s5
+    links:
+      - attributes:
+          display: type=Elbow,x=295,y=286,xs=244&340,ys=350&224
+        id: l6
+        to: s4
+        type: link
+    name: |-
+      Create
+      Movie
+    path: request
+    type: step
+  - attributes:
+      display: x=140,y=150,w=100,h=80
+      tsFile: src/movie.ts
+    id: s6
+    links:
+      - attributes:
+          display: type=Elbow,x=191,y=276,xs=190&190,ys=234&306
+        id: l5
+        to: s5
+        type: link
+    name: |-
+      Next
+      Movie
+    path: typescript
+    type: step
+  - attributes:
+      display: x=440,y=150,w=100,h=80
+      headers: '[["Accept","application/json"]]'
+      method: GET
+      url: ${baseUrl}/movies?year=>1939
+    id: s7
+    links:
+      - attributes:
+          display: type=Elbow,x=570,y=190,xs=544&596,ys=190&190
+        id: l7
+        to: s2
+        type: link
+    name: |-
+      Get Newly
+      Added Movies
+    path: request
     type: step
