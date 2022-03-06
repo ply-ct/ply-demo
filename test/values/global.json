@@ -1,6 +1,7 @@
 {
   "year": 1931,
   "rating": 5,
+  "movieId": "435b30ad",
   "queries": {
     "highlyRated1935": "year=1935&rating=>4&sort=rating&descending=true",
     "tipTop1935": "year=1935&sort=rating&descending=true&max=1",
@@ -10,5 +11,9 @@
     "organization": "ply-ct",
     "repository": "ply"
   },
-  "movieId": "435b30ad"
+  "tmdb": {
+    "year": 1940,
+    "genre": 27,
+    "studio": 33
+  }
 }

@@ -10,6 +10,27 @@
           "type": "text",
           "attribute": "year",
           "label": "Year"
+        },
+        {
+          "type": "select",
+          "attribute": "genre",
+          "label": "Genre",
+          "options": [
+            "Horror",
+            "Mystery"
+          ],
+          "default": "Horror"
+        },
+        {
+          "type": "select",
+          "attribute": "studio",
+          "label": "Studio",
+          "options": [
+            "Universal Studios",
+            "RKO Radio Pictures",
+            "Paramount Pictures"
+          ],
+          "default": "Universal Studios"
         }
       ]
     },

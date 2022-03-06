@@ -20,6 +20,8 @@ steps:
   - attributes:
       apiKey: ${tmdbKey}
       display: x=200,y=80,w=100,h=80
+      genre: Horror
+      studio: Universal Studios
       year: '1940'
     id: s3
     links:
@@ -29,7 +31,7 @@ steps:
         to: s2
         type: link
     name: |-
-      1940 TMDB
-      Univeral Horror
+      TMDB
+      Discover
     path: src/tmdb.ts
     type: step
