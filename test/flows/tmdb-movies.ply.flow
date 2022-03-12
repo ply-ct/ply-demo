@@ -58,15 +58,15 @@ steps:
   - attributes:
       body: |-
         {
-          "year": ${plyMovie.year}
+          "year": ${plyMovie.year},
           "title": "${plyMovie.title}",
           "rating": ${plyMovie.rating},
-          "description" "${plyMovie.description}",
+          "description": "${plyMovie.description}",
           "poster": "${plyMovie.poster}",
           "webRef": {
-            "site": "${plyMovie.webRef.site}"
-            "ref": "${plyMovie.webRef.ref}",
-          },
+            "site": "${plyMovie.webRef.site}",
+            "ref": "${plyMovie.webRef.ref}"
+          }
         }
       display: x=140,y=310,w=100,h=80
       headers: '[["Accept","application/json"],["Content-Type","application/json"]]'
