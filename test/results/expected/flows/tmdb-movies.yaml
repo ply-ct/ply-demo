@@ -1,0 +1,208 @@
+Start:
+  id: s1
+  status: Completed
+TMDB Discover:
+  id: s3
+  status: Completed
+Done?:
+  id: s4
+  status: Completed
+Next Movie:
+  id: s6
+  status: Completed
+Create Movie:
+  id: s5
+  request:
+    url: ${baseUrl}/movies
+    method: POST
+    headers:
+      Accept: application/json
+      Content-Type: application/json
+    body: |-
+      {
+        "year": 1940,
+        "title": "Black Friday",
+        "rating": 3,
+        "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
+        "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
+        "webRef": {
+          "site": "themoviedb.org",
+          "ref": "13784"
+        }
+      }
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      content-type: application/json; charset=utf-8
+      location: ${baseUrl}/movies/27b339e3
+    body: |-
+      {
+        "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
+        "id": "27b339e3",
+        "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
+        "rating": 3,
+        "title": "Black Friday",
+        "webRef": {
+          "ref": "13784",
+          "site": "themoviedb.org"
+        },
+        "year": 1940
+      }
+  status: Completed
+Done?_1:
+  id: s4
+  status: Completed
+Next Movie_1:
+  id: s6
+  status: Completed
+Create Movie_1:
+  id: s5
+  request:
+    url: ${baseUrl}/movies
+    method: POST
+    headers:
+      Accept: application/json
+      Content-Type: application/json
+    body: |-
+      {
+        "year": 1940,
+        "title": "The Mummy's Hand",
+        "rating": 3,
+        "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
+        "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
+        "webRef": {
+          "site": "themoviedb.org",
+          "ref": "31498"
+        }
+      }
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      content-type: application/json; charset=utf-8
+      location: ${baseUrl}/movies/648e2964
+    body: |-
+      {
+        "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
+        "id": "648e2964",
+        "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
+        "rating": 3,
+        "title": "The Mummy's Hand",
+        "webRef": {
+          "ref": "31498",
+          "site": "themoviedb.org"
+        },
+        "year": 1940
+      }
+  status: Completed
+Done?_2:
+  id: s4
+  status: Completed
+Next Movie_2:
+  id: s6
+  status: Completed
+Create Movie_2:
+  id: s5
+  request:
+    url: ${baseUrl}/movies
+    method: POST
+    headers:
+      Accept: application/json
+      Content-Type: application/json
+    body: |-
+      {
+        "year": 1940,
+        "title": "The Invisible Man Returns",
+        "rating": 3,
+        "description": "The owner of a coal mining operation, falsely imprisoned for fratricide, takes a drug to make him invisible, despite its side effect: gradual madness.",
+        "poster": "/mk4HBkyY1Z5A07q44nw251Sb3Ax.jpg",
+        "webRef": {
+          "site": "themoviedb.org",
+          "ref": "28421"
+        }
+      }
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      content-type: application/json; charset=utf-8
+      location: ${baseUrl}/movies/660bd502
+    body: |-
+      {
+        "description": "The owner of a coal mining operation, falsely imprisoned for fratricide, takes a drug to make him invisible, despite its side effect: gradual madness.",
+        "id": "660bd502",
+        "poster": "/mk4HBkyY1Z5A07q44nw251Sb3Ax.jpg",
+        "rating": 3,
+        "title": "The Invisible Man Returns",
+        "webRef": {
+          "ref": "28421",
+          "site": "themoviedb.org"
+        },
+        "year": 1940
+      }
+  status: Completed
+Done?_3:
+  id: s4
+  status: Completed
+Get Newly Added Movies:
+  id: s7
+  request:
+    url: ${baseUrl}/movies?year=>1939
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
+            "id": "27b339e3",
+            "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
+            "rating": 3,
+            "title": "Black Friday",
+            "webRef": {
+              "ref": "13784",
+              "site": "themoviedb.org"
+            },
+            "year": 1940
+          },
+          {
+            "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
+            "id": "648e2964",
+            "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
+            "rating": 3,
+            "title": "The Mummy's Hand",
+            "webRef": {
+              "ref": "31498",
+              "site": "themoviedb.org"
+            },
+            "year": 1940
+          },
+          {
+            "description": "The owner of a coal mining operation, falsely imprisoned for fratricide, takes a drug to make him invisible, despite its side effect: gradual madness.",
+            "id": "660bd502",
+            "poster": "/mk4HBkyY1Z5A07q44nw251Sb3Ax.jpg",
+            "rating": 3,
+            "title": "The Invisible Man Returns",
+            "webRef": {
+              "ref": "28421",
+              "site": "themoviedb.org"
+            },
+            "year": 1940
+          }
+        ]
+      }
+  status: Completed
+Stop:
+  id: s2
+  status: Completed

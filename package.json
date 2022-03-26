@@ -1,6 +1,6 @@
 {
   "name": "@ply-ct/ply-demo",
-  "version": "3.0.33",
+  "version": "3.0.35",
   "description": "Illustrate Ply automated testing",
   "license": "MIT",
   "repository": {
@@ -34,9 +34,10 @@
     "load-test-parallel": "ply flows/movies-api.ply.flow --valuesFiles=\"test/values/localhost.json,test/values/forties-movies.csv\" --submit --parallel"
   },
   "devDependencies": {
-    "@ply-ct/ply": "^3.0.33",
+    "@ply-ct/ply": "^3.0.35",
     "@ply-ct/ply-movies": "^1.1.10",
     "@types/chai": "^4.3.0",
+    "@types/express": "^4.17.13",
     "@types/node": "^17.0.8",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
