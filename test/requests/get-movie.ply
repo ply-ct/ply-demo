@@ -1,5 +1,5 @@
 get-movie:
-  url: https://ply-ct.org/movies/cdbafec0
+  url: ${baseUrl}/movies/cdbafec0
   method: GET
   headers:
     Accept: application/json
