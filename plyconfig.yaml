@@ -1,7 +1,7 @@
 testsLocation: test
 
 # movies-api.ply.yaml is for programmatic cases
-skip: '{requests/movies-api.ply.yaml,requests/form-data.ply}'
+skip: '{requests/movies-api.ply.yaml,requests/form-data.ply,requests/tmdb-universal-horror.ply}'
 
 valuesFiles:
   - test/values/global.json

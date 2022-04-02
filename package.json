@@ -1,6 +1,6 @@
 {
   "name": "@ply-ct/ply-demo",
-  "version": "3.0.35",
+  "version": "3.0.37",
   "description": "Illustrate Ply automated testing",
   "license": "MIT",
   "repository": {
@@ -30,20 +30,21 @@
     "ply": "ply",
     "pretest": "npm run start-movies",
     "test": "npm-run-all ply stop-movies --continue-on-error",
-    "load-test-sequential": "ply flows/movies-api.ply.flow --valuesFiles=\"test/values/localhost.json,test/values/forties-movies-3.csv\" --reporter=json",
+    "load-test-sequential": "ply flows/movies-api.ply.flow --valuesFiles=\"test/values/localhost.json,test/values/forties-movies.csv\" --reporter=json",
     "load-test-parallel": "ply flows/movies-api.ply.flow --valuesFiles=\"test/values/localhost.json,test/values/forties-movies.csv\" --submit --parallel"
   },
   "devDependencies": {
-    "@ply-ct/ply": "^3.0.35",
-    "@ply-ct/ply-movies": "^1.1.9",
+    "@ply-ct/ply": "^3.0.37",
+    "@ply-ct/ply-movies": "^1.1.10",
     "@types/chai": "^4.3.0",
-    "@types/node": "^17.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "@typescript-eslint/parser": "^5.9.0",
-    "chai": "^4.3.4",
-    "eslint": "^8.6.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.12.0",
     "npm-run-all": "^4.1.5",
     "run-script-os": "^1.1.6",
-    "typescript": "^4.3.5"
+    "typescript": "^4.6.3"
   }
 }

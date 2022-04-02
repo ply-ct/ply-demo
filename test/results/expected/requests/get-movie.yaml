@@ -1,0 +1,47 @@
+get-movie:
+  request:
+    url: ${baseUrl}/movies/cdbafec0
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "credits": [
+          {
+            "name": "Albert Parker",
+            "role": "director"
+          },
+          {
+            "name": "Horace Hodges",
+            "role": "actor"
+          },
+          {
+            "name": "Hugh Williams",
+            "role": "actor"
+          },
+          {
+            "name": "Grethe Hansen",
+            "role": "actor"
+          },
+          {
+            "name": "George Barraud",
+            "role": "actor"
+          }
+        ],
+        "description": "Contains most of the elements of a nice old house mystery, but at a scant 45 minutes running time this offering from Fox U.K. Studios is compressed beyond any ability to engage.",
+        "id": "cdbafec0",
+        "poster": "ad.jpg",
+        "rating": 2.5,
+        "title": "After Dark",
+        "webRef": {
+          "ref": "tt0328815",
+          "site": "imdb.com"
+        },
+        "year": 1932
+      }
