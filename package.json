@@ -1,6 +1,6 @@
 {
   "name": "@ply-ct/ply-demo",
-  "version": "3.0.37",
+  "version": "3.0.39",
   "description": "Illustrate Ply automated testing",
   "license": "MIT",
   "repository": {
@@ -34,7 +34,7 @@
     "load-test-parallel": "ply flows/movies-api.ply.flow --valuesFiles=\"test/values/localhost.json,test/values/forties-movies.csv\" --submit --parallel"
   },
   "devDependencies": {
-    "@ply-ct/ply": "^3.0.37",
+    "@ply-ct/ply": "^3.0.39",
     "@ply-ct/ply-movies": "^1.1.10",
     "@types/chai": "^4.3.0",
     "@types/express": "^4.17.13",
