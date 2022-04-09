@@ -36,7 +36,7 @@ Create Movie:
       message: Created
     headers:
       content-type: application/json; charset=utf-8
-      location: ${baseUrl}/movies/27b339e3
+      location: ${baseUrl}/movies/648e2964
     body: |-
       {
         "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
@@ -83,7 +83,7 @@ Create Movie_1:
       message: Created
     headers:
       content-type: application/json; charset=utf-8
-      location: ${baseUrl}/movies/648e2964
+      location: ${baseUrl}/movies/27b339e3
     body: |-
       {
         "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",

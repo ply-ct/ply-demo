@@ -1,6 +1,6 @@
 Delete Movie:
   request:
-    url: http://localhost:3000/movies/4fba651b
+    url: ${baseUrl}/movies/4fba651b
     method: DELETE
     headers:
       Accept: application/json
