@@ -1,6 +1,6 @@
 TMDB Universal Horror:
   request:
-    url: https://api.themoviedb.org/3/discover/movie?primary_release_year=${tmdb.year}&with_genres=${tmdb.genre}&with_companies=${tmdb.studio}&api_key=${tmdbKey}&language=en-US
+    url: https://api.themoviedb.org/3/discover/movie?primary_release_year=${tmdb.year}&with_genres=${tmdb.genre}&with_companies=${tmdb.studio}&api_key=${tmdbKey}&language=en-US&sort_by=release_date.asc
     method: GET
     headers: {}
   response:
@@ -27,33 +27,13 @@ TMDB Universal Horror:
             "original_language": "en",
             "original_title": "The Invisible Man Returns",
             "overview": "The owner of a coal mining operation, falsely imprisoned for fratricide, takes a drug to make him invisible, despite its side effect: gradual madness.",
-            "popularity": ${~.*},
+            "popularity": 7.353,
             "poster_path": "/mk4HBkyY1Z5A07q44nw251Sb3Ax.jpg",
             "release_date": "1940-01-12",
             "title": "The Invisible Man Returns",
             "video": false,
             "vote_average": 6.3,
             "vote_count": 76
-          },
-          {
-            "adult": false,
-            "backdrop_path": "/4c6qv7spRVy1lp4itOT5GEptlQG.jpg",
-            "genre_ids": [
-              27,
-              12,
-              14
-            ],
-            "id": 31498,
-            "original_language": "en",
-            "original_title": "The Mummy's Hand",
-            "overview": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
-            "popularity": ${~.*},
-            "poster_path": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
-            "release_date": "1940-09-20",
-            "title": "The Mummy's Hand",
-            "video": false,
-            "vote_average": 6.2,
-            "vote_count": 52
           },
           {
             "adult": false,
@@ -67,13 +47,33 @@ TMDB Universal Horror:
             "original_language": "en",
             "original_title": "Black Friday",
             "overview": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
-            "popularity": ${~.*},
+            "popularity": 4.906,
             "poster_path": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
             "release_date": "1940-02-29",
             "title": "Black Friday",
             "video": false,
             "vote_average": 6.2,
             "vote_count": 31
+          },
+          {
+            "adult": false,
+            "backdrop_path": "/4c6qv7spRVy1lp4itOT5GEptlQG.jpg",
+            "genre_ids": [
+              27,
+              12,
+              14
+            ],
+            "id": 31498,
+            "original_language": "en",
+            "original_title": "The Mummy's Hand",
+            "overview": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
+            "popularity": 8.586,
+            "poster_path": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
+            "release_date": "1940-09-20",
+            "title": "The Mummy's Hand",
+            "video": false,
+            "vote_average": 6.2,
+            "vote_count": 52
           }
         ],
         "total_pages": 1,

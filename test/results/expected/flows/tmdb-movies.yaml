@@ -21,13 +21,13 @@ Create Movie:
     body: |-
       {
         "year": 1940,
-        "title": "Black Friday",
+        "title": "The Mummy's Hand",
         "rating": 3,
-        "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
-        "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
+        "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
+        "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
         "webRef": {
           "site": "themoviedb.org",
-          "ref": "13784"
+          "ref": "31498"
         }
       }
   response:
@@ -39,13 +39,13 @@ Create Movie:
       location: ${baseUrl}/movies/27b339e3
     body: |-
       {
-        "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
-        "id": "27b339e3",
-        "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
+        "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
+        "id": "648e2964",
+        "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
         "rating": 3,
-        "title": "Black Friday",
+        "title": "The Mummy's Hand",
         "webRef": {
-          "ref": "13784",
+          "ref": "31498",
           "site": "themoviedb.org"
         },
         "year": 1940
@@ -68,13 +68,13 @@ Create Movie_1:
     body: |-
       {
         "year": 1940,
-        "title": "The Mummy's Hand",
+        "title": "Black Friday",
         "rating": 3,
-        "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
-        "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
+        "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
+        "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
         "webRef": {
           "site": "themoviedb.org",
-          "ref": "31498"
+          "ref": "13784"
         }
       }
   response:
@@ -86,13 +86,13 @@ Create Movie_1:
       location: ${baseUrl}/movies/648e2964
     body: |-
       {
-        "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
-        "id": "648e2964",
-        "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
+        "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
+        "id": "27b339e3",
+        "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
         "rating": 3,
-        "title": "The Mummy's Hand",
+        "title": "Black Friday",
         "webRef": {
-          "ref": "31498",
+          "ref": "13784",
           "site": "themoviedb.org"
         },
         "year": 1940
@@ -165,18 +165,6 @@ Get Newly Added Movies:
       {
         "movies": [
           {
-            "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
-            "id": "27b339e3",
-            "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
-            "rating": 3,
-            "title": "Black Friday",
-            "webRef": {
-              "ref": "13784",
-              "site": "themoviedb.org"
-            },
-            "year": 1940
-          },
-          {
             "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
             "id": "648e2964",
             "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
@@ -184,6 +172,18 @@ Get Newly Added Movies:
             "title": "The Mummy's Hand",
             "webRef": {
               "ref": "31498",
+              "site": "themoviedb.org"
+            },
+            "year": 1940
+          },
+          {
+            "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
+            "id": "27b339e3",
+            "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
+            "rating": 3,
+            "title": "Black Friday",
+            "webRef": {
+              "ref": "13784",
               "site": "themoviedb.org"
             },
             "year": 1940
