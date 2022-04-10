@@ -30,8 +30,8 @@
     "ply": "ply",
     "pretest": "npm run start-movies",
     "test": "npm-run-all ply stop-movies --continue-on-error",
-    "load-test-sequential": "ply flows/movies-api.ply.flow --valuesFiles=\"test/values/localhost.json,test/values/forties-movies.csv\" --reporter=json",
-    "load-test-parallel": "ply flows/movies-api.ply.flow --valuesFiles=\"test/values/localhost.json,test/values/forties-movies.csv\" --submit --parallel"
+    "load-test-sequential": "ply test/flows/rowwise-movies-api.ply.flow --valuesFiles=\"test/values/localhost.json,test/values/forties-movies.xlsx\"",
+    "load-test-parallel": "ply test/flows/rowwise-movies-api.ply.flow --valuesFiles=\"test/values/localhost.json,test/values/forties-movies.csv\" --submit --parallel --quiet"
   },
   "devDependencies": {
     "@ply-ct/ply": "^3.0.39",
