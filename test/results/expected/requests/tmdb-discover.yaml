@@ -32,8 +32,8 @@ TMDB Universal Horror:
             "release_date": "1940-01-12",
             "title": "The Invisible Man Returns",
             "video": false,
-            "vote_average": 6.3,
-            "vote_count": 76
+            "vote_average": ${~.*},
+            "vote_count": ${~.*}
           },
           {
             "adult": false,
@@ -52,8 +52,8 @@ TMDB Universal Horror:
             "release_date": "1940-02-29",
             "title": "Black Friday",
             "video": false,
-            "vote_average": 6.2,
-            "vote_count": 31
+            "vote_average": ${~.*},
+            "vote_count": ${~.*}
           },
           {
             "adult": false,
@@ -72,8 +72,8 @@ TMDB Universal Horror:
             "release_date": "1940-09-20",
             "title": "The Mummy's Hand",
             "video": false,
-            "vote_average": 6.2,
-            "vote_count": 52
+            "vote_average": ${~.*},
+            "vote_count": ${~.*}
           }
         ],
         "total_pages": 1,
