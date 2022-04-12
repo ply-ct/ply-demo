@@ -1,5 +1,5 @@
 Get Movie:
-  url: ${baseUrl}/movies/4fba651b
+  url: ${baseUrl}/movies/cdbafec0
   method: GET
   headers:
     Accept: application/json
