@@ -1,4 +1,4 @@
-form-data:
+Form Data:
   url: https://postman-echo.com/post
   method: POST
   headers:

@@ -1,4 +1,4 @@
-get-movie:
+Get Movie:
   request:
     url: ${baseUrl}/movies/cdbafec0
     method: GET

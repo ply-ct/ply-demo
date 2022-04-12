@@ -1,4 +1,4 @@
-get-movie-by-title:
+Get Movie by Title:
   request:
     url: ${baseUrl}/movies?title=Dracula
     method: GET
