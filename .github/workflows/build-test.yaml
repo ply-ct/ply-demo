@@ -14,11 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PLY_VALUES: ${{ secrets.PLY_VALUES }}
+      FORCE_COLOR: 'true'
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
-        node-version: '14.x'
+        node-version: '12.x'
     - run: npm install
     - run: npx ply --version
     - run: npm test

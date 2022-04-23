@@ -7,7 +7,7 @@
 </a>
 
 Illustrates how to use [Ply](https://ply-ct.github.io/ply/) for automated API testing. 
-Includes an example GitHub workflow to demonstrate Ply continuous testing.
+Includes an example GitHub Actions workflow to demonstrate Ply continuous testing.
 
 ## Run a request suite
 ```

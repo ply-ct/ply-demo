@@ -1,5 +1,4 @@
 {
     "diffEditor.codeLens": true,
-    "ply.plyPath": "node_modules/@ply-ct/ply",
     "ply.customSteps": "custom/steps/**/*.json"
 }
