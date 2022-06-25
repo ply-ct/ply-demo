@@ -118,7 +118,7 @@ Create Movie_2:
         "title": "The Invisible Man Returns",
         "rating": 3,
         "description": "The owner of a coal mining operation, falsely imprisoned for fratricide, takes a drug to make him invisible, despite its side effect: gradual madness.",
-        "poster": "/mk4HBkyY1Z5A07q44nw251Sb3Ax.jpg",
+        "poster": "/aRTinROsOFuy9cepIAd9iauV7nc.jpg",
         "webRef": {
           "site": "themoviedb.org",
           "ref": "28421"
@@ -135,7 +135,7 @@ Create Movie_2:
       {
         "description": "The owner of a coal mining operation, falsely imprisoned for fratricide, takes a drug to make him invisible, despite its side effect: gradual madness.",
         "id": "660bd502",
-        "poster": "/mk4HBkyY1Z5A07q44nw251Sb3Ax.jpg",
+        "poster": "/aRTinROsOFuy9cepIAd9iauV7nc.jpg",
         "rating": 3,
         "title": "The Invisible Man Returns",
         "webRef": {
@@ -191,7 +191,7 @@ Get Newly Added Movies:
           {
             "description": "The owner of a coal mining operation, falsely imprisoned for fratricide, takes a drug to make him invisible, despite its side effect: gradual madness.",
             "id": "660bd502",
-            "poster": "/mk4HBkyY1Z5A07q44nw251Sb3Ax.jpg",
+            "poster": "/aRTinROsOFuy9cepIAd9iauV7nc.jpg",
             "rating": 3,
             "title": "The Invisible Man Returns",
             "webRef": {

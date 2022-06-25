@@ -8,7 +8,7 @@ TMDB Universal Horror:
       code: 200
       message: OK
     headers:
-      content-type: application/json;charset=utf-8
+      content-type: application/json; charset=utf-8
     body: |-
       {
         "page": 1,
@@ -28,7 +28,7 @@ TMDB Universal Horror:
             "original_title": "The Invisible Man Returns",
             "overview": "The owner of a coal mining operation, falsely imprisoned for fratricide, takes a drug to make him invisible, despite its side effect: gradual madness.",
             "popularity": ${~.*},
-            "poster_path": "/mk4HBkyY1Z5A07q44nw251Sb3Ax.jpg",
+            "poster_path": "/${~.*}.jpg",
             "release_date": "1940-01-12",
             "title": "The Invisible Man Returns",
             "video": false,
