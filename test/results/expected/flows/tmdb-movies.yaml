@@ -24,7 +24,7 @@ Create Movie:
         "title": "The Mummy's Hand",
         "rating": 3,
         "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
-        "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
+        "poster": "/jSSdvLkGXy4oICnSo5Cnz12B6Ae.jpg",
         "webRef": {
           "site": "themoviedb.org",
           "ref": "31498"
@@ -41,7 +41,7 @@ Create Movie:
       {
         "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
         "id": "648e2964",
-        "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
+        "poster": "/jSSdvLkGXy4oICnSo5Cnz12B6Ae.jpg",
         "rating": 3,
         "title": "The Mummy's Hand",
         "webRef": {
@@ -167,7 +167,7 @@ Get Newly Added Movies:
           {
             "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
             "id": "648e2964",
-            "poster": "/bbF8coh96xdXjszhnHAvRsTRPBm.jpg",
+            "poster": "/jSSdvLkGXy4oICnSo5Cnz12B6Ae.jpg",
             "rating": 3,
             "title": "The Mummy's Hand",
             "webRef": {
