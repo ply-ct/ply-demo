@@ -1,6 +1,6 @@
 {
   "name": "@ply-ct/ply-demo",
-  "version": "3.0.43",
+  "version": "3.0.44",
   "description": "Illustrate Ply automated testing",
   "license": "MIT",
   "repository": {
@@ -35,7 +35,7 @@
     "html-report": "ply --report=node_modules/@ply-ct/ply-viz#html -o load-test-results.html"
   },
   "devDependencies": {
-    "@ply-ct/ply": "^3.0.43",
+    "@ply-ct/ply": "^3.0.44",
     "@ply-ct/ply-movies": "^1.1.10",
     "@ply-ct/ply-viz": "^0.1.0",
     "@types/chai": "^4.3.0",
