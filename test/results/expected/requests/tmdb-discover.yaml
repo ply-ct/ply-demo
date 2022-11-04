@@ -57,7 +57,7 @@ TMDB Universal Horror:
           },
           {
             "adult": false,
-            "backdrop_path": "/4c6qv7spRVy1lp4itOT5GEptlQG.jpg",
+            "backdrop_path": "/${~.*}.jpg",
             "genre_ids": [
               27,
               12,
