@@ -16,15 +16,15 @@ jobs:
       PLY_VALUES: ${{ secrets.PLY_VALUES }}
       FORCE_COLOR: 'true'
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
       with:
         node-version: '16.x'
     - run: npm install
     - run: npx ply --version
     - run: npm test
     - name: ply
-      uses: ply-ct/ply-action@v1.1.0
+      uses: ply-ct/ply-action@v1.2.0
       with:
         result-file: test/results/actual/ply-results.json
 
