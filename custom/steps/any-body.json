@@ -1,0 +1,22 @@
+{
+  "type": "step",
+  "path": "src/any-body.ts",
+  "name": "Any Body",
+  "icon": "custom/steps/any-body.svg",
+  "template": {
+    "Movies": {
+      "widgets": [
+        {
+          "type": "text",
+          "attribute": "plyRequest",
+          "label": "Ply Request"
+        },
+        {
+          "type": "text",
+          "attribute": "responseValueKey",
+          "label": "Response Value Key"
+        }
+      ]
+    }
+  }
+}

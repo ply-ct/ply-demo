@@ -1,0 +1,64 @@
+attributes:
+  NodeStyle: BoxIcon
+  bail: 'false'
+  display: x=23,y=18,w=156,h=27
+steps:
+  - attributes:
+      display: x=50,y=110,w=60,h=40
+    id: s1
+    links:
+      - attributes:
+          display: type=Elbow,x=152,y=130,xs=114&186,ys=130&130
+        id: l1
+        to: s3
+    name: Start
+    path: start
+  - attributes:
+      display: x=722,y=112,w=60,h=40
+    id: s2
+    name: Stop
+    path: stop
+  - attributes:
+      display: x=190,y=90,w=100,h=80
+      headers: '[["Accept","application/json"]]'
+      method: GET
+      url: ${baseUrl}/movies?year=${year}&rating=${rating}
+    id: s3
+    links:
+      - id: l5
+        to: s6
+        attributes:
+          display: type=Elbow,x=326,y=130,xs=294&356,ys=130&130
+    name: |-
+      Movies by
+      Year & Rating
+    path: request
+  - attributes:
+      display: x=550,y=90,w=100,h=80
+      headers: '[["Accept","application/json"]]'
+      method: GET
+      url: ${baseUrl}/movies?year=${movieByTitleResponse.body.movies[0].year}
+    id: s5
+    links:
+      - attributes:
+          display: type=Elbow,x=688,y=132,xs=654&718,ys=132&132
+        id: l4
+        to: s2
+    name: |-
+      Films of
+      Same Year
+    path: request
+  - id: s6
+    name: |-
+      Get Movie
+      by Title
+    path: src/any-body.ts
+    links:
+      - id: l6
+        to: s5
+        attributes:
+          display: type=Elbow,x=505,y=130,xs=464&546,ys=130&130
+    attributes:
+      display: x=360,y=90,w=100,h=80
+      plyRequest: test/requests/get-movie-by-title.ply
+      responseValueKey: movieByTitleResponse
