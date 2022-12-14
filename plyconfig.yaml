@@ -5,7 +5,7 @@ skip: '{requests/movies-api.ply.yaml,requests/form-data.ply,requests/tmdb-univer
 
 valuesFiles:
   - test/values/global.json
-  # - test/values/ply-ct.json
-  - test/values/localhost.json
+  - test/values/ply-ct.json
+  # - test/values/localhost.json
 
 outputFile: test/results/actual/ply-results.json
