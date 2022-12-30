@@ -1,0 +1,19 @@
+github-graphql-topics:
+  url: https://api.github.com/graphql
+  method: POST
+  headers:
+    Authorization: Bearer ${github.token}
+  body: |
+    query {
+      repository(owner: "${github.organization}", name: "${github.repository}") {
+        repositoryTopics(first: 10) {
+          edges {
+            node {
+              topic {
+                name
+              }
+            }
+          }
+        }
+      }
+    }

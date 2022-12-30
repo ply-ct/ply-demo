@@ -106,6 +106,7 @@ Find Repository ID:
     headers:
       Content-Type: application/json
       User-Agent: ply-ct
+      X-Github-Next-Global-ID: '1'
     body: |-
       query findRepositoryId {
         repository(owner:"${github.organization}", name:"${github.repository}") {
@@ -123,7 +124,7 @@ Find Repository ID:
       {
         "data": {
           "repository": {
-            "id": "MDEwOlJlcG9zaXRvcnkxMjk1NDk0ODk="
+            "id": "${~.*}"
           }
         }
       }

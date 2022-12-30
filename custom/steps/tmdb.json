@@ -31,15 +31,13 @@
             "Paramount Pictures"
           ],
           "default": "Universal Studios"
+        },
+        {
+          "type": "text",
+          "attribute": "apiKey",
+          "label": "API Key"
         }
       ]
-    },
-    "Authentication": {
-      "widgets": {
-        "type": "text",
-        "attribute": "apiKey",
-        "label": "API Key"
-      }
     }
   }
 }

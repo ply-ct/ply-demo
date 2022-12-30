@@ -10,7 +10,7 @@ repositoryTopicsQuery:
   url: https://api.github.com/graphql
   method: POST
   headers:
-    Authorization: Bearer ${githubToken}
+    Authorization: Bearer ${github.token}
     Content-Type: application/graphql
   body: |-
     query {
@@ -31,8 +31,9 @@ findRepositoryId:
   url: https://api.github.com/graphql
   method: POST
   headers:
-    Authorization: Bearer ${githubToken}
+    Authorization: Bearer ${github.token}
     Content-Type: application/graphql
+    X-Github-Next-Global-ID: '1'
   body: |-
     query findRepositoryId {
       repository(owner:"${github.organization}", name:"${github.repository}") {
@@ -44,7 +45,7 @@ starRepository:
   url: https://api.github.com/graphql
   method: POST
   headers:
-    Authorization: Bearer ${githubToken}
+    Authorization: Bearer ${github.token}
     Content-Type: application/graphql
   body: |-  # repository id comes from findRepositoryId response
     mutation starRepository {

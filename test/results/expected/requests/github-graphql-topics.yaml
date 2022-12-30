@@ -1,36 +1,9 @@
-repositoryTopics:
-  request:
-    url: https://api.github.com/repos/${github.organization}/${github.repository}/topics
-    method: GET
-    headers:
-      Accept: application/vnd.github.mercy-preview+json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      content-type: application/json; charset=utf-8
-    body: |-
-      {
-        "names": [
-          "rest-api",
-          "testing",
-          "typescript",
-          "nodejs",
-          "test-automation",
-          "continuous-testing",
-          "graphql",
-          "workflow"
-        ]
-      }
-
-repositoryTopicsQuery:
+github-graphql-topics:
   request:
     url: https://api.github.com/graphql
     method: POST
-    headers:
-      Content-Type: application/graphql
-    body: |-
+    headers: {}
+    body: |
       query {
         repository(owner: "${github.organization}", name: "${github.repository}") {
           repositoryTopics(first: 10) {
@@ -114,68 +87,6 @@ repositoryTopicsQuery:
                   }
                 }
               ]
-            }
-          }
-        }
-      }
-
-findRepositoryId:
-  request:
-    url: https://api.github.com/graphql
-    method: POST
-    headers:
-      Content-Type: application/graphql
-      X-Github-Next-Global-ID: '1'
-    body: |-
-      query findRepositoryId {
-        repository(owner:"${github.organization}", name:"${github.repository}") {
-          id
-        }
-      }
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      content-type: application/json; charset=utf-8
-      x-github-media-type: github.v4; format=json
-    body: |-  # id matched against regex
-      {
-        "data": {
-          "repository": {
-            "id": "${~.*}"
-          }
-        }
-      }
-
-# returns HTTP 200 even if already starred
-starRepository:
-  request:
-    url: https://api.github.com/graphql
-    method: POST
-    headers:
-      Content-Type: application/graphql
-    body: |-  # repository id comes from findRepositoryId response
-      mutation starRepository {
-        addStar(input:{starrableId:"${@findRepositoryId.response.body.data.repository.id}"}) {
-          starrable {
-            viewerHasStarred
-          }
-        }
-      }
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      content-type: application/json; charset=utf-8
-      x-github-media-type: github.v4; format=json
-    body: |-
-      {
-        "data": {
-          "addStar": {
-            "starrable": {
-              "viewerHasStarred": true
             }
           }
         }

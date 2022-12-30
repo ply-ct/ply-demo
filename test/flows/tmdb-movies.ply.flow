@@ -18,11 +18,11 @@ steps:
     name: Stop
     path: stop
   - attributes:
-      apiKey: ${tmdbKey}
+      apiKey: ${tmdb.key}
       display: x=300,y=40,w=100,h=80
       genre: Horror
       studio: Universal Studios
-      year: '1940'
+      year: ${tmdb.year}
     id: s3
     links:
       - attributes:

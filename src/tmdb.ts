@@ -11,15 +11,11 @@ export default class TmdbStep extends ply.PlyExecBase {
         super(step, instance, logger);
     }
 
-    async run(_runtime: ply.Runtime, values: any): Promise<ply.ExecResult> {
-        if (!this.step.attributes?.apiKey) {
-            throw new Error('Missing attribute: apiKey');
-        }
-        values.apiKey = this.step.attributes?.apiKey;
-
-        values.tmdb = this.getTmdb(this.step.attributes);
+    async run(_runtime: ply.Runtime, values: any, runOptions?: ply.RunOptions): Promise<ply.ExecResult> {
+        values.tmdb = this.getTmdb(values, runOptions?.trusted);
 
         const request = await new ply.Ply().loadRequest('test/requests/tmdb-discover.ply');
+        console.log("VALUES: " + JSON.stringify(values, null, 2));
         const response = await request.submit(values);
 
         const tmdbResults = JSON.parse(response.body).results;
@@ -48,22 +44,23 @@ export default class TmdbStep extends ply.PlyExecBase {
         return { status: 'Passed' };
     }
 
-    getTmdb(attributes: { [name: string]: string }): { [name: string]: any } {
+    getTmdb(values: any, trusted?: boolean): { [name: string]: any } {
         const tmdb: { [name: string]: any } = {};
-        if (attributes.year) {
-            const y = parseInt(attributes.year);
-            if (isNaN(y) || y < 1940) {
-                throw new Error('Attribute "year" must be valid year after 1939');
-            }
-            tmdb.year = attributes.year;
-        } else {
-            throw new Error('Attribute "year" is required');
+        tmdb.key = this.getAttribute('apiKey', values, {trusted, required: true});
+        tmdb.year = this.getAttribute('year', values, { trusted, required: true });
+        const y = parseInt(tmdb.year);
+        if (isNaN(y) || y < 1940) {
+            throw new Error('Attribute "year" must be valid year after 1939');
         }
-        if (attributes.genre) {
-            tmdb.genre = genres[attributes.genre];
+
+        // optional attributes
+        const genre = this.getAttribute('genre', values, { trusted });
+        if (genre) {
+            tmdb.genre = genres[genre];
         }
-        if (attributes.studio) {
-            tmdb.studio = studios[attributes.studio];
+        const studio = this.getAttribute('studio', values, { trusted });
+        if (studio) {
+            tmdb.studio = studios[studio];
         }
         return tmdb;
     }

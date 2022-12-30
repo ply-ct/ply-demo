@@ -1,6 +1,6 @@
 TMDB Universal Horror:
   request:
-    url: https://api.themoviedb.org/3/discover/movie?primary_release_year=${tmdb.year}&with_genres=${tmdb.genre}&with_companies=${tmdb.studio}&api_key=${tmdbKey}&language=en-US&sort_by=release_date.asc
+    url: https://api.themoviedb.org/3/discover/movie?primary_release_year=${tmdb.year}&with_genres=${tmdb.genre}&with_companies=${tmdb.studio}&api_key=${tmdb.key}&language=en-US&sort_by=release_date.asc
     method: GET
     headers: {}
   response:

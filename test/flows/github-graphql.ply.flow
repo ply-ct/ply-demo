@@ -10,7 +10,6 @@ steps:
           display: type=Elbow,x=181,y=120,xs=124&216,ys=120&120
         id: l1
         to: s3
-        type: link
     name: Start
     path: start
   - attributes:
@@ -34,7 +33,7 @@ steps:
           }
         }
       display: x=220,y=80,w=100,h=80
-      headers: '[["Authorization","Bearer ${githubToken}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
+      headers: '[["Authorization","Bearer ${github.token}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
       method: POST
       url: https://api.github.com/graphql
     id: s3
@@ -43,12 +42,10 @@ steps:
           display: type=Elbow,x=365,y=120,xs=324&406,ys=120&120
         id: l2
         to: s4
-        type: link
     name: |-
       Repository
       Topics
     path: request
-    type: step
   - attributes:
       body: |-
         query findRepositoryId {
@@ -57,7 +54,7 @@ steps:
           }
         }
       display: x=410,y=80,w=100,h=80
-      headers: '[["Authorization","Bearer ${githubToken}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
+      headers: '[["Authorization","Bearer ${github.token}"],["Content-Type","application/json"],["User-Agent","${github.organization}"],["X-Github-Next-Global-ID","1"]]'
       method: POST
       url: https://api.github.com/graphql
     id: s4
@@ -66,12 +63,10 @@ steps:
           display: type=Elbow,x=560,y=120,xs=514&606,ys=120&120
         id: l3
         to: s5
-        type: link
     name: |-
       Find
       Repository ID
     path: request
-    type: step
   - attributes:
       body: |-
         mutation starRepository {
@@ -82,7 +77,7 @@ steps:
           }
         }
       display: x=610,y=80,w=100,h=80
-      headers: '[["Authorization","Bearer ${githubToken}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
+      headers: '[["Authorization","Bearer ${github.token}"],["Content-Type","application/json"],["User-Agent","${github.organization}"]]'
       method: POST
       url: https://api.github.com/graphql
     id: s5
@@ -91,9 +86,7 @@ steps:
           display: type=Elbow,x=760,y=120,xs=714&806,ys=120&120
         id: l4
         to: s2
-        type: link
     name: |-
       Star
       Repository
     path: request
-    type: step
