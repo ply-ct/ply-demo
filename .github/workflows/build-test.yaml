@@ -23,11 +23,8 @@ jobs:
       with:
         node-version: '16.x'
     - run: npm install
-    - run: npx ply --version
-    - run: npm test
+    - run: npm run start-movies
     - name: ply
       uses: ply-ct/ply-action@v2.3
-      with:
-        ply-path: node_modules/@ply-ct/ply
-        result-file: test/results/actual/ply-results.json
+    - run: npm run stop-movies
 
