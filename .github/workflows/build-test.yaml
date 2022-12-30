@@ -22,7 +22,9 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: '16.x'
-    - run: npm install
+    - run: |
+        npm install
+        npm run build
     - run: npm run start-movies
     - name: ply
       uses: ply-ct/ply-action@v2.3
