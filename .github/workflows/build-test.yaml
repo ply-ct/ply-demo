@@ -28,5 +28,6 @@ jobs:
     - name: ply
       uses: ply-ct/ply-action@v2.3
       with:
+        ply-path: node_modules/@ply-ct/ply
         result-file: test/results/actual/ply-results.json
 
