@@ -27,9 +27,8 @@ jobs:
         npm run build
     - run: npm run start-movies
     - name: ply
-      uses: ply-ct/ply-action@v2.3
+      uses: ply-ct/ply-action@v2.4
       with:
         ply-path: node_modules/@ply-ct/ply
-
     - run: npm run stop-movies
 
