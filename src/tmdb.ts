@@ -6,7 +6,7 @@ export default class TmdbStep extends ply.PlyExecBase {
     constructor(
         readonly step: ply.FlowStep,
         readonly instance: ply.StepInstance,
-        readonly logger: ply.Logger
+        readonly logger: ply.Log
     ) {
         super(step, instance, logger);
     }
