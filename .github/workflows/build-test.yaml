@@ -17,7 +17,6 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       TMDB_KEY: ${{ secrets.TMDB_KEY }}
       FORCE_COLOR: 'true'
-      NODE_OPTIONS: '-r ts-node/register'
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
@@ -31,5 +30,8 @@ jobs:
       uses: ply-ct/ply-action@v2.4
       with:
         ply-path: node_modules/@ply-ct/ply
+      env:
+        NODE_OPTIONS: '-r ts-node/register'
+
     - run: npm run stop-movies
 
