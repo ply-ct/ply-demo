@@ -16,7 +16,8 @@ jobs:
       PLY_VALUES: ${{ secrets.PLY_VALUES }} # override baseUrl
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       TMDB_KEY: ${{ secrets.TMDB_KEY }}
-      FORCE_COLOR: 'true'
+      FORCE_COLOR: 'true',
+      NODE_OPTIONS: '-r ts-node/register'
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
