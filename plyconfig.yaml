@@ -4,10 +4,14 @@ testsLocation: test
 skip: '{requests/movies-api.ply.yaml,requests/form-data.ply,requests/tmdb-universal-horror.ply}'
 
 valuesFiles:
-  test/values/global.json: true
-  test/values/ply-ct.json: true
-  test/values/localhost.json: false
-  test/values/forties-movies.csv: false
-  test/values/forties-movies.xlsx: false
+  - test/values/global.json
+  - test/values/ply-ct.json
+  # - test/values/localhost.json
+  # await vscode-ply 3.0 for enableable values files
+  # test/values/global.json: true
+  # test/values/ply-ct.json: true
+  # test/values/localhost.json: false
+  # test/values/forties-movies.csv: false
+  # test/values/forties-movies.xlsx: false
 
 outputFile: test/results/actual/ply-results.json

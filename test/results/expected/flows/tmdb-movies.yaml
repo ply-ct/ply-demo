@@ -167,7 +167,7 @@ Get Newly Added Movies:
           {
             "description": "A couple of young, out-of-work archaeologists in Egypt discover evidence of the burial place of the ancient Egyptian princess Ananka. After receiving funding from an eccentric magician and his beautiful daughter, they set out into the desert only to be terrorized by a sinister high priest and the living mummy Kharis who are the guardians of Ananka’s tomb.",
             "id": "648e2964",
-            "poster": "/jSSdvLkGXy4oICnSo5Cnz12B6Ae.jpg",
+            "poster": "/${~.*}.jpg",
             "rating": 3,
             "title": "The Mummy's Hand",
             "webRef": {
@@ -179,7 +179,7 @@ Get Newly Added Movies:
           {
             "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
             "id": "27b339e3",
-            "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
+            "poster": "/${~.*}.jpg",
             "rating": 3,
             "title": "Black Friday",
             "webRef": {

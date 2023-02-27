@@ -1,4 +1,5 @@
 {
     "diffEditor.codeLens": true,
-    "ply.customSteps": "custom/steps/**/*.json"
+    "ply.customSteps": "custom/steps/**/*.json",
+    "ply.requireTsNode": true
 }
