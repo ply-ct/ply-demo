@@ -33,10 +33,10 @@ Create Movie:
         }
       ],
       "poster": "mg.jpg",
-      "title": "The Mad Genius",
+      "title": "${newMovie.title}",
       "webRef": {
         "ref": "tt0022103",
         "site": "imdb.com"
       },
-      "year": 1931
+      "year": ${year}
     }

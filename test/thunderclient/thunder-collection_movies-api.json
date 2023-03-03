@@ -1,0 +1,63 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "movies-api",
+    "dateExported": "2023-03-02T22:05:01.759Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9f3e8ac4-acb5-45a4-9fe3-62bb93500d80",
+            "colId": "5c341369-42a0-4bb5-97b3-9ea1b5e67d60",
+            "containerId": "",
+            "name": "movies by year",
+            "url": "{{baseUrl}}/movies?year=1931&sort=rating&descending=true",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-03-02T21:30:03.899Z",
+            "modified": "2023-03-02T21:30:03.899Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "year",
+                    "value": "1931",
+                    "isPath": false
+                },
+                {
+                    "name": "sort",
+                    "value": "rating",
+                    "isPath": false
+                },
+                {
+                    "name": "descending",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "ca52c58c-1b00-489f-aa29-2961d16ba20a",
+            "colId": "5c341369-42a0-4bb5-97b3-9ea1b5e67d60",
+            "containerId": "",
+            "name": "create movie",
+            "url": "{{baseUrl}}/movies",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-03-02T22:04:44.332Z",
+            "modified": "2023-03-02T22:04:44.332Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"credits\": [\n    {\n      \"name\": \"Michael Curtiz\",\n      \"role\": \"director\"\n    },\n    {\n      \"name\": \"John Barrymore\",\n      \"role\": \"actor\"\n    },\n    {\n      \"name\": \"Marian Marsh\",\n      \"role\": \"actor\"\n    },\n    {\n      \"name\": \"Charles Butterworth\",\n      \"role\": \"actor\"\n    },\n    {\n      \"name\": \"Donald Cook\",\n      \"role\": \"actor\"\n    },\n    {\n      \"name\": \"Luis Alberni\",\n      \"role\": \"actor\"\n    }\n  ],\n  \"poster\": \"mg.jpg\",\n  \"title\": \"The Mad Genius\",\n  \"webRef\": {\n    \"ref\": \"tt0022103\",\n    \"site\": \"imdb.com\"\n  },\n  \"year\": \"{{year}}\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

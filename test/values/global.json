@@ -17,5 +17,8 @@
     "genre": 27,
     "studio": 33,
     "key": "${TMDB_KEY}"
+  },
+  "newMovie": {
+    "title": "The Mad Genius"
   }
 }
