@@ -15,7 +15,6 @@ export default class TmdbStep extends ply.PlyExecBase {
         values.tmdb = this.getTmdb(values, runOptions?.trusted);
 
         const request = await new ply.Ply().loadRequest('test/requests/tmdb-discover.ply');
-        console.log("VALUES: " + JSON.stringify(values, null, 2));
         const response = await request.submit(values);
 
         const tmdbResults = JSON.parse(response.body).results;

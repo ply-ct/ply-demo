@@ -71,7 +71,7 @@ Create Movie_1:
         "title": "Black Friday",
         "rating": 3,
         "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
-        "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
+        "poster": "/${~.*}.jpg",
         "webRef": {
           "site": "themoviedb.org",
           "ref": "13784"
@@ -88,7 +88,7 @@ Create Movie_1:
       {
         "description": "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
         "id": "27b339e3",
-        "poster": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
+        "poster": "/${~.*}.jpg",
         "rating": 3,
         "title": "Black Friday",
         "webRef": {
