@@ -13,7 +13,6 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     env:
-      PLY_VALUES: ${{ secrets.PLY_VALUES }} # override baseUrl
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       TMDB_KEY: ${{ secrets.TMDB_KEY }}
       FORCE_COLOR: 'true'
@@ -27,9 +26,12 @@ jobs:
         npm run build
     - run: npm run start-movies
     - name: ply
-      uses: ply-ct/ply-action@v2.5
+      uses: ply-ct/ply-action@v3.0
       with:
-        ply-path: node_modules/@ply-ct/ply
+        values-files: |-
+          test/values/global.json
+          test/values/localhost.json
+
       env:
         NODE_OPTIONS: '-r ts-node/register'
 
