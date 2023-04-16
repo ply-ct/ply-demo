@@ -1,0 +1,203 @@
+movies-client-sort: #! sort(${response.body.movies}, id)
+  request:
+    url: ${baseUrl}/movies?year=1936&rating=3.5
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "Charles Lamont",
+                "role": "director"
+              },
+              {
+                "name": "Ray Walker",
+                "role": "actor"
+              },
+              {
+                "name": "Berton Churchill",
+                "role": "actor"
+              },
+              {
+                "name": "Irene Ware",
+                "role": "actor"
+              },
+              {
+                "name": "Hobart Bosworth",
+                "role": "actor"
+              },
+              {
+                "name": "Hedda Hopper",
+                "role": "actor"
+              },
+              {
+                "name": "E. E. Clive",
+                "role": "actor"
+              }
+            ],
+            "description": "Here we have a well put-together murder mystery from Chesterfield pictures with just perhaps one twist too many at its resolution, and one ridiculous deduction too many by its sleuth.",
+            "id": "1947dbd7",
+            "poster": "dh.jpg",
+            "rating": 3.5,
+            "title": "The Dark Hour",
+            "webRef": {
+              "ref": "tt0027501",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Frank R. Strayer",
+                "role": "director"
+              },
+              {
+                "name": "John Miljan",
+                "role": "actor"
+              },
+              {
+                "name": "Irene Ware",
+                "role": "actor"
+              },
+              {
+                "name": "Iris Adrian",
+                "role": "actor"
+              },
+              {
+                "name": "Noel Madison",
+                "role": "actor"
+              },
+              {
+                "name": "Oscar Apfel",
+                "role": "actor"
+              }
+            ],
+            "description": "This is a first-rate detective thriller from the Poverty Row production company Invincible Pictures, with a stalwart cast, nicely-paced direction by Frank Strayer, and a couple of truly horrific murders to boot.",
+            "id": "2fcb26c2",
+            "poster": "maga.jpg",
+            "rating": 3.5,
+            "title": "Murder at Glen Athol",
+            "webRef": {
+              "ref": "tt0028000",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Edwin L. Marin",
+                "role": "director"
+              },
+              {
+                "name": "Chester Morris",
+                "role": "actor"
+              },
+              {
+                "name": "Madge Evans",
+                "role": "actor"
+              },
+              {
+                "name": "Leo Carrillo",
+                "role": "actor"
+              },
+              {
+                "name": "Frank McHugh",
+                "role": "actor"
+              },
+              {
+                "name": "Benita Hume",
+                "role": "actor"
+              }
+            ],
+            "description": "The production values and cast are outstanding in this MGM mystery which takes place during an opera staged at the Hollywood Bowl, but the story is somewhat jumbled due to continuity issues introduced during editing.",
+            "id": "b277e7a4",
+            "poster": "mmrdr.jpg",
+            "rating": 3.5,
+            "title": "Moonlight Murder",
+            "webRef": {
+              "ref": "tt0027980",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Tod Browning",
+                "role": "director"
+              },
+              {
+                "name": "Lionel Barrymore",
+                "role": "actor"
+              },
+              {
+                "name": "Maureen O'Sullivan",
+                "role": "actor"
+              },
+              {
+                "name": "Frank Lawton",
+                "role": "actor"
+              },
+              {
+                "name": "Rafaela Ottiano",
+                "role": "actor"
+              }
+            ],
+            "description": "Lionel Barrymore rarely appeared in horror films, and his performance in this one is delightfully entertaining, especially when he dons the guise of an old woman to exact revenge against his enemies.",
+            "id": "bef1cbd4",
+            "poster": "dd.jpg",
+            "rating": 3.5,
+            "title": "The Devil Doll",
+            "webRef": {
+              "ref": "tt0027521",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          },
+          {
+            "credits": [
+              {
+                "name": "Lambert Hillyer",
+                "role": "director"
+              },
+              {
+                "name": "Boris Karloff",
+                "role": "actor"
+              },
+              {
+                "name": "Bela Lugosi",
+                "role": "actor"
+              },
+              {
+                "name": "Frances Drake",
+                "role": "actor"
+              },
+              {
+                "name": "Frank Lawton",
+                "role": "actor"
+              }
+            ],
+            "description": "In their movies Karloff and Lugosi seem to take turns playing the heavy, and this time it's Karloff delivering nicely as the demented scientist while Lugosi plays the kindly doctor in a surprisingly suspenseful Universal feature.",
+            "id": "ede9938e",
+            "poster": "tir.jpg",
+            "rating": 3.5,
+            "title": "The Invisible Ray",
+            "webRef": {
+              "ref": "tt0027800",
+              "site": "imdb.com"
+            },
+            "year": 1936
+          }
+        ]
+      }

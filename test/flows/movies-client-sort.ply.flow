@@ -1,0 +1,72 @@
+attributes:
+  NodeStyle: BoxIcon
+  display: x=23,y=18,w=156,h=27
+steps:
+  - id: s1
+    name: Start
+    path: start
+    attributes:
+      display: x=60,y=90,w=60,h=40
+    links:
+      - id: l1
+        attributes:
+          display: type=Elbow,x=159,y=110,xs=124&186,ys=110&110
+        to: s3
+  - id: s2
+    name: Stop
+    path: stop
+    attributes:
+      display: x=740,y=90,w=60,h=40
+  - id: s3
+    name: |-
+      Sort by
+      ID
+    path: request
+    links:
+      - id: l2
+        to: s5
+        attributes:
+          display: type=Elbow,x=330,y=110,xs=294&356,ys=110&110
+    attributes:
+      display: x=190,y=70,w=100,h=80
+      url: ${baseUrl}/movies?year=1936&rating=3.5
+      method: GET
+      headers: '[["Accept","application/json"]]'
+  - id: s4
+    name: |-
+      Sort by
+      Poster
+    path: request
+    links:
+      - id: l3
+        to: s2
+        attributes:
+          display: type=Elbow,x=695,y=110,xs=654&736,ys=110&110
+    attributes:
+      display: x=550,y=70,w=100,h=80
+      url: ${baseUrl}/movies?year=1936&rating=3.5
+      method: GET
+      headers: '[["Accept","application/json"]]'
+  - id: s5
+    name: Sorted?
+    path: decide
+    links:
+      - id: l4
+        to: s4
+        attributes:
+          display: type=Elbow,x=487,y=92,xs=464&546,ys=110&110
+        result: 'true'
+      - id: l5
+        to: s6
+        attributes:
+          display: type=Elbow,x=418,y=167,xs=410&410,ys=144&226
+        result: 'false'
+    attributes:
+      display: x=360,y=80,w=100,h=60
+      expression: ${@s3.response.body.movies[1].id === '2fcb26c2'}
+  - id: s6
+    name: Stop
+    path: stop
+    links: []
+    attributes:
+      display: x=380,y=230,w=60,h=40
