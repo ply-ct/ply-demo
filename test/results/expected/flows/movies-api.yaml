@@ -91,7 +91,7 @@ Create Movie:
             "role": "actor"
           }
         ],
-        "id": "${movieId}",
+        "id": "435b30ad",
         "poster": "cothd.jpg",
         "title": "The Case of the Howling Dog",
         "webRef": {
@@ -104,7 +104,7 @@ Create Movie:
 Update Rating:
   id: s8
   request:
-    url: ${baseUrl}/movies/${movieId}
+    url: ${baseUrl}/movies/${@s7.response.body.id}
     method: PATCH
     headers:
       Accept: application/json
@@ -130,7 +130,7 @@ Update Rating:
 Confirm Update:
   id: s9
   request:
-    url: ${baseUrl}/movies/${movieId}
+    url: ${baseUrl}/movies/${@s7.response.body.id}
     method: GET
     headers:
       Accept: application/json
@@ -168,7 +168,7 @@ Confirm Update:
             "role": "actor"
           }
         ],
-        "id": "${movieId}",
+        "id": "${@s7.response.body.id}",
         "poster": "cothd.jpg",
         "rating": 5,
         "title": "The Case of the Howling Dog",
@@ -182,7 +182,7 @@ Confirm Update:
 Delete Movie:
   id: s10
   request:
-    url: ${baseUrl}/movies/${movieId}
+    url: ${baseUrl}/movies/${@s7.response.body.id}
     method: DELETE
     headers:
       Accept: application/json
@@ -203,7 +203,7 @@ Delete Movie:
 Confirm Delete:
   id: s11
   request:
-    url: ${baseUrl}/movies/${movieId}
+    url: ${baseUrl}/movies/${@s7.response.body.id}
     method: GET
     headers:
       Accept: application/json
@@ -217,7 +217,7 @@ Confirm Delete:
       {
         "status": {
           "code": 404,
-          "message": "Movie not found: ${movieId}"
+          "message": "Movie not found: ${@s7.response.body.id}"
         }
       }
   status: Completed
