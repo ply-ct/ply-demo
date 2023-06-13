@@ -1,5 +1,9 @@
 {
     "diffEditor.codeLens": true,
     "ply.customSteps": "custom/steps/**/*.json",
-    "ply.requireTsNode": true
+    "ply.requireTsNode": true,
+    "files.associations": {
+        "**/test/values/global.json": "jsonc",
+        "**/test/values/ply-ct.json": "jsonc"
+    }
 }
