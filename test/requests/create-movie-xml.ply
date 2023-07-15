@@ -1,0 +1,41 @@
+Create Movie XML:
+  url: ${baseUrl}/movies
+  method: POST
+  headers:
+    Accept: application/xml
+    Content-Type: application/xml
+  body: |-
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <root>
+      <credits>
+        <name>Michael Curtiz</name>
+        <role>director</role>
+      </credits>
+      <credits>
+        <name>John Barrymore</name>
+        <role>actor</role>
+      </credits>
+      <credits>
+        <name>Marian Marsh</name>
+        <role>actor</role>
+      </credits>
+      <credits>
+        <name>Charles Butterworth</name>
+        <role>actor</role>
+      </credits>
+      <credits>
+        <name>Donald Cook</name>
+        <role>actor</role>
+      </credits>
+      <credits>
+        <name>Luis Alberni</name>
+        <role>actor</role>
+      </credits>
+      <poster>mg.jpg</poster>
+      <title>${newMovie.title}</title>
+      <webRef>
+        <ref>tt0022103</ref>
+        <site>imdb.com</site>
+      </webRef>
+      <year>${year}</year>
+    </root>

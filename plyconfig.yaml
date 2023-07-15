@@ -1,7 +1,7 @@
 testsLocation: test
 
 # movies-api.ply.yaml is for programmatic cases
-skip: '{requests/movies-api.ply.yaml,requests/form-data.ply,requests/rowwise-requests.ply.yaml,flows/rowwise-movies-api.ply.flow}'
+skip: '{requests/movies-api.ply.yaml,requests/form-data.ply,requests/create-movie-xml.ply,requests/rowwise-requests.ply.yaml,flows/rowwise-movies-api.ply.flow}'
 
 valuesFiles:
   - test/values/global.json
