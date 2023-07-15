@@ -4,6 +4,9 @@
     "ply.requireTsNode": true,
     "files.associations": {
         "**/test/values/global.json": "jsonc",
-        "**/test/values/ply-ct.json": "jsonc"
+        "**/test/values/ply-ct.json": "jsonc",
+        "plyconfig.json": "jsonc",
+        "**/test/values/localhost.json": "jsonc",
+        "**/test/values/local-docker.json": "jsonc"
     }
 }
