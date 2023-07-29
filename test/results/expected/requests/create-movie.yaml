@@ -80,7 +80,7 @@ Create Movie:
         "poster": "mg.jpg",
         "title": "${newMovie.title}",
         "webRef": {
-          "ref": "tt0022103",
+          "ref": "${~.*}",
           "site": "imdb.com"
         },
         "year": ${year}
