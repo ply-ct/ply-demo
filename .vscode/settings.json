@@ -8,5 +8,6 @@
         "plyconfig.json": "jsonc",
         "**/test/values/localhost.json": "jsonc",
         "**/test/values/local-docker.json": "jsonc"
-    }
+    },
+    "ply.plyPath": "node_modules/@ply-ct/ply"
 }

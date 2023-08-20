@@ -14,7 +14,12 @@ export default class TmdbStep extends ply.PlyExecBase {
     async run(_runtime: ply.Runtime, values: any, runOptions?: ply.RunOptions): Promise<ply.ExecResult> {
         values.tmdb = this.getTmdb(values, runOptions?.trusted);
 
-        const request = await new ply.Ply().loadRequest('test/requests/tmdb-discover.ply');
+        let requestDir = 'test/requests';
+        if (runOptions?.stepsBase) {
+            // means cli from non-root directory -- use rel to stepsBase
+            requestDir = `${runOptions.stepsBase}/${requestDir}`;
+        }
+        const request = await new ply.Ply().loadRequest(`${requestDir}/tmdb-discover.ply`);
         const response = await request.submit(values);
 
         const tmdbResults = JSON.parse(response.body).results;

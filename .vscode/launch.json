@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "ply",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder}/node_modules/@ply-ct/ply/dist/cli.js",
+        "args": ["--submit", "--trusted", "--stepsBase=../..", "tmdb-movies.ply.flow"],
+        "cwd": "${workspaceFolder}/test/flows"
+      }
+    ]
+  }
