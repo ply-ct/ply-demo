@@ -16,40 +16,40 @@ Get Movie by Title:
           {
             "credits": [
               {
-                "name": "Tod Browning",
+                "name": "James Whale",
                 "role": "director"
               },
               {
-                "name": "Bela Lugosi",
+                "name": "Boris Karloff",
                 "role": "actor"
               },
               {
-                "name": "Helen Chandler",
+                "name": "Colin Clive",
                 "role": "actor"
               },
               {
-                "name": "David Manners",
+                "name": "Valerie Hobson",
+                "role": "actor"
+              },
+              {
+                "name": "Ernest Thesiger",
                 "role": "actor"
               },
               {
                 "name": "Dwight Frye",
                 "role": "actor"
-              },
-              {
-                "name": "Edward Van Sloan",
-                "role": "actor"
               }
             ],
-            "description": "What's even more amazing than Lugosi's out-of-body performance is the fact that the finest horror movie ever made was filmed within 2 years of the advent of talking pictures.",
-            "id": "269b34c1",
-            "poster": "drac.jpg",
+            "description": "James Whale's poignant, horrifying, hilarious masterpiece demonstrates his genius and surpasses the original as a cathartic, visionary tour de force.",
+            "id": "f236166",
+            "poster": "tbof.jpg",
             "rating": 5,
             "title": "${title}",
             "webRef": {
-              "ref": "tt0021814",
+              "ref": "tt0026138",
               "site": "imdb.com"
             },
-            "year": 1931
+            "year": 1935
           }
         ]
       }

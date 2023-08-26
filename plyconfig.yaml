@@ -1,7 +1,7 @@
 testsLocation: test
 
 # movies-api.ply.yaml is for programmatic cases
-# ignoring get-movie-by-title.ply until ply issue #83
+# ignoring get-movie-by-title.ply until ply-action supports value overrides
 skip: '{requests/get-movie-by-title.ply,requests/movies-api.ply.yaml,requests/form-data.ply,requests/create-movie-xml.ply,requests/rowwise-requests.ply.yaml,flows/rowwise-movies-api.ply.flow}'
 
 valuesFiles:

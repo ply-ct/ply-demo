@@ -11,7 +11,7 @@ export default class TmdbStep extends ply.PlyExecBase {
         super(step, instance, logger);
     }
 
-    async run(_runtime: ply.Runtime, values: any, runOptions?: ply.RunOptions): Promise<ply.ExecResult> {
+    async run(_runtime: ply.Runtime, values: ply.Values, runOptions?: ply.RunOptions): Promise<ply.ExecResult> {
         values.tmdb = this.getTmdb(values, runOptions?.trusted);
 
         let requestDir = 'test/requests';

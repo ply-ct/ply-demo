@@ -10,7 +10,7 @@ export default class NextMovie extends ply.PlyExecBase {
         super(step, instance, logger);
     }
 
-    async run(_runtime: ply.Runtime, values: any): Promise<ply.ExecResult> {
+    async run(_runtime: ply.Runtime, values: ply.Values): Promise<ply.ExecResult> {
         if (Array.isArray(values.plyMovies)) {
             values.plyMovie = values.plyMovies.pop();
             return { status: 'Passed' };
