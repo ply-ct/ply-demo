@@ -1,0 +1,25 @@
+github-repo-topics:
+  request:
+    url: https://api.github.com/repos/${github.organization}/${github.repository}/topics
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "names": [
+          "rest-api",
+          "testing",
+          "typescript",
+          "nodejs",
+          "test-automation",
+          "continuous-testing",
+          "graphql",
+          "workflow"
+        ]
+      }

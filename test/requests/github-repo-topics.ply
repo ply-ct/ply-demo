@@ -1,0 +1,6 @@
+github-repo-topics:
+  url: https://api.github.com/repos/${github.organization}/${github.repository}/topics
+  method: GET
+  headers:
+    Authorization: Bearer ${github.token}
+    Accept: application/json
