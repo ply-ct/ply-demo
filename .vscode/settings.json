@@ -2,5 +2,12 @@
     "diffEditor.codeLens": true,
     "ply.customSteps": "custom/steps/**/*.json",
     "ply.plyPath": "node_modules/@ply-ct/ply",
-    "ply.requireTsNode": true
+    "ply.requireTsNode": true,
+    "files.associations": {
+        "plyconfig.json": "jsonc",
+        "**/test/values/global.json": "jsonc",
+        "**/test/values/ply-ct.json": "jsonc",
+        "**/test/values/localhost.json": "jsonc",
+        "**/test/values/local-docker.json": "jsonc"
+    }
 }
