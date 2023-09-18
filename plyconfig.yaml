@@ -13,3 +13,5 @@ valuesFiles:
   test/values/forties-movies.xlsx: false
 
 outputFile: test/results/actual/ply-results.json
+
+verbose: false

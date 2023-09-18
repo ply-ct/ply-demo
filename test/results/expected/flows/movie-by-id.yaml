@@ -1,0 +1,55 @@
+Start:
+  id: s1
+  status: Completed
+Get Movie by ID:
+  id: s3
+  request:
+    url: ${baseUrl}/movies/${movieId}
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "credits": [
+          {
+            "name": "James Whale",
+            "role": "director"
+          },
+          {
+            "name": "Claude Rains",
+            "role": "actor"
+          },
+          {
+            "name": "Gloria Stuart",
+            "role": "actor"
+          },
+          {
+            "name": "William Harrigan",
+            "role": "actor"
+          },
+          {
+            "name": "Henry Travers",
+            "role": "actor"
+          }
+        ],
+        "description": "From the opening scene with Claude Rains stumbling around in a blizzard, the desolation of H.G. Wells' story is depicted with chilling atmospherics and astonishing special effects.",
+        "id": "b1cd7001",
+        "poster": "tim.jpg",
+        "rating": 5,
+        "title": "The Invisible Man",
+        "webRef": {
+          "ref": "tt0024184",
+          "site": "imdb.com"
+        },
+        "year": 1933
+      }
+  status: Completed
+Stop:
+  id: s2
+  status: Completed
