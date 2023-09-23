@@ -16,11 +16,11 @@ steps:
     name: Stop
     path: stop
     attributes:
-      display: x=490,y=70,w=60,h=40
+      display: x=690,y=70,w=60,h=40
   - id: s3
     name: |-
-      Get
-      Movie
+      Get Movie
+      by Title
     path: request
     links:
       - id: l4
@@ -33,14 +33,32 @@ steps:
       method: GET
       headers: '[["Accept","application/json"]]'
   - id: s4
-    name: Subflow
+    name: |-
+      Invoke
+      movie-by-id
     path: subflow
     links:
-      - id: l3
-        to: s2
+      - id: l5
+        to: s5
         attributes:
-          display: type=Elbow,x=463,y=90,xs=434&486,ys=90&90
+          display: type=Elbow,x=471,y=90,xs=434&506,ys=90&90
     attributes:
       display: x=330,y=50,w=100,h=80
       subflow: test/flows/movie-by-id.ply.flow
-      values: '[["movieId","${@s3.response.body.movies[0].id}"]]'
+      inValues: '[["movieId","${@s3.response.body.movies[0].id}"]]'
+      outValues: '[["movieYear","queryYear"]]'
+  - id: s5
+    name: |-
+      Great Movies
+      of Year
+    path: request
+    links:
+      - id: l6
+        to: s2
+        attributes:
+          display: type=Elbow,x=650,y=90,xs=614&686,ys=90&90
+    attributes:
+      display: x=510,y=50,w=100,h=80
+      method: GET
+      url: ${baseUrl}/movies?year=${queryYear}&rating=>=4.5
+      headers: '[["Accept","application/json"]]'

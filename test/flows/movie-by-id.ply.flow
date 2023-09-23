@@ -2,6 +2,7 @@ attributes:
   NodeStyle: BoxIcon
   display: x=23,y=18,w=156,h=27
   values: '[["movieId","","true",""]]'
+  return: '[["movieYear","${@s3.response.body.year}"]]'
 steps:
   - id: s1
     name: Start
@@ -11,13 +12,13 @@ steps:
     links:
       - id: l1
         attributes:
-          display: type=Elbow,x=164,y=117,xs=120&206,ys=117&117
+          display: type=Elbow,x=158,y=117,xs=120&196,ys=117&117
         to: s3
   - id: s2
     name: Stop
     path: stop
     attributes:
-      display: x=406,y=97,w=60,h=40
+      display: x=420,y=100,w=60,h=40
   - id: s3
     name: |-
       Get Movie
@@ -27,9 +28,9 @@ steps:
       - id: l2
         to: s2
         attributes:
-          display: type=Elbow,x=358,y=117,xs=314&402,ys=117&117
+          display: type=Elbow,x=360,y=120,xs=304&416,ys=120&120
     attributes:
-      display: x=210,y=80,w=100,h=80
+      display: x=200,y=80,w=100,h=80
       url: ${baseUrl}/movies/${movieId}
       method: GET
       headers: '[["Accept","application/json"]]'

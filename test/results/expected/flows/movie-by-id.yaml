@@ -39,7 +39,7 @@ Get Movie by ID:
           }
         ],
         "description": "From the opening scene with Claude Rains stumbling around in a blizzard, the desolation of H.G. Wells' story is depicted with chilling atmospherics and astonishing special effects.",
-        "id": "b1cd7001",
+        "id": "${movieId}",
         "poster": "tim.jpg",
         "rating": 5,
         "title": "The Invisible Man",

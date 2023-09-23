@@ -1,6 +1,6 @@
 {
   "name": "@ply-ct/ply-demo",
-  "version": "3.2.15",
+  "version": "3.2.16",
   "description": "Illustrate Ply automated testing",
   "license": "MIT",
   "repository": {
@@ -47,7 +47,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@ply-ct/ply": "^3.2.15"
+    "@ply-ct/ply": "^3.2.16"
   },
   "optionalDependencies": {
     "@ply-ct/ply-viz": "^0.1.0"

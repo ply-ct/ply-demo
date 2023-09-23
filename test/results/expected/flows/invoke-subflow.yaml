@@ -1,7 +1,7 @@
 Start:
   id: s1
   status: Completed
-Get Movie:
+Get Movie by Title:
   id: s3
   request:
     url: ${baseUrl}/movies?title=The Invisible Man
@@ -54,7 +54,7 @@ Get Movie:
         ]
       }
   status: Completed
-Subflow:
+Invoke movie-by-id:
   id: s4
   data: |
     [
@@ -62,10 +62,177 @@ Subflow:
         "test/flows/movie-by-id.ply.flow",
         "Passed",
         ${~.*},
-        ${~.*},
+        1695498240603,
         ""
       ]
     ]
+  status: Completed
+Great Movies of Year:
+  id: s5
+  request:
+    url: ${baseUrl}/movies?year=${queryYear}&rating=>=4.5
+    method: GET
+    headers:
+      Accept: application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type: application/json; charset=utf-8
+    body: |-
+      {
+        "movies": [
+          {
+            "credits": [
+              {
+                "name": "James Whale",
+                "role": "director"
+              },
+              {
+                "name": "Claude Rains",
+                "role": "actor"
+              },
+              {
+                "name": "Gloria Stuart",
+                "role": "actor"
+              },
+              {
+                "name": "William Harrigan",
+                "role": "actor"
+              },
+              {
+                "name": "Henry Travers",
+                "role": "actor"
+              }
+            ],
+            "description": "From the opening scene with Claude Rains stumbling around in a blizzard, the desolation of H.G. Wells' story is depicted with chilling atmospherics and astonishing special effects.",
+            "id": "b1cd7001",
+            "poster": "tim.jpg",
+            "rating": 5,
+            "title": "The Invisible Man",
+            "webRef": {
+              "ref": "tt0024184",
+              "site": "imdb.com"
+            },
+            "year": ${queryYear}
+          },
+          {
+            "credits": [
+              {
+                "name": "Merian C. Cooper",
+                "role": "director"
+              },
+              {
+                "name": "Ernest B. Schoedsack",
+                "role": "director"
+              },
+              {
+                "name": "Fay Wray",
+                "role": "actor"
+              },
+              {
+                "name": "Robert Armstrong",
+                "role": "actor"
+              },
+              {
+                "name": "Bruce Cabot",
+                "role": "actor"
+              },
+              {
+                "name": "Frank Reicher",
+                "role": "actor"
+              }
+            ],
+            "description": "From the wondrous scenes on Skull Island to the pandemonium of terrified crowds in New York City, this epic maintains an allegorical sensibility that puts it really in a genre of its own.",
+            "id": "daa31bd3",
+            "poster": "kk.jpg",
+            "rating": 4.5,
+            "title": "King Kong",
+            "webRef": {
+              "ref": "tt0024216",
+              "site": "imdb.com"
+            },
+            "year": ${queryYear}
+          },
+          {
+            "credits": [
+              {
+                "name": "A. Edward Sutherland",
+                "role": "director"
+              },
+              {
+                "name": "Charles Ruggles",
+                "role": "actor"
+              },
+              {
+                "name": "Lionel Atwill",
+                "role": "actor"
+              },
+              {
+                "name": "Gail Patrick",
+                "role": "actor"
+              },
+              {
+                "name": "Randolph Scott",
+                "role": "actor"
+              },
+              {
+                "name": "Kathleen Burke",
+                "role": "actor"
+              }
+            ],
+            "description": "Atwill is bone-chilling as the evil Dr. Gorman who devises ever more sadistic ways to dispose of his enemies in this first-rate Paramount chiller whose only defect is the ever-annoying Charlie Ruggles.",
+            "id": "d4e52815",
+            "poster": "mitz.jpg",
+            "rating": 4.5,
+            "title": "Murders in the Zoo",
+            "webRef": {
+              "ref": "tt0024360",
+              "site": "imdb.com"
+            },
+            "year": ${queryYear}
+          },
+          {
+            "credits": [
+              {
+                "name": "Fritz Lang",
+                "role": "director"
+              },
+              {
+                "name": "Rudolf Klein-Rogge",
+                "role": "actor"
+              },
+              {
+                "name": "Otto Wernicke",
+                "role": "actor"
+              },
+              {
+                "name": "Oscar Beregi Sr.",
+                "role": "actor"
+              },
+              {
+                "name": "Gustav Diessl",
+                "role": "actor"
+              },
+              {
+                "name": "Theodor Loos",
+                "role": "actor"
+              }
+            ],
+            "description": "Fritz Lang uses sets and lighting brilliantly in this virtuosic example of German Expressionist filmmaking, delivering atmosphere galore in his banned last movie before fleeing the Nazis.",
+            "id": "ff560f19",
+            "poster": "todm.jpg",
+            "rating": 4.5,
+            "title": "The Testament of Dr. Mabuse",
+            "webRef": {
+              "ref": "tt0023563",
+              "site": "imdb.com"
+            },
+            "year": ${queryYear}
+          }
+        ]
+      }
   status: Completed
 Stop:
   id: s2
