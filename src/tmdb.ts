@@ -1,33 +1,25 @@
-import * as ply from '@ply-ct/ply';
+import { StepExec, ExecContext, ExecResult, Ply } from '@ply-ct/ply';
 import { Movie } from '@ply-ct/ply-movies';
 
-export default class TmdbStep extends ply.PlyExecBase {
+export default class TmdbStep extends StepExec {
 
-    constructor(
-        readonly step: ply.FlowStep,
-        readonly instance: ply.StepInstance,
-        readonly logger: ply.Log
-    ) {
-        super(step, instance, logger);
-    }
-
-    async run(_runtime: ply.Runtime, values: ply.Values, runOptions?: ply.RunOptions): Promise<ply.ExecResult> {
-        values.tmdb = this.getTmdb(values, runOptions?.trusted);
+    async run(context: ExecContext): Promise<ExecResult> {
+        context.values.tmdb = this.getTmdb(context);
 
         let requestDir = 'test/requests';
-        if (runOptions?.stepsBase) {
+        if (context.runOptions?.stepsBase) {
             // means cli from non-root directory -- use rel to stepsBase
-            requestDir = `${runOptions.stepsBase}/${requestDir}`;
+            requestDir = `${context.runOptions.stepsBase}/${requestDir}`;
         }
-        const request = await new ply.Ply().loadRequest(`${requestDir}/tmdb-discover.ply`);
-        const response = await request.submit(values);
+        const request = await new Ply().loadRequest(`${requestDir}/tmdb-discover.ply`);
+        const response = await request.submit(context.values);
 
         const tmdbResults = JSON.parse(response.body).results;
         if (!tmdbResults || tmdbResults.length === 0) {
             return { status: 'Failed', message: 'No results' };
         }
 
-        values.tmdb.results = tmdbResults;
+        context.values.tmdb.results = tmdbResults;
         const plyMovies: Movie[] = tmdbResults.map((result: any) => {
             return {
                 title: result.original_title,
@@ -41,28 +33,28 @@ export default class TmdbStep extends ply.PlyExecBase {
                 }
             };
         });
-        values.plyMovies = plyMovies;
+        context.values.plyMovies = plyMovies;
 
-        this.logger.debug('plyMovies', plyMovies);
+        context.logDebug('plyMovies', plyMovies);
 
         return { status: 'Passed' };
     }
 
-    getTmdb(values: any, trusted?: boolean): { [name: string]: any } {
+    getTmdb(context: ExecContext): { [name: string]: any } {
         const tmdb: { [name: string]: any } = {};
-        tmdb.key = this.getAttribute('apiKey', values, {trusted, required: true});
-        tmdb.year = this.getAttribute('year', values, { trusted, required: true });
+        tmdb.key = context.getAttribute('apiKey', { required: true});
+        tmdb.year = context.getAttribute('year', { required: true });
         const y = parseInt(tmdb.year);
         if (isNaN(y) || y < 1940) {
             throw new Error('Attribute "year" must be valid year after 1939');
         }
 
         // optional attributes
-        const genre = this.getAttribute('genre', values, { trusted });
+        const genre = context.getAttribute('genre');
         if (genre) {
             tmdb.genre = genres[genre];
         }
-        const studio = this.getAttribute('studio', values, { trusted });
+        const studio = context.getAttribute('studio');
         if (studio) {
             tmdb.studio = studios[studio];
         }

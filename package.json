@@ -1,6 +1,6 @@
 {
   "name": "@ply-ct/ply-demo",
-  "version": "3.2.18",
+  "version": "3.3.0",
   "description": "Illustrate Ply automated testing",
   "license": "MIT",
   "repository": {
@@ -35,7 +35,7 @@
     "html-report": "ply --report=node_modules/@ply-ct/ply-viz#html -o load-test-results.html"
   },
   "devDependencies": {
-    "@ply-ct/ply-movies": "^1.2.4",
+    "@ply-ct/ply-movies": "^1.2.5",
     "@types/chai": "^4.3.4",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",

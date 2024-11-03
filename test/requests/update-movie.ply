@@ -1,0 +1,10 @@
+Create Movie:
+  url: ${baseUrl}/movies/cdbafec0
+  method: PATCH
+  headers:
+    Accept: application/json
+    Content-Type: application/json
+  body: |-
+    {
+      "year": 1942
+    }

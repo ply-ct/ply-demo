@@ -1,18 +1,10 @@
-import * as ply from '@ply-ct/ply';
+import { StepExec, ExecContext, ExecResult } from '@ply-ct/ply';
 
-export default class NextMovie extends ply.PlyExecBase {
+export default class NextMovie extends StepExec {
 
-    constructor(
-        readonly step: ply.FlowStep,
-        readonly instance: ply.StepInstance,
-        readonly logger: ply.Log
-    ) {
-        super(step, instance, logger);
-    }
-
-    async run(_runtime: ply.Runtime, values: ply.Values): Promise<ply.ExecResult> {
-        if (Array.isArray(values.plyMovies)) {
-            values.plyMovie = values.plyMovies.pop();
+    async run(context: ExecContext): Promise<ExecResult> {
+        if (Array.isArray(context.values.plyMovies)) {
+            context.values.plyMovie = context.values.plyMovies.pop();
             return { status: 'Passed' };
         } else {
             throw new Error('Expects array value: plyMovies');
