@@ -21,8 +21,8 @@
   "scripts": {
     "build": "tsc",
     "start-movies": "run-script-os",
-    "start-movies:default": "ply-movies start -p $npm_package_config_port -q &",
-    "start-movies:windows": "start /b ply-movies start -p %npm_package_config_port% -q",
+    "start-movies:default": "ply-movies start -p $npm_package_config_port --websockets -q &",
+    "start-movies:windows": "start /b ply-movies start -p %npm_package_config_port% --websockets -q",
     "start-movies-foreground": "ply-movies start -p $npm_package_config_port",
     "stop-movies": "run-script-os",
     "stop-movies:default": "ply-movies stop -p $npm_package_config_port",
@@ -35,7 +35,7 @@
     "html-report": "ply --report=node_modules/@ply-ct/ply-viz#html -o load-test-results.html"
   },
   "devDependencies": {
-    "@ply-ct/ply-movies": "^1.2.5",
+    "@ply-ct/ply-movies": "^1.3.1",
     "@types/chai": "^4.3.4",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
@@ -47,7 +47,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@ply-ct/ply": "^3.2.18"
+    "@ply-ct/ply": "^3.3.0"
   },
   "optionalDependencies": {
     "@ply-ct/ply-viz": "^0.1.0"
