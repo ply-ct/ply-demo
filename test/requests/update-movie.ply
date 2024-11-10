@@ -1,4 +1,4 @@
-Create Movie:
+Update Movie:
   url: ${baseUrl}/movies/cdbafec0
   method: PATCH
   headers:
@@ -6,5 +6,5 @@ Create Movie:
     Content-Type: application/json
   body: |-
     {
-      "year": 1942
+      "rating": 2.0
     }
