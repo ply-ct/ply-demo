@@ -18,9 +18,7 @@ TMDB Universal Horror:
             "backdrop_path": "/s9fkuABRgvo4ovWft8O4ywdtlRB.jpg",
             "genre_ids": [
               27,
-              9648,
-              878,
-              53
+              878
             ],
             "id": 28421,
             "original_language": "en",
@@ -29,6 +27,7 @@ TMDB Universal Horror:
             "popularity": ${~.*},
             "poster_path": "/hJmmgKnY0NaJKVP7Glb4ciAzXWr.jpg",
             "release_date": "1940-01-12",
+            "softcore": false,
             "title": "The Invisible Man Returns",
             "video": false,
             "vote_average": ${~.*},
@@ -36,8 +35,10 @@ TMDB Universal Horror:
           },
           {
             "adult": false,
-            "backdrop_path": "/qqn5yDwWZcgJcVeL2Yt1Krn0xX8.jpg",
+            "backdrop_path": "/uMbzbXR46JB9UoBrcjpDvOeJADF.jpg",
             "genre_ids": [
+              ${~.*},
+              ${~.*},
               ${~.*},
               ${~.*},
               ${~.*}
@@ -49,17 +50,17 @@ TMDB Universal Horror:
             "popularity": ${~.*},
             "poster_path": "/268GiPoyYmuNhrez1I7GXypKC6T.jpg",
             "release_date": "1940-02-29",
+            "softcore": false,
             "title": "Black Friday",
             "video": false,
-            "vote_average": 6,
-            "vote_count": 50
+            "vote_average": ${~.*},
+            "vote_count": ${~.*}
           },
           {
             "adult": false,
             "backdrop_path": "/epPy2TZgvU2LJWnOp45ePsHVM9g.jpg",
             "genre_ids": [
               27,
-              12,
               14
             ],
             "id": 31498,
@@ -69,29 +70,31 @@ TMDB Universal Horror:
             "popularity": ${~.*},
             "poster_path": "/jSSdvLkGXy4oICnSo5Cnz12B6Ae.jpg",
             "release_date": "1940-09-20",
+            "softcore": false,
             "title": "The Mummy's Hand",
             "video": false,
             "vote_average": ${~.*},
-            "vote_count": 88
+            "vote_count": ${~.*}
           },
           {
             "adult": false,
             "backdrop_path": "/gbxm4XRbDAfeyd2KLxSi7Rmf2q5.jpg",
             "genre_ids": [
-              878,
-              35,
-              27
+              ${~.*},
+              ${~.*},
+              ${~.*}
             ],
             "id": 28423,
             "original_language": "en",
             "original_title": "The Invisible Woman",
             "overview": "Kitty Carroll, an attractive store model, volunteers to become a test subject for a machine that will make her invisible so that she can use her invisibility to exact revenge on her ex-boss.",
             "popularity": ${~.*},
-            "poster_path": "/ix2JkOviYalRWVX2iBA6Xxn878V.jpg",
-            "release_date": "1940-12-28",
+            "poster_path": "/${~.*}.jpg",
+            "release_date": "1940-12-27",
+            "softcore": false,
             "title": "The Invisible Woman",
             "video": false,
-            "vote_average": 5.7,
+            "vote_average": ${~.*},
             "vote_count": ${~.*}
           }
         ],
